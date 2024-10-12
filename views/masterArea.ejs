@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Jindal Trading | Dashboard</title>
+
+	
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="global_assets/js/main/jquery.min.js"></script>
+	<script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+
+	<script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+
+
+	<script src="assets/js/app.js"></script>
+	<script src="global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="global_assets/js/demo_pages/form_multiselect.js"></script>
+	<!-- /theme JS files -->
+
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-dark">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="../../../../global_assets/images/logo_light.png" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li>
+			</ul>
+
+			<span class="badge bg-success ml-md-3 mr-md-auto">Online</span>
+
+			<ul class="navbar-nav">
+
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+						<img src="../../../../global_assets/images/demo/users/face11.jpg" class="rounded-circle mr-2" height="34" alt="">
+						<span><%=username%></span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
+						<div class="dropdown-divider"></div>
+						<a href="/logout" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				Navigation
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user">
+					<div class="card-body">
+						<div class="media">
+							<div class="mr-3">
+								<a href="#"><img src="../../../../global_assets/images/demo/users/face11.jpg" width="38" height="38" class="rounded-circle" alt=""></a>
+							</div>
+
+							<div class="media-body">
+								<div class="media-title font-weight-semibold"><%=username%></div>
+								<div class="font-size-xs opacity-50">
+									<i class="icon-pin font-size-sm"></i> &nbsp;Meerut
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/userDashboard" class="nav-link ">
+								<i class="icon-home4"></i>
+								<span>
+									Dashboard
+								</span>
+							</a>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/register" class="nav-link">User-Register</a></li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/registeredUsers" class="nav-link">Register-List</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Market-Plan</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanPigIron" class="nav-link">Pig-Iron</a></li>
+							</ul>
+							
+							<!-- <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+							   <li class="nav-item"><a href="/marketPlanAllotment" class="nav-link">Allotment</a></li>
+						    </ul> -->
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanQuantityLedger" class="nav-link">QuantityLedger</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+							<a href="#" class="nav-link active"><i class="icon-copy"></i> <span>Master</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterArea" class="nav-link active">MasterArea</a></li>
+								<li class="nav-item"><a href="/masterCategories" class="nav-link">MasterCategories</a></li>
+								<li class="nav-item"><a href="/masterGrade" class="nav-link">MasterGrade</a></li>
+								<li class="nav-item"><a href="/masterProducts" class="nav-link">MasterProducts</a></li>
+								<li class="nav-item"><a href="/masterProductGroup" class="nav-link">MasterProductGroup</a></li>
+								<li class="nav-item"><a href="/masterTeams" class="nav-link">MasterTeams</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Customers</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterCustomer" class="nav-link">MasterCustomer</a></li>
+								<li class="nav-item"><a href="/masterFirm" class="nav-link">MasterFirm</a></li>
+								<li class="nav-item nav-item-submenu ">
+									<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Datatables</span></a>
+									<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+										<li class="nav-item"><a href="/customerContact" class="nav-link">Contact</a></li>
+										<li class="nav-item"><a href="/customerCategory" class="nav-link">Categories</a></li>
+										<li class="nav-item"><a href="/customerFirm" class="nav-link">Firms</a></li>
+										<li class="nav-item"><a href="/customerProduct" class="nav-link">Products</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Transport</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/transportDetails" class="nav-link">Details</a></li>
+								<li class="nav-item"><a href="/transportContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/transportStations" class="nav-link">Stations</a></li>
+								<li class="nav-item"><a href="/transportTrucks" class="nav-link">Trucks</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Vendor</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterVendors" class="nav-link">MasterVendors</a></li>
+								<li class="nav-item"><a href="/vendorContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/vendorFirm" class="nav-link">Firm</a></li>
+								<li class="nav-item"><a href="/vendorProduct" class="nav-link">Product</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Employee</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterEmployee" class="nav-link">MasterEmployee</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/contacts" class="nav-link"><i class="icon-copy"></i> <span>Contacts</span></a>
+						</li>
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+			
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+				<div class="page-header-content header-elements-md-inline">
+					<div class="page-title d-flex">
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Master Area</span> - Master</h4>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content">
+
+				<!-- Dashboard content -->
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="errInfo" id="errInfo" style=" background-color: rgb(255, 0, 0); margin: 1%;">
+							<% if(msg){ %>
+								<h6 style="text-align: center;"><%=msg%></h6>
+							<% } %>
+						</div>
+
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Master Area</h5>
+								<% if(level>2) {%>
+									<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_form_vertical" >Add new Master Area</button>
+									
+								<%}%>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+										<a class="list-icons-item" data-action="remove"></a>
+									</div>
+								</div>
+							</div>
+
+							<% if(data.length>0) {%>
+									
+								<table  class="table datatable-basic table-bordered table-striped table-hover">
+									<thead>
+										<tr>
+											<th>Area</th>
+											<th>District</th>
+											<th>Zone</th>
+											<th>State</th>
+											<% if(level>2) {%>
+												<th>Edit</th>
+												<th>Delete</th>
+											<%}else if(level>1){%>
+												<th>Edit</th>
+											<%}else{%>
+											<%}%>
+										</tr>
+									</thead >
+									
+									<tbody>
+									<% for(var i=0; i<data.length; i++) {%>
+										<tr class="<%= data[i].areaId%>apnaarea">
+											<%if(level==1) {%>
+												<td class="area"><%= data[i].area%></td>
+												<td class="district"><%= data[i].district%></td>
+												<td class="zone"><%= data[i].zone%></td>
+												<td class="state"><%= data[i].state%></td>
+											<%} else if(level>2) {%>
+												<td class="area" ><%= data[i].area%></td>
+												<td class="district" ><%= data[i].district%></td>
+												<td class="zone" ><%= data[i].zone%></td>
+												<td class="state"><%= data[i].state%></td>
+
+												<td>
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" onclick="eedit('<%= data[i].areaId%>apnaarea')">Edit</button>
+												</td>
+												
+												<td>
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_del"  onclick="ddel('<%= data[i].areaId%>apnaarea')" >Delete</button>
+												</td>
+												
+													
+											<%}else if(level>1){%>
+												<td class="area" ><%= data[i].area%></td>
+												<td class="district" ><%= data[i].district%></td>
+												<td class="zone" ><%= data[i].zone%></td>
+												<td class="state"><%= data[i].state%></td>
+
+												<td>
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" onclick="eedit('<%= data[i].areaId%>apnaarea')">Edit</button>
+												</td>
+											<%}%> 
+										</tr>
+									<% } %>
+									</tbody>
+								</table>
+							
+							<%}else{%>
+								<h4>No new data</h4>
+							<%}%>
+
+
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-2">
+										<label for="area" class="form-control"><span class="font-weight-semibold">area</span></label>
+										<select name="area" class="form-control multiselect-filtering area" id="areaFil" multiple="multiple" data-fouc>
+											<% let dataValuesarea = data.reduce((acc, curr) => {
+												if (curr.area && !acc.includes(curr.area)) {
+												  acc.push(curr.area);
+												}
+												return acc;
+											  }, []); %>
+											  
+											  <% dataValuesarea.forEach(function(value) { %>
+												<option value="<%= value %>"><%= value %></option>
+											  <% }); %>
+										</select>
+									</div>
+									<div class="col-sm-2" >
+										<label for="district" class="form-control"><span class="font-weight-semibold">district</span></label>
+										<select name="district" class="form-control multiselect-filtering district" id="districtFil" multiple="multiple" data-fouc>
+                                            <% let dataValuesdistrict = data.reduce((acc, curr) => {
+												if (curr.district && !acc.includes(curr.district)) {
+												  acc.push(curr.district);
+												}
+												return acc;
+											  }, []); %>
+											  
+											  <% dataValuesdistrict.forEach(function(value) { %>
+												<option value="<%= value %>"><%= value %></option>
+											  <% }); %>
+										</select>
+									</div>
+									<div class="col-sm-2">
+										<label for="zone" class="form-control"><span class="font-weight-semibold">zone</span></label>
+										<select name="zone" class="form-control multiselect-filtering  zone" id="zoneFil" multiple="multiple" data-fouc>
+                                            <% let dataValueszone = data.reduce((acc, curr) => {
+												if (curr.zone && !acc.includes(curr.zone)) {
+												  acc.push(curr.zone);
+												}
+												return acc;
+											  }, []); %>
+											  
+											  <% dataValueszone.forEach(function(value) { %>
+												<option value="<%= value %>"><%= value %></option>
+											  <% }); %>
+										</select>
+									</div>																	
+									<div class="col-sm-2">
+										<label for="state" class="form-control"><span class="font-weight-semibold">state</span></label>
+										<select name="state" class="form-control multiselect-filtering  state" id="stateFil" multiple="multiple" data-fouc>
+											<% let dataValuesstate = data.reduce((acc, curr) => {
+												if (curr.state && !acc.includes(curr.state)) {
+												  acc.push(curr.state);
+												}
+												return acc;
+											  }, []); %>
+											  
+											  <% dataValuesstate.forEach(function(value) { %>
+												<option value="<%= value %>"><%= value %></option>
+											  <% }); %>
+										</select>
+									</div>																	
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<button onclick="fil()" class="form-control bg-teal-400" type="button">Filter</button>
+								</div>
+							</div>
+							<div class="card" style="overflow-x: auto;" id="koiBhi"></div>
+							<div class="card" style="overflow-x: auto;" id="chlna"></div>
+							
+							<!-- Vertical form modal -->
+							<div id="modal_form_vertical" class="modal fade" tabindex="-1">
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">New Master Area</h5>
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+							            <form action="/masterArea" method="POST">
+								            <div class="modal-body">
+									            <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-4">
+												            <label>Area<span class="text-danger">*</span></label>
+												            <input type="text" placeholder="area" class="form-control area" required name="area" id="area">
+											            </div>
+											            <div class="col-sm-4">
+												            <label>District<span class="text-danger">*</span></label>
+												            <input type="text" placeholder="district" class="form-control district" required name="district" id="district">
+											            </div>
+											            <div class="col-sm-4">
+												            <label>Zone<span class="text-danger">*</span></label>
+												            <input type="text" placeholder="zone" class="form-control zone" required name="zone" id="zone">
+											            </div>
+										            </div>
+									            </div>
+									            
+												<div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-4">
+												            <label>State/UT<span class="text-danger">*</span></label>
+															<select class="form-control state" required name="state" id="state">
+																<option value="" disabled selected>-Select-</option>
+																<option value="Andhra Pradesh">Andhra Pradesh</option>
+																<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+																<option value="Assam">Assam</option>
+																<option value="Bihar">Bihar</option>
+																<option value="Chhattisgarh">Chhattisgarh</option>
+																<option value="Goa">Goa</option>
+																<option value="Gujarat">Gujarat</option>
+																<option value="Haryana">Haryana</option>
+																<option value="Himachal Pradesh">Himachal Pradesh</option>
+																<option value="Jharkhand">Jharkhand</option>
+																<option value="Karnataka">Karnataka</option>
+																<option value="Kerala">Kerala</option>
+																<option value="Madhya Pradesh">Madhya Pradesh</option>
+																<option value="Maharashtra">Maharashtra</option>
+																<option value="Manipur">Manipur</option>
+																<option value="Meghalaya">Meghalaya</option>
+																<option value="Mizoram">Mizoram</option>
+																<option value="Nagaland">Nagaland</option>
+																<option value="Odisha">Odisha</option>
+																<option value="Punjab">Punjab</option>
+																<option value="Rajasthan">Rajasthan</option>
+																<option value="Sikkim">Sikkim</option>
+																<option value="Tamil Nadu">Tamil Nadu</option>
+																<option value="Telangana">Telangana</option>
+																<option value="Tripura">Tripura</option>
+																<option value="Uttar Pradesh">Uttar Pradesh</option>
+																<option value="Uttarakhand">Uttarakhand</option>
+																<option value="West Bengal">West Bengal</option>
+																<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+																<option value="Chandigarh">Chandigarh</option>
+																<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+																<option value="Daman and Diu">Daman and Diu</option>
+																<option value="Lakshadweep">Lakshadweep</option>
+																<option value="Delhi">Delhi</option>
+																<option value="Puducherry">Puducherry</option>
+																<option value="Ladakh">Ladakh</option>
+																<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+															  </select>
+															  
+											            </div>
+										            </div>
+									            </div>
+								            </div>
+
+								            <div class="modal-footer">
+									            <button type="button" style='color:teal' class="btn btn-link" data-dismiss="modal">Close</button>
+									            <button type="submit" class="btn  bg-teal-400">Add</button>
+								            </div>
+							            </form>
+						            </div>
+					            </div>
+				            </div>
+
+
+
+
+							<!-- EDIT modal -->
+							<div id="modal_edit" class="modal fade" tabindex="-1">
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">Edit Master Area</h5>
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+								        <div class="modal-body" id="blast">
+									        
+								        </div>
+
+								        <div class="modal-footer" id="off">
+									        
+								        </div>
+						            </div>
+					            </div>
+				            </div>
+							
+							
+							
+							<!-- DEL modal -->
+							<div id="modal_del" class="modal fade" tabindex="-1">
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">Delete Master Area</h5>
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+								        <div class="modal-body" id="blasto">
+									        
+								        </div>
+
+								        <div class="modal-footer" id="offo">
+									        
+								        </div>
+						            </div>
+					            </div>
+				            </div>
+							
+			            </div>
+		            </div>
+					
+		        </div>
+				<!-- /dashboard content -->
+
+			</div>
+			<!-- /content area -->
+
+
+			<!-- Footer -->
+			<!-- /footer -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+</body>
+
+</html>
+
+
+
+
+<script>
+
+    function del(value)
+    {
+        console.log(value);
+        $.post("/masterArea",
+            {
+                id: value,
+                op:"del"
+            },
+            function (data, status) {
+                console.log(data);
+                console.log(status);
+				if(data!="present")
+				{
+					setInterval('refreshPage()', 500);
+				}
+				else 
+				{
+					alert("area already used")
+				}
+            }
+            );
+    }
+	function edit(value)
+    {
+		console.log(value);
+        var eArea = document.getElementById("eArea").value;
+		console.log(eArea);
+        var eDistrict = document.getElementById("eDistrict").value;
+		console.log(eDistrict);
+        var eZone = document.getElementById("eZone").value;
+		console.log(eZone);
+        var eState = document.getElementById("eState").value;
+		console.log(eState);
+        
+		$.post("/masterArea",
+            {
+                id: value,
+                eArea: eArea,
+                eDistrict: eDistrict,
+                eZone: eZone,
+                eState: eState,
+                op:"edt"
+            },
+            function (data, status) {
+                console.log(data);
+                console.log(status);
+				setInterval('refreshPage()', 500);
+
+            }
+            );
+    }
+
+	function refreshPage() {
+    	location.reload(true);
+	}
+
+	function eedit(value)
+    {
+        console.log(value);
+        var sub = 'apnaarea';
+        var result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+            var area = $(this).find(".area").html();    
+            var district = $(this).find(".district").html();    
+            var zone = $(this).find(".zone").html();    
+            var state = $(this).find(".state").html();    
+            console.log(area);
+            console.log(district);
+            console.log(zone);
+            console.log(state);
+			console.log(result)
+
+            var tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >Area</td> <td><input type="text" value="'+area+'" class="form-control eArea" name="eArea" id="eArea"></td> </tr> <tr> <td>District</td> <td><input type="text" value="'+district+'" class="form-control eDistrict" name="eDistrict" id="eDistrict"> </tr> <tr> <td>Zone</td><td><input type="text" value="'+zone+'" class="form-control eZone" name="eZone" id="eZone"> </tr> <tr> <td>State</td> <td><input type="text" value="'+state+'" class="form-control eState" name="eState" id="eState"> </tr> </table> </div>'
+
+			var bt="<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button> <button type='submit' onclick='edit("+result+")' data-dismiss='modal' class='btn bg-teal-400'>Save</button>"
+			console.log("Ujjwal")
+			document.getElementById("blast").innerHTML=tek;
+			document.getElementById("off").innerHTML=bt;
+		});
+    }
+
+	function ddel(value)
+    {
+        console.log(value);
+        var sub = 'apnaarea';
+        var result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+			console.log("aaaaaaaaaaaaaaaaaaaaaaaa")
+            var area = $(this).find(".area").html();    
+            var district = $(this).find(".district").html();    
+            var zone = $(this).find(".zone").html();   
+            var state = $(this).find(".state").html();    
+
+            console.log(area);
+            console.log(district);
+            console.log(zone);
+            console.log(state);
+			console.log(result)
+
+
+            var tek = "<div class='card' style='text-align:center;'> <table class='table datatable-basic table-bordered table-striped table-hover'> <tr> <td >Area</td> <td>"+area+"</td> </tr> <tr> <td>District</td> <td>"+district+" </td> </tr> <tr> <td>Zone</td><td>"+zone+"</td> </tr> <tr> <td>State</td><td>"+state+"</td> </tr> </table> </div>"
+
+			var bt="<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button> <button type='submit' onclick='del("+result+")' data-dismiss='modal' class='btn bg-teal-400'>Delete</button>"
+			console.log("Ujjwal")
+			document.getElementById("blasto").innerHTML=tek;
+			document.getElementById("offo").innerHTML=bt;
+		});
+    }
+
+	function fil()
+		{
+			var areaFil = document.getElementById("areaFil").value;
+			var districtFil = document.getElementById("districtFil").value;
+			var zoneFil = document.getElementById("zoneFil").value;
+			var stateFil = document.getElementById("stateFil").value;
+			
+			console.log(areaFil);
+			console.log(districtFil);
+			console.log(zoneFil);
+			console.log(stateFil);
+			
+			console.log("ujjwal");
+        $.post("/masterArea",
+        {
+			areaFil: areaFil,
+            districtFil: districtFil,
+            zoneFil: zoneFil,
+            stateFil: stateFil,
+            op:"fil"
+        },
+        function (dataFil, status) {
+			console.log("filter kios");
+            console.log(dataFil);
+			check(dataFil);
+            console.log(status);
+        }
+        );
+    }
+
+	function check(tableData)
+		{
+			var table = "<table class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;' id='tbl'> <thead> <th>area</th> <th>district</th> <th>zone</th></thead> <tbody> "
+			for(var i=0;i<tableData.length;i++)
+			{
+
+				table+="<tr> "
+					table+="<td class='area'>"+tableData[i].area+"</td>"	
+					table+="<td class='district'>"+tableData[i].district+"</td>"	                   
+					table+="<td class='zone'>"+tableData[i].zone+"</td>"	                   
+					table+="<td class='state'>"+tableData[i].state+"</td>"	                   
+				table+="</tr>"
+			}
+			table+="</tbody> </table>"
+			document.getElementById("koiBhi").innerHTML=table;
+			var button = "<button class='btn-link teal-400' style='color:teal' onclick=exportData()> Download list</button>"
+			document.getElementById("chlna").innerHTML=button;
+
+		}
+
+	function exportData()
+	{
+			console.log("a")
+			
+			var table = document.getElementById("tbl");
+			console.log(table)
+
+			
+			var rows =[];
+ 
+      
+			for(var i=0,row; row = table.rows[i];i++){
+				
+				column1 = row.cells[0].innerText;
+				column2 = row.cells[1].innerText;
+				column3 = row.cells[2].innerText;
+				column4 = row.cells[3].innerText;
+				rows.push(
+					[
+						column1,
+						column2,
+						column3,
+						column4
+					]
+				);
+ 
+        	}
+			console.log(rows)
+        	csvContent = "data:text/csv;charset=utf-8,";
+         
+			rows.forEach(function(rowArray){
+				row = rowArray.join(",");
+				csvContent += row + "\r\n";
+			});
+ 
+			var encodedUri = encodeURI(csvContent);
+			var link = document.createElement("a");
+			link.setAttribute("href", encodedUri);
+			link.setAttribute("download", "Master_Area.csv");
+			document.body.appendChild(link);
+			link.click();
+	}
+
+
+    </script>`

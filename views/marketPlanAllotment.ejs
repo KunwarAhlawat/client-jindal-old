@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Jindal Trading | Dashboard</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="global_assets/js/main/jquery.min.js"></script>
+	<script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+
+	<script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+
+
+	<script src="assets/js/app.js"></script>
+	<script src="global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="global_assets/js/demo_pages/form_multiselect.js"></script>
+	<!-- /theme JS files -->
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar  navbar-expand-md navbar-dark">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="../../../../global_assets/images/logo_light.png" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li>
+			</ul>
+
+			<span class="badge bg-success ml-md-3 mr-md-auto">Online</span>
+
+			<ul class="navbar-nav">
+
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+						<img src="../../../../global_assets/images/demo/users/face11.jpg" class="rounded-circle mr-2" height="34" alt="">
+						<span><%=username%></span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
+						<div class="dropdown-divider"></div>
+						<a href="/logout" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				Navigation
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user">
+					<div class="card-body">
+						<div class="media">
+							<div class="mr-3">
+								<a href="#"><img src="../../../../global_assets/images/demo/users/face11.jpg" width="38" height="38" class="rounded-circle" alt=""></a>
+							</div>
+
+							<div class="media-body">
+								<div class="media-title font-weight-semibold"><%=username%></div>
+								<div class="font-size-xs opacity-50">
+									<i class="icon-pin font-size-sm"></i> &nbsp;Meerut
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/userDashboard" class="nav-link">
+								<i class="icon-home4"></i>
+								<span>
+									Dashboard
+								</span>
+							</a>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/register" class="nav-link">User-Register</a></li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/registeredUsers" class="nav-link">Register-List</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+							<a href="#" class="nav-link active"><i class="icon-copy"></i> <span>Market-Plan</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanPigIron" class="nav-link">Create Market-Plan</a></li>
+							</ul>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanAllotment" class="nav-link active">Allotment</a></li>
+							</ul>
+							
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketplanUser" class="nav-link active">UserPage</a></li>
+							</ul>
+							
+
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanQuantityLedger" class="nav-link">QuantityLedger</a></li>
+							</ul>
+							
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Master</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterArea" class="nav-link">MasterArea</a></li>
+								<li class="nav-item"><a href="/masterCategories" class="nav-link">MasterCategories</a></li>
+								<li class="nav-item"><a href="/masterGrade" class="nav-link">MasterGrade</a></li>
+								<li class="nav-item"><a href="/masterProducts" class="nav-link">MasterProducts</a></li>
+								<li class="nav-item"><a href="/masterProductGroup" class="nav-link">MasterProductGroup</a></li>
+								<li class="nav-item"><a href="/masterTeams" class="nav-link">MasterTeams</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Customers</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterCustomer" class="nav-link">MasterCustomer</a></li>
+								<li class="nav-item"><a href="/masterFirm" class="nav-link">MasterFirm</a></li>
+								<li class="nav-item nav-item-submenu ">
+									<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Datatables</span></a>
+									<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+										<li class="nav-item"><a href="/customerContact" class="nav-link">Contact</a></li>
+										<li class="nav-item"><a href="/customerCategory" class="nav-link">Categories</a></li>
+										<li class="nav-item"><a href="/customerFirm" class="nav-link">Firms</a></li>
+										<li class="nav-item"><a href="/customerProduct" class="nav-link">Products</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Transport</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/transportDetails" class="nav-link">Details</a></li>
+								<li class="nav-item"><a href="/transportContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/transportStations" class="nav-link">Stations</a></li>
+								<li class="nav-item"><a href="/transportTrucks" class="nav-link">Trucks</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Vendor</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterVendors" class="nav-link">MasterVendors</a></li>
+								<li class="nav-item"><a href="/vendorContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/vendorFirm" class="nav-link">Firm</a></li>
+								<li class="nav-item"><a href="/vendorProduct" class="nav-link">Product</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Employee</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterEmployee" class="nav-link">MasterEmployee</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/contacts" class="nav-link"><i class="icon-copy"></i> <span>Contacts</span></a>
+						</li>
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+			
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+				<div class="page-header-content header-elements-md-inline">
+					<div class="page-title d-flex">
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Market-Plan</span> - Allotment</h4>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content">
+
+				<!-- Dashboard content -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card" style="overflow-x: auto;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Allotments</h5>
+								<% if(level>1) {%>
+									<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_form_vertical">Add new Allotment<i class="icon-play3 ml-2"></i></button>
+								<%}%>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+										<a class="list-icons-item" data-action="remove"></a>
+									</div>
+								</div>
+							</div>
+
+							<% if(data.length>0) {%>
+    
+								<table class="table datatable-basic table-bordered table-striped table-hover" style="table-layout: auto; width: 100%; overflow-x: auto;">
+									
+									<thead>
+										<tr>
+                                            <th>Plan Title</th>
+                                            <th>Filter By</th>
+                                            <th>Plan Status</th>
+                                            <th>Employee</th>
+                                         
+											<th>Start Date</th>
+											<th>End Date</th>
+											<% if(level>2) {%>
+												<th>View</th>
+												<!-- <th>Edit</th>
+												<th>Delete</th> -->
+											<%}else if(level>1){%>
+												<th>Edit</th>
+											<%}else{%>
+											<%}%>
+										</tr>
+									</thead >
+									
+									<% for(var i=0; i<data.length; i++) {%>
+										<tr class="<%= data[i].serialNumber%>Allotment">
+											<%if(level==1) {%>
+												<td class="customerId" ><%= data[i].dataValues.planTitle%></td>
+                                                <td class="phoneNumber" ><%= data[i].dataValues.Area%></td>
+                                                <td class="phoneNumber" ><%= data[i].dataValues.PlanStatus%></td>
+ 											 
+												<td name="product" class="product">
+													<% for (var a = 0; a < adata.length; a++) { %>
+														<% if (adata[a].dataValues.empId == data[i].dataValues.EmpoyeeId) { %>
+															<%=adata[a].dataValues.employeeName %>  
+														 <% } %>
+												   <% } %>
+												</td>
+
+												<td class="meetingDates" ><%= data[i].formattedStartDate%></td>
+
+												<td class="meetingDates" ><%= data[i].formattedEndDate%></td>
+												<%= console.log("dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa , " , data[0].dataValues.allotmentId) %>
+												  <td>
+													<a href="/marketPlanAllotment/<%= data[i].dataValues.allotmentId %>"><button>View</button></a>
+
+                                                    <!-- <button onclick="edit('<%= data[i].allotmentId%>')" name="foo" value="check" >View</button> -->
+                                                </td>
+											<%} else if(level>2) {%>
+                                                <% console.log("Ddddddddddddddddddddddddd" , data[i].dataValues.planTitle) %>
+                                                <td class="customerId" ><%= data[i].dataValues.planTitle%></td>
+                                                <td class="phoneNumber" ><%= data[i].dataValues.Area%></td>
+                                                <td class="phoneNumber" ><%= data[i].dataValues.PlanStatus%></td>
+ 											 
+												<td name="product" class="product">
+													<% for (var a = 0; a < adata.length; a++) { %>
+														<% if (adata[a].dataValues.empId == data[i].dataValues.EmpoyeeId) { %>
+															<%=adata[a].dataValues.employeeName %>  
+														 <% } %>
+												   <% } %>
+												</td>
+
+												<td class="meetingDates" ><%= data[i].formattedStartDate%></td>
+
+												<td class="meetingDates" ><%= data[i].formattedEndDate%></td>
+												<%= console.log("dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa , " , data[0].dataValues.allotmentId) %>
+												  <td>
+													<a href="/marketPlanAllotment/<%= data[i].dataValues.allotmentId %>"><button>View</button></a>
+
+                                                    <!-- <button onclick="edit('<%= data[i].allotmentId%>')" name="foo" value="check" >View</button> -->
+                                                </td>
+ 												<!-- <td>
+                                                    <button onclick="edit('<%= data[i].serialNumber%>Allotment')" name="foo" value="check" >Edit</button>
+                                                </td>
+                                                <td>
+                                                    <button onclick="del('<%= data[i].serialNumber%>')" name="foo" value="check" >Delete</button>
+                                                </td> -->
+											<%}else if(level>1){%>
+                                                <td class="customerId" ><%= data[i].customerId%></td>
+                                                <td class="phoneNumber" ><%= data[i].phoneNumber%></td>
+												<td name="area" class="area">
+													<select name="aSelect" class="aSelect">
+														<option value="<%= data[i].area%>"><%= data[i].area%></option>
+														<% for(var j=0; j<adata.length; j++) {%>
+															<option value="	<%=adata[j].area%>"><%=adata[j].area%></option>
+														<% } %>
+													</select>
+												</td>
+												<td name="product" class="product">
+													<select name="pSelect" class="pSelect">
+														<option value="<%= data[i].area%>"><%= data[i].product%></option>
+														<% for(var j=0; j<pdata.length; j++) {%>
+															<option value="	<%=pdata[j].productName%>"><%=pdata[j].productName%></option>
+														<% } %>
+													</select>
+												</td>
+                                                <td class="representative" ><%= data[i].representative%></td>
+                                                <td class="meetingDates" ><%= data[i].meetingDates%></td>
+                                                <td class="currentIssue" ><%= data[i].currentIssue%></td>
+                                                <button onclick="edit('<%= data[i].serialNumber %>Allotment')" name="foo" value="check" >Edit</button>
+                                                </td>
+											<%}%>
+										</tr>
+									<% } %>
+								</table>
+							
+							<%}else{%>
+								<h4>No data</h4>
+							<%}%>
+
+
+								
+									
+
+
+
+
+							
+							<!-- Vertical form modal -->
+							<div id="modal_form_vertical" class="modal fade" tabindex="-1">
+							
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">New Allotment </h5>    
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+							            <form action="/marketPlanAllotment" method="POST">
+								            <div class="modal-body">
+									            <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-6">
+												            <label>customerId </label>
+												            <input type="text" placeholder="customerId" class="form-control customerId" name="customerId" id="customerId">
+											            </div>
+											            
+											            <div class="col-sm-6">
+												            <label>phoneNumber </label>
+												            <input type="text" placeholder="phoneNumber" class="form-control phoneNumber" name="phoneNumber" id="phoneNumber">
+											            </div>
+                                                        
+										            </div>
+									            </div>
+                                                
+									            <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <label>area</label>
+                                                            <select id="area" name="area" class="form-control area" id="area">
+                                                                <option value="" disabled selected>-Select-</option>
+                                                                <% for(var i=0; i<adata.length; i++) {%>
+                                                                    <option value="<%=adata[i].area%>"><%=adata[i].area%></option>
+                                                                    <% } %>
+                                                                </select>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label>product</label>
+                                                            <select id="product" name="product" class="form-control product" id="product">
+                                                                <option value="" disabled selected>-Select-</option>
+                                                                <% for(var i=0; i<pdata.length; i++) {%>
+                                                                    <option value="<%=pdata[i].productName%>"><%=pdata[i].productName%></option>
+                                                                    <% } %>
+                                                            </select>                        	
+                                                        </div>
+                                                            
+                                                    </div>
+                                                </div>
+                                                        
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <label>representative </label>
+                                                            <input type="text" placeholder="representative" class="form-control representative" name="representative" id="representative">
+                                                        </div> 
+
+                                                        <div class="col-sm-6">
+                                                            <label>meetingDates </label>
+                                                            <input type="text" placeholder="meetingDates" class="form-control meetingDates" name="meetingDates" id="meetingDates">
+                                                        </div>                                
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <label>currentIssue </label>
+                                                            <input type="text" placeholder="currentIssue" class="form-control currentIssue" name="currentIssue" id="currentIssue">
+                                                        </div>                              
+                                                    </div>
+                                                </div>
+									            
+								            </div>
+
+								            <div class="modal-footer">
+									            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+									            <button type="submit" class="btn bg-primary">Add</button>
+								            </div>
+							            </form>
+						            </div>
+					            </div>
+				            </div>
+
+
+						
+
+			            </div>
+		            </div>
+					
+		        </div>
+				<!-- /dashboard content -->
+
+			</div>
+			<!-- /content area -->
+
+
+			<!-- Footer -->
+			<!-- /footer -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	
+</body>
+
+</html>
+
+
+<script>
+    function edit(value)
+    {
+        console.log(`EDIT  ${value}`);
+        var sub = 'Allotment';
+        var result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {
+            console.log("new yr");
+            var customerId = $(this).find(".customerId").html();   
+            var phoneNumber = $(this).find(".phoneNumber").html();   
+            var area = $(this).find(".aSelect").val();    
+            var product = $(this).find(".pSelect").val();    
+            var representative = $(this).find(".representative").html();     
+            var meetingDates = $(this).find(".meetingDates").html();     
+            var currentIssue = $(this).find(".currentIssue").html();     
+            console.log(customerId);
+            console.log(phoneNumber);
+            console.log(area);
+            console.log(product);
+            console.log(representative);
+            console.log(meetingDates);
+            console.log(currentIssue);
+            console.log("ujjwal");
+            $.post("/marketPlanAllotment",
+            {
+                id: result,
+                customerId:customerId,
+                phoneNumber:phoneNumber,
+                area: area,
+                product:product,
+                representative: representative,
+                meetingDates: meetingDates,
+                currentIssue: currentIssue,
+                op:"edt"
+            },
+            function (data, status) {
+                console.log("check edit wala data");
+                console.log(data);
+                console.log(status);
+            }
+            );
+        });
+    }
+    
+</script>
+
+<script>
+    
+    function del(value)
+    {
+        console.log(value);
+        $.post("/marketPlanAllotment",
+            {
+                id: value,
+                op:"del"
+            },
+            function (data, status) {
+                console.log(data);
+                console.log(status);
+            }
+            );
+    }
+
+	
+</script>
+
+
+</script>

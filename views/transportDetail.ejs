@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Jindal Trading | Dashboard</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="global_assets/js/main/jquery.min.js"></script>
+	<script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+
+	<script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+
+
+	<script src="assets/js/app.js"></script>
+	<script src="global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="global_assets/js/demo_pages/form_multiselect.js"></script>
+	<!-- /theme JS files -->
+
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-dark">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="../../../../global_assets/images/logo_light.png" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li>
+			</ul>
+
+			<span class="badge bg-success ml-md-3 mr-md-auto">Online</span>
+
+			<ul class="navbar-nav">
+
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+						<img src="../../../../global_assets/images/demo/users/face11.jpg" class="rounded-circle mr-2" height="34" alt="">
+						<span><%=username%></span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
+						<div class="dropdown-divider"></div>
+						<a href="/logout" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				Navigation
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user">
+					<div class="card-body">
+						<div class="media">
+							<div class="mr-3">
+								<a href="#"><img src="../../../../global_assets/images/demo/users/face11.jpg" width="38" height="38" class="rounded-circle" alt=""></a>
+							</div>
+
+							<div class="media-body">
+								<div class="media-title font-weight-semibold"><%=username%></div>
+								<div class="font-size-xs opacity-50">
+									<i class="icon-pin font-size-sm"></i> &nbsp;Meerut
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/userDashboard" class="nav-link">
+								<i class="icon-home4"></i>
+								<span>
+									Dashboard
+								</span>
+							</a>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/register" class="nav-link">User-Register</a></li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/registeredUsers" class="nav-link">Register-List</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Market-Plan</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanPigIron" class="nav-link">Pig-Iron</a></li>
+							</ul>
+							
+							<!-- <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+							   <li class="nav-item"><a href="/marketPlanAllotment" class="nav-link">Allotment</a></li>
+						    </ul> -->
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanQuantityLedger" class="nav-link">QuantityLedger</a></li>
+							</ul>
+						</li>
+						
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Master</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterArea" class="nav-link">MasterArea</a></li>
+								<li class="nav-item"><a href="/masterCategories" class="nav-link">MasterCategories</a></li>
+								<li class="nav-item"><a href="/masterGrade" class="nav-link">MasterGrade</a></li>
+								<li class="nav-item"><a href="/masterProducts" class="nav-link">MasterProducts</a></li>
+								<li class="nav-item"><a href="/masterProductGroup" class="nav-link">MasterProductGroup</a></li>
+								<li class="nav-item"><a href="/masterTeams" class="nav-link">MasterTeams</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Customers</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterCustomer" class="nav-link">MasterCustomer</a></li>
+								<li class="nav-item"><a href="/masterFirm" class="nav-link">MasterFirm</a></li>
+								<li class="nav-item nav-item-submenu ">
+									<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Datatables</span></a>
+									<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+										<li class="nav-item"><a href="/customerContact" class="nav-link">Contact</a></li>
+										<li class="nav-item"><a href="/customerCategory" class="nav-link">Categories</a></li>
+										<li class="nav-item"><a href="/customerFirm" class="nav-link">Firms</a></li>
+										<li class="nav-item"><a href="/customerProduct" class="nav-link">Products</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+							<a href="#" class="nav-link active"><i class="icon-copy"></i> <span>Transport</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/transportDetails" class="nav-link active">Details</a></li>
+								<li class="nav-item"><a href="/transportContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/transportStations" class="nav-link">Stations</a></li>
+								<li class="nav-item"><a href="/transportTrucks" class="nav-link">Trucks</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Vendor</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterVendors" class="nav-link">MasterVendors</a></li>
+								<li class="nav-item"><a href="/vendorContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/vendorFirm" class="nav-link">Firm</a></li>
+								<li class="nav-item"><a href="/vendorProduct" class="nav-link">Product</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Employee</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterEmployee" class="nav-link">MasterEmployee</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/contacts" class="nav-link"><i class="icon-copy"></i> <span>Contacts</span></a>
+						</li>
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+			
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+				<div class="page-header-content header-elements-md-inline">
+					<div class="page-title d-flex">
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Transport</span> - Details</h4>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content">
+
+				<!-- Dashboard content -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Style combinations</h5>
+								<% if(level>2) {%>
+									<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_form_vertical">Add new Transporter</button></td>
+								<%}%>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+										<a class="list-icons-item" data-action="remove"></a>
+									</div>
+								</div>
+							</div>
+
+							<% if(data.length>0) {%>
+    
+								<table class="table datatable-basic table-bordered table-striped table-hover">
+									
+									<thead>
+										<tr>
+											<th>transportName</th>
+                                            <th>transportArea</th>
+                                            <th>transportStation</th>
+                                            <th>transportOwner</th>
+                                            <th>bankName</th>
+                                            <th>bankAccountNumber</th>
+                                            <th>ifscCode</th>
+											<% if(level>2) {%>
+												<th>Edit</th>
+												<th>Delete</th>
+											<%}else if(level>1){%>
+												<th>Edit</th>
+											<%}else{%>
+											<%}%>
+										</tr>
+									</thead >
+									
+									<% for(var i=0; i<data.length; i++) {%>
+										<tr  class="<%= data[i].transportId%>transport">
+                                            <%if(level==1) {%>
+                                                <td class="transportName"><%= data[i].transportName%></td>
+												<td class="transportArea">
+													<% for (var a = 0; a < areaData.length; a++) { %>
+														<% if (areaData[a].areaId == data[i].transportArea) { %>
+															<%=areaData[a].area %>
+														<% } %>
+													<% } %>
+												</td>
+												<td class="transportStation"><%= data[i].transportStation%></td>
+												<td class="transportOwner"><%= data[i].transportOwner%></td>
+												<td class="bankName"><%= data[i].bankName%></td>
+												<td class="bankAccountNumber"><%= data[i].bankAccountNumber%></td>
+												<td class="ifscCode"><%= data[i].ifscCode%></td>
+                                            <%} else if(level>2) {%>
+                                                <td class="transportName"><%= data[i].transportName%></td>
+                                                <td class="transportArea">
+													<% for (var a = 0; a < areaData.length; a++) { %>
+														<% if (areaData[a].areaId == data[i].transportArea) { %>
+															<%=areaData[a].area %>
+														<% } %>
+													<% } %>
+												</td>
+                                                <td class="transportStation"><%= data[i].transportStation%></td>
+                                                <td class="transportOwner"><%= data[i].transportOwner%></td>
+                                                <td class="bankName"><%= data[i].bankName%></td>
+                                                <td class="bankAccountNumber"><%= data[i].bankAccountNumber%></td>
+                                                <td class="ifscCode"><%= data[i].ifscCode%></td>
+                                                <td>
+                                                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" onclick="eedit('<%= data[i].transportId%>transport')">Edit</button>
+                                                </td>
+                                                <td >  
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_del" onclick="ddel('<%= data[i].transportId%>transport')">Delete</button>
+                                                </td>
+                                            <%}else if(level>1){%>
+                                                <td class="transportName"><%= data[i].transportName%></td>
+                                                <td class="transportArea">
+													<% for (var a = 0; a < areaData.length; a++) { %>
+														<% if (areaData[a].areaId == data[i].transportArea) { %>
+															<%=areaData[a].area %>
+														<% } %>
+													<% } %>
+												</td>
+                                                <td class="transportStation"><%= data[i].transportStation%></td>
+                                                <td class="transportOwner"><%= data[i].transportOwner%></td>
+                                                <td class="bankName"><%= data[i].bankName%></td>
+                                                <td class="bankAccountNumber"><%= data[i].bankAccountNumber%></td>
+                                                <td class="ifscCode"><%= data[i].ifscCode%></td>
+												<td>
+                                                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" onclick="eedit('<%= data[i].transportId%>transport')">Edit</button>
+                                                </td>
+                                                
+                                            <%}%>
+                                            </tr>
+									<% } %>
+								</table>
+							
+							<%}else{%>
+								<h4>No new data</h4>
+							<%}%>
+							
+
+							<div class="form-group">
+								<div class="row">
+									
+									<div class="col-sm-2">
+										<label for="transportArea" class="form-control"><span class="font-weight-semibold">transportArea</span></label>
+										<select name="transportArea" class="form-control multiselect-filtering  transportArea" id="transportAreaFil" multiple="multiple" data-fouc>
+											<% let dataValues = data.reduce((acc, curr) => {
+												if (curr.transportArea && !acc.includes(curr.transportArea)) {
+												  acc.push(curr.transportArea);
+												}
+												return acc;
+											}, []); %>
+											
+											<% dataValues.forEach(function(value) { %>
+											<option value="<%= value %>">
+												<% for (var a = 0; a < areaData.length; a++) { %>
+													<% if (areaData[a].areaId == value) { %>
+														<%=areaData[a].area %>
+													<% } %>
+												<% } %>
+											</option>
+											<% }); %>
+										</select>
+									</div>
+																
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<button onclick="fil()" class="form-control bg-teal-400" type="button">Filter</button>
+								</div>
+							</div>
+							<div class="card" style="overflow-x: auto;" id="koiBhi"></div>
+							<div class="card" style="overflow-x: auto;" id="chlna"></div>
+							
+							<!-- Vertical form modal -->
+							<div id="modal_form_vertical" class="modal fade" tabindex="-1">
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">New Transporter</h5>
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+							            <form action="/transportDetails" method="POST">
+								            <div class="modal-body">
+									            <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-6">
+												            <label>Transport Name<span class="text-danger">*</span></label>
+												            <input required type="text"class="form-control transportName" name="transportName" id="transportName">
+											            </div>
+											            <div class="col-sm-6">
+												            <label>Transport Area<span class="text-danger">*</span></label>
+															<select required id="transportArea" name="transportArea" class="form-control transportArea">
+																<option value="" disabled selected>-Select-</option>
+																<% for(var i=0; i<areaData.length; i++) {%>
+																	<option value="<%=areaData[i].areaId%>"><%=areaData[i].area%></option>
+																<% } %>
+															</select>
+											            </div>
+										            </div>
+										        </div>
+                                                <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-6">
+												            <label>Transport Station</label>
+												            <input type="text"class="form-control transportStation" name="transportStation" id="transportStation">
+											            </div>
+											            <div class="col-sm-6">
+												            <label>Transport Owner</label>
+												            <input type="text"class="form-control transportOwner" name="transportOwner" id="transportOwner">
+											            </div>
+										            </div>
+										        </div>
+                                                <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-6">
+												            <label>Bank Name<span class="text-danger">*</span></label>
+												            <input type="text" required class="form-control bankName" name="bankName" id="bankName">
+											            </div>
+											            <div class="col-sm-6">
+												            <label>ifsc Code<span class="text-danger">*</span></label>
+												            <input type="text" required class="form-control ifscCode" name="ifscCode" id="ifscCode">
+											            </div>
+										            </div>
+										        </div>
+                                                <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-10">
+												            <label>Bank Account Number<span class="text-danger">*</span></label>
+												            <input type="number" required class="form-control bankAccountNumber" name="bankAccountNumber" id="bankAccountNumber">
+											            </div>
+										            </div>
+									            </div>
+
+												<legend class="font-weight-semibold text-uppercase font-size-sm">Contact</legend>
+
+												<div class="form-group"  id="contactsContainer">
+													<div class="row">
+														<div class="col-sm-3">
+															<label>Contact Name<span class="text-danger">*</span></label>
+															<input type="text" class="form-control contactName" name="contactName[]" id="contactName" >
+														</div>
+														<div class="col-sm-2">
+															<label>Designation<span class="text-danger">*</span></label>
+															<input type="text" class="form-control designation" name="designation[]" id="designation" >
+														</div>
+														<div class="col-sm-3">
+															<label>Mobile Number<span class="text-danger">*</span></label>
+															<input type="tel" placeholder="10-digit-format" class="form-control contact" name="contact[]" id="contact" pattern="[0-9]{10}">
+														</div>
+														<div class="col-sm-2">
+															<label>Email</label>
+															<input type="email" class="form-control email" name="email[]" id="email" >
+														</div>
+
+														<div class="col-sm-2">
+															<button type="button" class="float-right" id="addContactBtn">Add Contact</button>
+														</div>
+
+													</div>
+												</div>
+
+												<legend class="font-weight-semibold text-uppercase font-size-sm">Station</legend>
+
+                                                <div class="form-group">
+													<div class="row">
+														<div class="col-sm-6">
+															<label>transportSource</label>
+															<input type="text"class="form-control transportSource" name="transportSource" id="transportSource">
+														</div>
+														<div class="col-sm-6">
+															<label>transportDestination</label>
+															<input type="text"class="form-control transportDestination" name="transportDestination" id="transportDestination">
+														</div>
+										            </div>
+									            </div>
+                                                
+												<legend class="font-weight-semibold text-uppercase font-size-sm">Truck Information</legend>
+
+												<div class="form-group" id="trucksContainer">
+													<div class="row">
+														<div class="col-sm-4">
+															<label>Truck Number<span class="text-danger">*</span></label>
+															<input required type="text" class="form-control transportTruck" name="transportTruck[]" id="transportTruck">
+														</div>
+														<div class="col-sm-4">
+															<label>Capacity<span class="text-danger">*</span></label>
+															<input required type="text" class="form-control capacity" name="capacity[]" id="capacity">
+														</div>
+														<div class="col-sm-4">
+															<label>Truck Body<span class="text-danger">*</span></label>
+															<select required name="bodyType[]" class="form-control bodyType" id="bodyType">
+																<option value="" disabled selected>-Select-</option>
+																<option value="FULL">FULL</option>
+																<option value="HALF">HALF</option>
+															</select>
+														</div>
+													
+														<div class="col-sm-4">
+															<label>Owner Name<span class="text-danger">*</span></label>
+															<input type="text" class="form-control ownerName" name="ownerName[]" id="ownerName">
+														</div>
+														<div class="col-sm-4">
+															<label>Driver Name<span class="text-danger">*</span></label>
+															<input type="text" class="form-control driverName" name="driverName[]" id="driverName">
+														</div>
+
+														<div class="col-sm-4">
+															<label>Owner Mobile Number<span class="text-danger">*</span></label>
+															<input required pattern="[0-9]{10}" placeholder="10-digit-format" type="tel" class="form-control ownerMobileNumber" name="ownerMobileNumber[]" id="ownerMobileNumber">
+														</div>
+														<div class="col-sm-4">
+															<label>Driver Mobile Number<span class="text-danger">*</span></label>
+															<input required pattern="[0-9]{10}" placeholder="10-digit-format" type="tel" class="form-control driverMobileNumber" name="driverMobileNumber[]" id="driverMobileNumber">
+														</div>
+														<div class="col-sm-4">
+															<button type="button" class="float-right" id="addTruckBtn" style="margin-top: 20px; padding:8px">Add Truck</button>
+														</div>
+													</div>
+													<br>
+												</div>
+                                                
+								            </div>
+
+								            <div class="modal-footer">
+									            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+									            <button type="submit" class="btn bg-primary">Add</button>
+								            </div>
+							            </form>
+						            </div>
+					            </div>
+				            </div>
+
+
+
+							
+							<script>
+								// Function to add dynamic truck input fields
+								function addTruckInput() {
+									var container = document.getElementById("trucksContainer");
+							
+									// Create a new row
+									var row = document.createElement("div");
+									row.className = "row";
+							
+									// Create truck number input field
+									var col1 = document.createElement("div");
+									col1.className = "col-sm-4";
+									var truckNumberLabel = document.createElement("label");
+									truckNumberLabel.textContent = "Truck Number";
+									var truckNumberInput = document.createElement("input");
+									truckNumberInput.type = "text";
+									truckNumberInput.className = "form-control transportTruck";
+									truckNumberInput.name = "transportTruck[]";
+									truckNumberInput.placeholder = "Truck Number";
+									col1.appendChild(truckNumberLabel);
+									col1.appendChild(truckNumberInput);
+									row.appendChild(col1);
+							
+									// Create capacity input field
+									var col2 = document.createElement("div");
+									col2.className = "col-sm-4";
+									var capacityLabel = document.createElement("label");
+									capacityLabel.textContent = "Capacity";
+									var capacityInput = document.createElement("input");
+									capacityInput.type = "text";
+									capacityInput.className = "form-control capacity";
+									capacityInput.name = "capacity[]";
+									capacityInput.placeholder = "Capacity";
+									col2.appendChild(capacityLabel);
+									col2.appendChild(capacityInput);
+									row.appendChild(col2);
+							
+									// Create truck body select field
+									var col3 = document.createElement("div");
+									col3.className = "col-sm-4";
+									var truckBodyLabel = document.createElement("label");
+									truckBodyLabel.textContent = "Truck Body";
+									var truckBodySelect = document.createElement("select");
+									truckBodySelect.required = true;
+									truckBodySelect.className = "form-control bodyType";
+									truckBodySelect.name = "bodyType[]";
+									var option1 = document.createElement("option");
+									option1.value = "";
+									option1.disabled = true;
+									option1.selected = true;
+									option1.textContent = "-Select-";
+									truckBodySelect.appendChild(option1);
+									var option2 = document.createElement("option");
+									option2.value = "FULL";
+									option2.textContent = "FULL";
+									truckBodySelect.appendChild(option2);
+									var option3 = document.createElement("option");
+									option3.value = "HALF";
+									option3.textContent = "HALF";
+									truckBodySelect.appendChild(option3);
+									col3.appendChild(truckBodyLabel);
+									col3.appendChild(truckBodySelect);
+									row.appendChild(col3);
+							
+									//owner Name
+									var col4 = document.createElement("div");
+									col4.className = "col-sm-4";
+									var ownerNameLabel = document.createElement("label");
+									ownerNameLabel.textContent = "Owner Name";
+									var ownerNameInput = document.createElement("input");
+									ownerNameInput.type = "text";
+									ownerNameInput.className = "form-control ownerName";
+									ownerNameInput.name = "ownerName[]";
+									ownerNameInput.placeholder = "Owner Name";
+									col4.appendChild(ownerNameLabel);
+									col4.appendChild(ownerNameInput);
+									row.appendChild(col4);
+							
+									//driver Name
+									var col5 = document.createElement("div");
+									col5.className = "col-sm-4";
+									var driverNameLabel = document.createElement("label");
+									driverNameLabel.textContent = "Driver Name";
+									var driverNameInput = document.createElement("input");
+									driverNameInput.type = "text";
+									driverNameInput.className = "form-control driverName";
+									driverNameInput.name = "driverName[]";
+									driverNameInput.placeholder = "Driver Name";
+									col5.appendChild(driverNameLabel);
+									col5.appendChild(driverNameInput);
+									row.appendChild(col5);
+
+									// Create owner mobile number input field
+									var col6 = document.createElement("div");
+									col6.className = "col-sm-4";
+									var ownerMobileNumberLabel = document.createElement("label");
+									ownerMobileNumberLabel.textContent = "Owner Mobile Number";
+									var ownerMobileNumberInput = document.createElement("input");
+									ownerMobileNumberInput.required = true;
+									ownerMobileNumberInput.pattern = "[0-9]{10}";
+									ownerMobileNumberInput.placeholder = "Owner Mobile Number";
+									ownerMobileNumberInput.type = "tel";
+									ownerMobileNumberInput.className = "form-control ownerMobileNumber";
+									ownerMobileNumberInput.name = "ownerMobileNumber[]";
+									col6.appendChild(ownerMobileNumberLabel);
+									col6.appendChild(ownerMobileNumberInput);
+									row.appendChild(col6);
+							
+									// Create driver mobile number input field
+									var col7 = document.createElement("div");
+									col7.className = "col-sm-4";
+									var driverMobileNumberLabel = document.createElement("label");
+									driverMobileNumberLabel.textContent = "Driver Mobile Number";
+									var driverMobileNumberInput = document.createElement("input");
+									driverMobileNumberInput.required = true;
+									driverMobileNumberInput.pattern = "[0-9]{10}";
+									driverMobileNumberInput.placeholder = "Driver Mobile Number";
+									driverMobileNumberInput.type = "tel";
+									driverMobileNumberInput.className = "form-control driverMobileNumber";
+									driverMobileNumberInput.name = "driverMobileNumber[]";
+									col7.appendChild(driverMobileNumberLabel);
+									col7.appendChild(driverMobileNumberInput);
+									row.appendChild(col7);
+							
+									// Create remove button
+									var col6 = document.createElement("div");
+									col6.className = "col-sm-4";
+									var removeBtn = document.createElement("button");
+									removeBtn.type = "button";
+									removeBtn.className = "btn btn-danger float-right";
+									removeBtn.style.marginTop = "20px";
+									removeBtn.style.padding = "8px";
+									removeBtn.textContent = "Remove Truck";
+									removeBtn.addEventListener("click", function() {
+										container.removeChild(row);
+										container.removeChild(br1);
+										container.removeChild(hr);
+										container.removeChild(br2);
+									});
+									col6.appendChild(removeBtn);
+									row.appendChild(col6);
+							
+									var br1 = document.createElement("br");
+									var br2 = document.createElement("br");
+
+									// Create <hr> element
+									var hr = document.createElement("hr");
+
+									// Append the row and elements to the trucks container
+									container.appendChild(br1);
+									container.appendChild(hr);
+									container.appendChild(br2);
+									container.appendChild(row);
+								}
+							
+								// Event listener for the "Add Truck" button
+								document.getElementById("addTruckBtn").addEventListener("click", addTruckInput);
+							</script>
+							
+													
+							<script>
+								// Function to add dynamic contact input fields
+								function addContactInput() {
+									var container = document.getElementById("contactsContainer");
+							
+									// Create a new row
+									var row = document.createElement("div");
+									row.className = "row";
+							
+									// Create name input field
+									var col1 = document.createElement("div");
+									col1.className = "col-sm-3";
+									var contactNameInput = document.createElement("input");
+									contactNameInput.type = "text";
+									contactNameInput.className = "form-control contactName";
+									contactNameInput.name = "contactName[]";
+									col1.appendChild(contactNameInput);
+									row.appendChild(col1);
+							
+									// Create designation input field
+									var col2 = document.createElement("div");
+									col2.className = "col-sm-2";
+									var designationInput = document.createElement("input");
+									designationInput.type = "text";
+									designationInput.className = "form-control designation";
+									designationInput.name = "designation[]";
+									col2.appendChild(designationInput);
+									row.appendChild(col2);
+							
+									// Create contact input field
+									var col3 = document.createElement("div");
+									col3.className = "col-sm-3";
+									var contactInput = document.createElement("input");
+									contactInput.type = "tel";
+									contactInput.className = "form-control contact";
+									contactInput.name = "contact[]";
+									contactInput.pattern = "[0-9]{10}";
+									contactInput.placeholder = "10-digit-format";
+									col3.appendChild(contactInput);
+									row.appendChild(col3);
+							
+									// Create email input field
+									var col4 = document.createElement("div");
+									col4.className = "col-sm-2";
+									var emailInput = document.createElement("input");
+									emailInput.type = "email";
+									emailInput.className = "form-control email";
+									emailInput.name = "email[]";
+									col4.appendChild(emailInput);
+									row.appendChild(col4);
+							
+									// Create remove button
+									var col5 = document.createElement("div");
+									col5.className = "col-sm-2";
+									var removeBtn = document.createElement("button");
+									removeBtn.type = "button";
+									removeBtn.className = "btn btn-danger float-right";
+									removeBtn.textContent = "Remove";
+									removeBtn.addEventListener("click", function() {
+										container.removeChild(row);
+									});
+									col5.appendChild(removeBtn);
+									row.appendChild(col5);
+							
+									// Append the row to the contacts container
+									container.appendChild(row);
+								}
+							
+								// Event listener for the "Add Contact" button
+								document.getElementById("addContactBtn").addEventListener("click", addContactInput);
+							</script>
+							
+							
+
+
+
+							<!-- EDIT modal -->
+							<div id="modal_edit" class="modal fade" tabindex="-1">
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">Edit Customer Product</h5>
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+								        <div class="modal-body" id="blast">
+									        
+								        </div>
+
+								        <div class="modal-footer" id="off">
+									        
+								        </div>
+						            </div>
+					            </div>
+				            </div>
+
+
+							<!-- DEL modal -->
+							<div id="modal_del" class="modal fade" tabindex="-1">
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">Delete Customer Product</h5>
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+								        <div class="modal-body" id="blasto">
+									        
+								        </div>
+
+								        <div class="modal-footer" id="offo">
+									        
+								        </div>
+						            </div>
+					            </div>
+				            </div>
+
+
+
+
+			            </div>
+		            </div>
+					
+		        </div>
+				<!-- /dashboard content -->
+
+			</div>
+			<!-- /content area -->
+
+
+			<!-- Footer -->
+			<!-- /footer -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+</body>
+
+</html>
+
+
+<script>
+    function edit(value)
+    {
+        console.log(value);
+        var etransportName = document.getElementById("etransportName").value;
+        var etransportArea = document.getElementById("etransportArea").value;
+        var etransportStation = document.getElementById("etransportStation").value;
+        var etransportOwner = document.getElementById("etransportOwner").value;
+        var ebankName = document.getElementById("ebankName").value;
+        var ebankAccountNumber = document.getElementById("ebankAccountNumber").value;
+        var eifscCode = document.getElementById("eifscCode").value;
+
+		$.post("/transportDetails",
+		{
+			id: value,
+			transportName: etransportName,
+			transportArea: etransportArea,
+			transportStation: etransportStation,
+			transportOwner: etransportOwner,
+			bankName: ebankName,
+			bankAccountNumber: ebankAccountNumber,
+			ifscCode: eifscCode,
+			op:"edt"
+		},
+		function (data, status) {
+			console.log(data);
+			console.log(status);
+			setInterval('refreshPage()', 500);
+		}
+		);
+    }
+</script>
+
+<script>
+    function del(value)
+    {
+        console.log(value);
+        $.post("/transportDetails",
+            {
+                id: value,
+                op:"del"
+            },
+            function (data, status) {
+                console.log(data);
+                console.log(status);
+				setInterval('refreshPage()', 500);
+            }
+            );
+    }
+
+	function refreshPage() {
+    	location.reload(true);
+	}
+
+
+	function eedit(value)
+    {
+        console.log(value);
+        var sub = 'transport';
+        var result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+
+			var transportName = $(this).find(".transportName").html();    
+            var transportArea = $(this).find(".transportArea").html();    
+            var transportStation = $(this).find(".transportStation").html();    
+            var transportOwner = $(this).find(".transportOwner").html();    
+            var bankName = $(this).find(".bankName").html();    
+            var bankAccountNumber = $(this).find(".bankAccountNumber").html();    
+            var ifscCode = $(this).find(".ifscCode").html();    
+            
+			console.log("++++++++++++++++++++++++++++++++++++++++")
+			console.log(result)
+			
+			
+            var tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >transportName</td> <td><input type="text" value="'+transportName+'" class="form-control etransportName" name="etransportName" id="etransportName"></td> </tr> <tr> <td>transportArea</td> <td><input type="text" value="'+transportArea+'" class="form-control etransportArea" name="etransportArea" id="etransportArea"></td> </tr> <tr> <td>transportStation</td> <td><input type="text" value="'+transportStation+'" class="form-control etransportStation" name="etransportStation" id="etransportStation"></td> </tr> <tr> <td>transportOwner</td> <td><input type="text" value="'+transportOwner+'" class="form-control etransportOwner" name="etransportOwner" id="etransportOwner"></td> </tr> <tr> <td>bankName</td> <td><input type="text" value="'+bankName+'" class="form-control ebankName" name="ebankName" id="ebankName"></td> </tr> <tr> <td>bankAccountNumber</td> <td><input type="number" value="'+bankAccountNumber+'" class="form-control ebankAccountNumber" name="ebankAccountNumber" id="ebankAccountNumber"></td> </tr> <tr> <td>ifscCode</td> <td><input type="text" value="'+ifscCode+'" class="form-control eifscCode" name="eifscCode" id="eifscCode"></td> </tr> </table> </div>'
+				
+			var bt="<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button> <button type='submit' onclick='edit("+result+")' data-dismiss='modal' class='btn bg-teal-400'>Save</button>"
+			console.log("Ujjwal")
+			document.getElementById("blast").innerHTML=tek;
+			document.getElementById("off").innerHTML=bt;
+			console.log("++++++++++++++++++++++++++++++++++++++++")
+			
+		});
+    }
+	
+	function ddel(value)
+    {
+        console.log(value);
+        var sub = 'transport';
+        var result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+			var transportName = $(this).find(".transportName").html();    
+            var transportArea = $(this).find(".transportArea").html();    
+            var transportStation = $(this).find(".transportStation").html();    
+            var transportOwner = $(this).find(".transportOwner").html();    
+            var bankName = $(this).find(".bankName").html();    
+            var bankAccountNumber = $(this).find(".bankAccountNumber").html();    
+            var ifscCode = $(this).find(".ifscCode").html();    
+                
+			console.log(result)
+
+
+            var tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >transportName</td> <td>'+transportName+'</td> </tr> <tr> <td>transportArea</td> <td>'+transportArea+' </td> </tr> <tr> <td>transportStation</td> <td>'+transportStation+' </td> </tr> <tr> <td>transportOwner</td> <td>'+transportOwner+' </td> </tr> <tr> <td>bankName</td> <td>'+bankName+' </td> </tr> <tr> <td>bankAccountNumber</td> <td>'+bankAccountNumber+' </td> </tr> <tr> <td>ifscCode</td> <td>'+ifscCode+' </td> </tr> </table> </div>'
+
+			var bt="<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button> <button type='submit' onclick='del("+result+")' data-dismiss='modal' class='btn bg-teal-400'>Delete</button>"
+			console.log("Ujjwal")
+			document.getElementById("blasto").innerHTML=tek;
+			document.getElementById("offo").innerHTML=bt;
+
+		});
+    }
+
+	function fil()
+	{
+		var mySelTransArea = document.getElementById("transportAreaFil").value;
+		console.log(mySelTransArea);
+		console.log("ujjwal");
+        $.post("/transportDetails",
+        {
+			transportAreaFil: mySelTransArea,
+            op:"fil"
+        },
+        function (dataFil, status) {
+			console.log("filter kios");
+            console.log(dataFil);
+			check(dataFil);
+            console.log(status);
+        }
+        );
+    }
+
+	async function check(tableData) {
+		var areaData = <%-JSON.stringify(areaData)%>;
+		console.log(areaData)
+		var table = "<table class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;' id='tbl'> <thead> <th>Transport Name</th> <th>Area</th> <th>TransportOwner</th> <th>Trucks</th> </thead> <tbody> ";
+	  
+		for (var i = 0; i < tableData.length; i++) {
+		  table += "<tr>";
+		  table += "<td class='transportName'>" + tableData[i].transportName + "</td>";
+		  for (var a = 0; a < areaData.length; a++) {
+			console.log("a")
+			console.log(areaData[a].areaId)
+			console.log(tableData[i].transportArea)
+			if (areaData[a].areaId == tableData[i].transportArea) {
+				console.log("b")
+			  table += "<td class='area'>" + areaData[a].area + "</td>";
+			  break;
+			}
+		  }
+		  table += "<td class='status'>" + tableData[i].transportOwner + "</td>";
+	  
+		  // Make AJAX call to fetch contact details using async/await
+		  var truckDetails = await fetchTruckDetails(tableData[i].transportId);
+		  var ct = "<td>";
+		  for (var l = 0; l < truckDetails.length; l++) {
+			if(l!=0) ct+="<hr>";
+			ct += "<p>" + truckDetails[l].transportTruck + "</p>";
+			ct += "<p> Owner Mobile : " + truckDetails[l].ownerMobileNumber + "</p>";
+			ct += "<p> Driver Mobile : " + truckDetails[l].driverMobileNumber + "</p>";
+			ct += "<p> BodyType : " + truckDetails[l].bodyType + "</p>";
+			ct += "<p> Capacity : " + truckDetails[l].capacity + "</p>";
+		  }
+		  ct += "</td>";
+		  table += ct;
+	  
+	  
+		  table += "</tr>";
+		}
+	  
+		table += "</tbody> </table>";
+		document.getElementById("koiBhi").innerHTML = table;
+	  
+		var button = "<button class='btn-link' onclick=exportData()> Download list</button>";
+		document.getElementById("chlna").innerHTML = button;
+	  }
+
+	  function fetchTruckDetails(transportId) {
+		return new Promise(function (resolve, reject) {
+		  $.post("/transportDetails", {
+			transportId: transportId,
+			op: "filterTruck"
+		  }, function (data, status) {
+			console.log(data);
+			console.log(status);
+	  
+			// Parse the contact details from the response data
+			var truckDetails = data.map(function (item) {
+			  return {
+				transportName: item.transportName,
+				transportTruck: item.transportTruck,
+				ownerMobileNumber: item.ownerMobileNumber,
+				driverMobileNumber: item.driverMobileNumber,
+				bodyType: item.bodyType,
+				capacity: item.capacity
+			  };
+			});
+	  
+			// Resolve the promise with the retrieved contact details
+			resolve(truckDetails);
+		  });
+		});
+	  }
+
+	  function exportData() {
+		var table = document.getElementById("tbl");
+		var csvContent = "";
+	  
+		for (var i = 0; i < table.rows.length; i++) {
+		  var row = table.rows[i];
+		  for (var j = 0; j < row.cells.length; j++) {
+			var cellContent = row.cells[j].innerText;
+	  
+			// Remove line breaks and escape double quotes within cell content
+			cellContent = cellContent.replace(/[\r\n]+/g, " ");
+			cellContent = cellContent.replace(/"/g, '""');
+	  
+			// Enclose cell content in double quotes
+			csvContent += '"' + cellContent + '",';
+		  }
+		  // Add line break after each row
+		  csvContent += "\r\n";
+		}
+	  
+		// Remove the trailing comma at the end of each row
+		csvContent = csvContent.replace(/,\r\n/g, "\r\n");
+	  
+		var encodedUri = "data:text/csv;charset=utf-8," + encodeURI(csvContent);
+		var link = document.createElement("a");
+		link.setAttribute("href", encodedUri);
+		link.setAttribute("download", "trucks_by_area.csv");
+		document.body.appendChild(link);
+		link.click();
+	  }
+</script>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jindal Trading</title>
+    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="topInfo" id="topInfo">
+      <a href="mailto: jindal.tr.co@gmail.com"   target="_blank"><i class="fa fa-envelope"> </i>Contact Us</a>  
+      <a href="https://goo.gl/maps/F4WRmiEBxYBYdhKS6" target=”_blank”><i class="fa fa-map-marker"> </i>Location</a>
+      <a href="tel:9690901694"><i class="fa fa-phone"></i>9690901694</a>
+    </div>
+    <nav id="navline">
+      <div class="moblogo">
+        <a href="/" class="logo">Jindal Trading Co.</a>
+      </div>
+      <div class="mobnavline">
+        <ul id="nav">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/products">PRODUCTS</a></li>
+          <li><a class="active" href="/distribution">DISTRIBUTION</a></li>
+          <li><a href="/vendors">VENDORS</a></li>
+          <li><a href="/team">TEAM</a></li>
+          <%if(data) {%>
+          <li><a href="/userDashboard">DASHBOARD</a></li>
+          <li><a href="/logout">LOG-OUT</a></li>
+          <%} else {%>
+          <li><a href="/login">LOGIN</a></li>
+          <%}%>
+        </ul>
+      </div>
+      <div class="menu" id="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <main>
+        <section class="landing" style="background: url(images/distribute.png) no-repeat; background-size: contain; background-position: center center; margin-top: 110px;"></section>
+        
+
+        <section class="enquiryMsg">
+          <div class="enquiry">
+            <div class="leftmost">
+              <h1>GET IN TOUCH</h1>
+            </div>
+            <div class="left1">
+              <input type="text" placeholder="Name">
+              <input type="email" placeholder="Email">
+              <input type="text" placeholder="Country">
+              <input type="tel" placeholder="Mobile Number">
+            </div>
+            <div class="right1">
+              <div class="row">
+                <textarea name="" id="" cols="70" rows="8" placeholder="Leave a enquiry message for us"></textarea>
+                <button>Send Message</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      <footer>
+        
+        <div class="some">
+          
+            
+              <a class="facebook" href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+
+              <a class="twitter" href="#">               
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+             
+              <a class="whatsapp" href="#">               
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </a>
+                       
+              <a class="instagram" href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+                       
+              <a class="google" href="#">                
+                <i class="fa fa-google-plus" aria-hidden="true"></i>
+              </a>
+                     
+        </div>
+
+        <div class="address">
+          <div class="a" id="a1">
+            <span>BRANCH OFFICE 1</span>
+          <hr>
+          <p>
+            NEAR KALANTRI BANGLOW, PLOT NO. 25,S6 NO. 8/1A/1B2 MANAV PARK, RESIDENCY SOAYGAON ALEGAON, NASIK
+          </p>
+          <code>
+            CONTACT : PRAMOD KULKARNI  MOB: +91-9765646011
+          </code>
+          </div>
+          <div class="a" id="a2">
+            <span>BRANCH OFFICE 2</span>
+            <hr>
+            <p>
+              PLOT NO: 46 WARD 4/B, ADIPUR (KUCH ) GANDHI DHAM PINCODE: 370205 
+            </p>
+            <code>
+              CONTACT : MR AKSHAT JAIN MOB: +91-9106728108
+            </code>
+          </div>
+          <div class="a" id="a3">
+            <span>BRANCH OFFICE 3</span>
+            <hr>
+            <p>
+              MANAI.TAND.NEER .. JHARKHAND OFFICE BANK COLONY, DHANBAD PINCODE: 826001
+            </p>
+            <code>
+              CONTACT : RAJ KUMAR VERMA MOB: +91-9431377544 +91-9334267522
+            </code>
+          </div>
+          <div class="a" id="a4">
+            <span>REGISTERED CORPORATE OFFICE</span>
+            <hr>
+            <p>
+              60/122 NEW PUNJABI PURA, DELHI ROAD, MEERUT PINCODE:250002 
+            </p>
+            <code>
+              CONTACT : MR VAIBHAV ROHATGI MOB: +91-9690901694
+            </code>
+          </div>
+        </div>
+
+      <div class="copy">
+        <i>© 2023 Jindal Trading Co. All rights reserved.</i>
+      </div>
+      </footer>
+    </main>
+    
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navline").style.top = "25px";
+        } else {
+          document.getElementById("navline").style.top = "-10rem";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+      </script>
+      <script>
+        const navigation = document.getElementById("nav");
+        const menu = document.getElementById("menu");
+    
+        menu.addEventListener("click", () => {
+          // The navigation.children.length means the following :-
+          // The children inside a parent are basically an array of elements; So, here I'm finding the length of the array aka how many children are inside the nav bar.
+          //   Yup That's all.
+          navigation.style.setProperty("--childenNumber", navigation.children.length);
+    
+          //    Casually Toggling Classes to make them animate on click
+          //   Regular stuff ;)
+          navigation.classList.toggle("active");
+          menu.classList.toggle("active");
+        });
+      </script>
+      <script>
+        // Wait for the document to be fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Find the WhatsApp icon element
+            var whatsappIcon = document.querySelector('.whatsapp');
+    
+            // Add a click event listener to the icon
+            whatsappIcon.addEventListener('click', function (event) {
+                // Prevent the default link behavior
+                event.preventDefault();
+    
+                // Define the phone number you want to open the chat with
+                var phoneNumber = '9690901694'; // Replace with the actual phone number
+    
+                // Construct the WhatsApp link
+                var whatsappLink = 'https://wa.me/' + phoneNumber;
+    
+                // Open the link in a new tab/window
+                window.open(whatsappLink, '_blank');
+            });
+        });
+    </script>
+    <script>
+      // Wait for the document to be fully loaded
+      document.addEventListener('DOMContentLoaded', function () {
+          // Find the Gmail icon element
+          var gmailIcon = document.querySelector('.google');
+  
+          // Add a click event listener to the icon
+          gmailIcon.addEventListener('click', function (event) {
+              // Prevent the default link behavior
+              event.preventDefault();
+  
+              // Define the recipient email address
+              var emailAddress = 'jindal.tr.co@gmail.com'; // Replace with the actual email address
+  
+              // Construct the Gmail link
+              var gmailLink = 'mailto:' + emailAddress;
+  
+              // Open the link in a new tab/window
+              window.open(gmailLink, '_blank');
+          });
+      });
+  </script>
+
+  </body>
+</html>

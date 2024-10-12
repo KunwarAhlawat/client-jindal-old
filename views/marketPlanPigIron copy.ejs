@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Jindal Trading | Dashboard</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900" rel="stylesheet" type="text/css">
+	<link href="global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css"> 
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	
+	
+	<link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/select/2.0.2/css/select.dataTables.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/5.0.0/css/fixedColumns.dataTables.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.0.2/css/buttons.dataTables.css">
+	<!-- /global stylesheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- Core JS files -->
+	<script src="global_assets/js/main/jquery.min.js"></script>
+	<script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+
+	<script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+
+	<script src="assets/js/app.js"></script>
+	<script src="global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="global_assets/js/demo_pages/form_multiselect.js"></script>
+	<!-- /theme JS files -->
+	
+	
+	
+	
+	
+	
+	
+	
+
+	<script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.0.2/js/dataTables.buttons.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.0.2/js/buttons.dataTables.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.0.2/js/buttons.html5.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.0.2/js/buttons.print.min.js"></script>
+	<script src="https://cdn.datatables.net/select/2.0.2/js/dataTables.select.js"></script>
+	<script src="https://cdn.datatables.net/select/2.0.2/js/select.dataTables.js"></script>
+ 	
+	<style>
+		#dt-search-1{
+			width: 300px!important;
+			margin: 0 10px;
+			}
+			button.dt-button {
+			padding: 1px 50px !important
+			}
+			#dt-length-1{
+				display: none!important;
+			}
+			.form-control{
+				border: none;
+			}
+			.form-control:focus{
+				box-shadow: none;
+				border : none;
+			}
+			.form-control:active{
+				box-shadow: none;
+				border : none;
+			}
+			.form-control:hover{
+				box-shadow: none;
+				border : none;
+			}
+			.multiselect {
+				box-shadow: rgb(65 64 64 / 35%) 0px -50px 36px -28px inset;
+				background-color: transparent!important;
+				border: 1px solid black;
+			}
+			.staticsCard{
+				background-color: red;
+				box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;	
+							padding:  10px;
+				border-radius: 10px;
+			}
+			 
+				</style>
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-dark">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="../../../../global_assets/images/logo_light.png" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li>
+			</ul>
+
+			<span class="badge bg-success ml-md-3 mr-md-auto">Online</span>
+
+			<ul class="navbar-nav">
+
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+						<img src="../../../../global_assets/images/demo/users/face11.jpg" class="rounded-circle mr-2" height="34" alt="">
+						<span><%=username%></span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
+						<div class="dropdown-divider"></div>
+						<a href="/logout" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				Navigation
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user">
+					<div class="card-body">
+						<div class="media">
+							<div class="mr-3">
+								<a href="#"><img src="../../../../global_assets/images/demo/users/face11.jpg" width="38" height="38" class="rounded-circle" alt=""></a>
+							</div>
+
+							<div class="media-body">
+								<div class="media-title font-weight-semibold"><%=username%></div>
+								<div class="font-size-xs opacity-50">
+									<i class="icon-pin font-size-sm"></i> &nbsp;Meerut
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/userDashboard" class="nav-link">
+								<i class="icon-home4"></i>
+								<span>
+									Dashboard
+								</span>
+							</a>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/register" class="nav-link">User-Register</a></li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/registeredUsers" class="nav-link">Register-List</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+							<a href="#" class="nav-link active"><i class="icon-copy"></i> <span>Market-Plan</span></a>
+
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanPigIron" class="nav-link active">Pig-Iron</a></li>
+							</ul>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+							   <li class="nav-item"><a href="/marketPlanAllotment" class="nav-link">Allotment</a></li>
+						    </ul>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanQuantityLedger" class="nav-link">QuantityLedger</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Master</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterArea" class="nav-link">MasterArea</a></li>
+								<li class="nav-item"><a href="/masterCategories" class="nav-link">MasterCategories</a></li>
+								<li class="nav-item"><a href="/masterGrade" class="nav-link">MasterGrade</a></li>
+								<li class="nav-item"><a href="/masterProducts" class="nav-link">MasterProducts</a></li>
+								<li class="nav-item"><a href="/masterProductGroup" class="nav-link">MasterProductGroup</a></li>
+								<li class="nav-item"><a href="/masterTeams" class="nav-link">MasterTeams</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Customers</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterCustomer" class="nav-link">MasterCustomer</a></li>
+								<li class="nav-item"><a href="/masterFirm" class="nav-link">MasterFirm</a></li>
+								<li class="nav-item nav-item-submenu ">
+									<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Datatables</span></a>
+									<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+										<li class="nav-item"><a href="/customerContact" class="nav-link">Contact</a></li>
+										<li class="nav-item"><a href="/customerCategory" class="nav-link">Categories</a></li>
+										<li class="nav-item"><a href="/customerFirm" class="nav-link">Firms</a></li>
+										<li class="nav-item"><a href="/customerProduct" class="nav-link">Products</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Transport</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/transportDetails" class="nav-link">Details</a></li>
+								<li class="nav-item"><a href="/transportContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/transportStations" class="nav-link">Stations</a></li>
+								<li class="nav-item"><a href="/transportTrucks" class="nav-link">Trucks</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Vendor</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterVendors" class="nav-link">MasterVendors</a></li>
+								<li class="nav-item"><a href="/vendorContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/vendorFirm" class="nav-link">Firm</a></li>
+								<li class="nav-item"><a href="/vendorProduct" class="nav-link">Product</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Employee</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterEmployee" class="nav-link">MasterEmployee</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/contacts" class="nav-link"><i class="icon-copy"></i> <span>Contacts</span></a>
+						</li>
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+			
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+				<div class="page-header-content header-elements-md-inline">
+					<div class="page-title d-flex">
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">PigIron</span> - Market Plan</h4>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- /page header -->
+
+	
+			<!-- Content area -->
+			<%if(level>1) {%>
+			<div class="content">
+				<div class="row">
+					<div class="col-3">
+						<div class="staticsCard d-flex ">
+							<div class="icon d-flex align-items-center  mr-3 " style="font-size: 30px; color: white;  border-radius: 10px;">
+								<i style=" border: none;   background-color: #56CA00; border-radius: 10px;" class="fa-regular fa-user p-3"></i>
+							</div>
+							<div class="d-flex flex-column  ">
+								<span style="font-size: 16px; color: white;"> Total Customer</span>
+								<span style="font-size: 40px; color: white;">12</span>
+							</div> 
+						</div>
+						 
+					</div>
+					<div class="col-3">
+						<div class="staticsCard d-flex ">
+							<div class="icon d-flex align-items-center  mr-3 " style="font-size: 30px; color: white;  border-radius: 10px;">
+								<i style=" border: none;   background-color: #56CA00; border-radius: 10px;" class="fa-regular fa-user p-3"></i>
+							</div>
+							<div class="d-flex flex-column  ">
+								<span style="font-size: 16px; color: white;"> Total Customer</span>
+								<span style="font-size: 40px; color: white;">12</span>
+							</div> 
+						</div>
+						 
+					</div>
+					<div class="col-3">
+						<div class="staticsCard d-flex ">
+							<div class="icon d-flex align-items-center  mr-3 " style="font-size: 30px; color: white;  border-radius: 10px;">
+								<i style=" border: none;   background-color: #56CA00; border-radius: 10px;" class="fa-regular fa-user p-3"></i>
+							</div>
+							<div class="d-flex flex-column  ">
+								<span style="font-size: 16px; color: white;"> Total Customer</span>
+								<span style="font-size: 40px; color: white;">12</span>
+							</div> 
+						</div>
+						 
+					</div>
+					<div class="col-3">
+						<div class="staticsCard d-flex ">
+							<div class="icon d-flex align-items-center  mr-3 " style="font-size: 30px; color: white;  border-radius: 10px;">
+								<i style=" border: none;   background-color: #56CA00; border-radius: 10px;" class="fa-regular fa-user p-3"></i>
+							</div>
+							<div class="d-flex flex-column  ">
+								<span style="font-size: 16px; color: white;"> Total Customer</span>
+								<span style="font-size: 40px; color: white;">12</span>
+							</div> 
+						</div>
+						 
+					</div>
+					
+				</div>
+				<!-- representative section -->
+				<h1>Allotment summery</h1>
+				<div class="  mb-5">
+					<div class="row  p-2   ">
+						<div class="col-12 p-2   card  ">
+						
+
+							<div class="container">
+								<div class="makretplan mx-auto w-100 d-flex justify-content-between align-items-center">
+									<h1 style="color: rgba(0, 0, 0, 0.818);font-weight: 900;font-size: 50px;">MARKET PLAN</h1>
+									<div class="createDate">
+										<label for="createdDate" style="font-weight: 700;">Created Date :-</label> <br>
+										<input type="date">
+									</div>
+								</div>
+								<div class="intor my-4">
+									<h1 style="color: red;font-weight: 900;font-size:25px;">JINDAL TRADING CO.</h1>
+									<p style="font-weight: 500;" class="px-2">60/122,New Punjabi Pura <br>
+									Near Bahardur Motors, Delhi Road  <br>
+								MEERUT <br> Phone: 0121-4056617 Mob : 8392902015</p>
+								<p></p>
+								</div>
+								<div class="template">
+									<p> <h1 id="nameDisplay" ></h1></p> 
+									<p> <h2 id="emailDisplay"></h2></p>
+									<p> <span id="phoneDisplay"></span></p>
+								</div>
+								
+							
+							</div>
+							<div id="invoiceContainer"></div>
+						
+						</div>
+						<div class="col-4 p-2 p-4 card  m-3 d-none">
+							<!-- <div class="inputs">
+								<label>Name:</label>
+								<input type="text" class="input-field" id="nameInput">
+								<BR></BR>
+								<label>Email:</label>
+								<input type="email" class="input-field" id="emailInput">
+								<br>
+								<label>Phone:</label>
+								<input type="tel" class="input-field" id="phoneInput">
+							</div> -->
+
+								<!-- <label for="title" class="font-weight-semibold mt-2">Title :-</label>
+								<input type="text" id="title">
+
+								<label for="date" class="font-weight-semibold mt-2">Creadte Date :-</label>
+								<input type="date" id="date">
+
+								<label for="title" class="font-weight-semibold mt-2">End Date :-</label>
+								<input type="date" id="title">
+
+								<label for="title" class="font-weight-semibold mt-2">Message :-</label>
+								 <textarea name="" id=""></textarea>
+ <br>
+								 <button>Add</button>
+								 <br> -->
+ 						
+						</div>
+
+						 
+					</div>
+				</div>
+					<!-- add data  -->
+					<div class="col-12  d-flex justify-content-end w-100 mb-3">
+						<button id="createAllotment" class="btn btn-success btn-lg w-25">Created Allotment</button>
+					</div>
+
+	
+				<!-- Dashboard content -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card p-4" style="overflow-x: auto;">
+							<div class="col-12 mb-3">
+							 <h2>All Customers List</h2>
+							</div>
+														<!-- HTML table to be converted into DataTable -->
+														<div class="form-group mb-5">
+															<div class="row">
+																<div class="col-sm-2">
+																	<label for="customerName" class="form-control"><span class="font-weight-semibold">customerName</span></label>
+																	<select name="customerName" class="form-control multiselect-filtering customerName" id="customerNameFil" multiple="multiple" data-fouc>
+																		<% let dataValuescustomerName = data.reduce((acc, curr) => {
+																			if (curr.customerName && !acc.includes(curr.customerName)) {
+																			acc.push(curr.customerName);
+																			}
+																			return acc;
+																		}, []); %>
+																		
+																		<% dataValuescustomerName.forEach(function(value) { %>
+																			<option value="<%= value %>"><%= value %></option>
+																		<% }); %>
+																	</select>
+																</div>
+																<div class="col-sm-2">
+																	<label for="area" class="form-control"><span class="font-weight-semibold">area</span></label>
+																	<select name="area" class="form-control multiselect-filtering area" id="areaFil" multiple="multiple" data-fouc>
+																		<% let dataValuesarea = data.reduce((acc, curr) => {
+																			if (curr.area && !acc.includes(curr.area)) {
+																				acc.push(curr.area);
+																			}
+																			return acc;
+																		}, []); %>
+																		
+																		<% dataValuesarea.forEach(function(value) { %>
+																			// Map the area ID to the corresponding area name
+																			<% const area = areaData.find(area => area.areaId === parseInt(value)).area; %>
+																			<option value="<%= value %>"><%= area %></option>
+																		<% }); %>
+																	</select>
+																</div>
+																<div class="col-sm-2">
+																	<label for="grade" class="form-control"><span class="font-weight-semibold">grade</span></label>
+																	<select name="grade" class="form-control multiselect-filtering grade" id="gradeFil" multiple="multiple" data-fouc>
+																	
+																		<% let dataValuesgrade = data.reduce((acc, curr) => {
+																			if (curr.grade && !acc.includes(curr.grade)) {
+																			acc.push(curr.grade);
+																			}
+																			return acc;
+																		}, []); %>
+
+																		<% dataValuesgrade.forEach(function(value) { %>
+																			// Map the area ID to the corresponding area name
+																			<%= console.log("dddddddd1value" , value)%>
+																			<%= console.log("dddddddd1" , gradeData)%>
+																			<% const grade = gradeData.find(grade => grade.gradeId === parseInt(value)).gradeType; %>
+
+																			<%= console.log("dddddddd1grade" , grade)%>
+																			<option value="<%= value %>"><%= grade %></option>
+																		<% }); %>
+																	 
+																	</select>
+																</div>
+																<div class="col-sm-2">
+																	<label for="category" class="form-control"><span class="font-weight-semibold">category</span></label>
+																	<select name="category" class="form-control multiselect-filtering category" id="categoryFil" multiple="multiple" data-fouc>
+ 																	
+  																			 
+																	 
+																				<% let dataValuesCategory = categorydata.reduce((acc, curr) => {
+																					if (curr.categoriesType && !acc.includes(curr.categoriesType)) {
+																					acc.push(curr.categoriesType);
+																					}
+																					return acc;
+																				}, []); %>
+																				
+																				<% dataValuesCategory.forEach(function(value) { %>
+																					<option value="<%= value %>"><%= value %></option>
+																				<% }); %>
+																	 
+																	</select>
+																</div>
+																<div class="col-sm-2">
+																	<label for="product" class="form-control"><span class="font-weight-semibold">product</span></label>
+																	<select name="product" class="form-control multiselect-filtering product" id="productFil" multiple="multiple" data-fouc>
+																		<% let dataValuesproduct = productData.reduce((acc, curr) => {
+																			if (curr.productName && !acc.includes(curr.productName)) {
+																			acc.push(curr.productName);
+																			}
+																			return acc;
+																		}, []); %>
+																		
+																		<% dataValuesproduct.forEach(function(value) { %>
+																			<option value="<%= value %>"><%= value %></option>
+																		<% }); %>
+ 
+																		
+																	</select>
+																</div>
+																<div class="col-sm-2">
+ 
+ 																		<button onclick="fil()" class="form-control btn bg-primary h-100" type="button font-weight-bold" style="font-size: 20px;">Filter</button>
+																	 
+
+																	<!-- <label for="representative" class="form-control"><span class="font-weight-semibold">representative</span></label>
+																	<select name="representative" class="form-control multiselect-filtering representative" id="representativeFil" multiple="multiple" data-fouc>
+																		<% let dataValuesrepresentative = teamData.reduce((acc, curr) => {
+																			if (curr.teamMember && !acc.includes(curr.teamMember)) {
+																			acc.push(curr.teamMember);
+																			}
+																			return acc;
+																		}, []); %>
+																		
+																		<% dataValuesrepresentative.forEach(function(value) { %>
+																			<option value="<%= value %>"><%= value %></option>
+																		<% }); %>
+																	</select> -->
+																</div>									
+															</div>
+														</div>
+													 
+															
+														<!-- Table to display filtered data -->
+														<table id="myTable" class="display nowrap table  table-striped hover p-5 row-border order-column cell-border">
+															<thead>
+																<tr>
+																	 
+																	<th>CustomerName</th>
+																	<th>Area</th>
+																	<th>Grade</th>
+																	<th>Product</th>
+																	<th>Category</th>
+
+																</tr>
+															</thead>
+															<tbody>
+																<!-- Table body content will be generated dynamically -->
+															</tbody>
+														</table>
+
+
+
+							
+
+<script>
+	let customerData = <%- JSON.stringify(custdata) %>;
+	let custprodData = <%- JSON.stringify(custProdData) %>;
+	let productData = <%- JSON.stringify(productData) %>;
+	function populateCustomers()
+	{
+		let areaDropdown = document.getElementById('areaFilter');
+     	let customerDropdown = document.getElementById('customerName');
+     	let productDropdown = document.getElementById('categoryProduct');
+      	let selectedArea = areaDropdown.value;
+		customerDropdown.innerHTML = '';
+		console.log(selectedArea) 
+
+		let filteredCustomers = customerData.filter(function(customer) {
+			return customer.area === selectedArea;
+		});
+		console.log(filteredCustomers)
+
+		let option = document.createElement('option');
+		option.text = "-Select-";
+		option.value = "";
+		option.selected = true;
+        option.disabled = true;
+		customerDropdown.add(option);
+
+		filteredCustomers.forEach(function(customer) {
+			let option = document.createElement('option');
+			option.text = customer.customerName;
+			option.value = customer.customerName;
+			customerDropdown.add(option);
+		  });
+	
+	}
+
+	function populateProducts()
+	{
+     	let customerDropdown = document.getElementById('customerName');
+     	let productDropdown = document.getElementById('categoryProduct');
+		productDropdown.innerHTML = '';
+      	let selectedCustomer = customerDropdown.value;
+		  console.log("aaaaaaaaaaaaaaaaaaaaaaaaa")
+
+		console.log(selectedCustomer)
+		let selectedProducts=[];
+
+		for (let a = 0; a < customerData.length; a++) {
+			if (customerData[a].customerName == selectedCustomer) { 
+				let selectedCustomerId=customerData[a].customerId
+
+				for (let i = 0; i < custprodData.length; i++) {
+			if (custprodData[i].customerName == selectedCustomerId) { 
+				selectedProducts.push(custprodData[i].product)
+			} 
+		} 
+
+			} 
+		} 
+
+		// console.log(selectedCustomerId)
+		console.log("aaaaaaaaaaaaaaaaaaaaaaaaa")
+
+		// let selectedProducts=[];
+		// for (let a = 0; a < custprodData.length; a++) {
+		// 	if (custprodData[a].customerName == selectedCustomerId) { 
+		// 		selectedProducts.push(custprodData[a].product)
+		// 	} 
+		// } 
+		console.log("ddd" , selectedProducts)
+		  console.log("dddddd" , productData  ,  )
+		console.log("dddddd" , productData[0].customerName)
+		let filteredProducts=[]
+		for (let a = 0; a < productData.length; a++) {
+			for (let i = 0; i < productData.length; i++) {
+			console.log("dddssssddd1" , productData[a].productId  , selectedProducts[i] )
+			console.log("dddssssddd1" , typeof productData[a].productId  , typeof selectedProducts[i] )
+
+			if (productData[a].productId === parseInt(selectedProducts[i])) { 
+				console.log("dddssssddd1" , productData[a].productName)
+				filteredProducts.push(productData[a].productName)
+			} 
+		} 
+		} 
+
+		console.log("dddssssddd" , filteredProducts)
+		let option = document.createElement('option');
+		option.text = "-Select-";
+		option.value = "";
+		option.selected = true;
+        option.disabled = true;
+		productDropdown.add(option);
+
+		let optgroup = document.createElement('optgroup');
+        optgroup.label = "Retail";
+		filteredProducts.forEach(function(product) {
+			let option = document.createElement('option');
+			option.text = "RETAIL "+product  ;
+			option.value = "R"+product ;
+			optgroup.appendChild(option);
+		});
+		productDropdown.appendChild(optgroup);
+		
+		let optgroup2 = document.createElement('optgroup');
+        optgroup2.label = "Wholesale";
+		filteredProducts.forEach(function(product) {
+			let option = document.createElement('option');
+			option.text = "WHOLESALE "+product ;
+			option.value = "W"+product ;
+			optgroup2.appendChild(option);
+		});
+		productDropdown.appendChild(optgroup2);
+	}
+</script>
+
+							
+ 
+			            </div>
+		            </div>
+			<!-- add data  -->
+			<div class="col-12  d-flex justify-content-end w-100 mb-3">
+				<button id="submitSelected" class="btn btn-success btn-lg w-25">Add</button>
+			</div>
+				
+		        </div>
+				<!-- /dashboard content -->
+
+			</div>
+			<%}else{%>
+				<h4>No new data</h4>
+				<%}%>
+
+			<!-- /content area -->
+
+
+			<!-- Footer -->
+			<!-- /footer -->
+			
+		
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+	
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/pdfmake.min.js" integrity="sha512-5wC3oH3tojdOtHBV6B4TXjlGc0E2uk3YViSrWnv1VUmmVlQDAs1lcupsqqpwjh8jIuodzADYK5xCL5Dkg/ving==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/vfs_fonts.min.js" integrity="sha512-EFlschXPq/G5zunGPRSYqazR1CMKj0cQc8v6eMrQwybxgIbhsfoO5NAMQX3xFDQIbFlViv53o7Hy+yCWw6iZxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    function uEdit(value)
+    {
+		console.log("uEdit")
+		let ecustomerName = document.getElementById("ecustomerName").innerText;
+        let earea = document.getElementById("earea").innerText;
+        let egrade = document.getElementById("egrade").innerText;
+        let ecategory = document.getElementById("ecategory").innerText;
+        let eproduct = document.getElementById("eproduct").innerText;
+        let elastDelivery = document.getElementById("elastDelivery").innerText;
+        let erepresentative = document.getElementById("erepresentative").innerText;
+        let ephoneNumber = document.getElementById("ephoneNumber").innerText;
+
+        let ecurrentRemark = document.getElementById("ecurrentRemark").value;
+        let enextDate = document.getElementById("enextDate").value;
+        let ecurrentIssue = document.getElementById("ecurrentIssue").value;
+        
+        $.post("/marketPlanPigIron",
+		{
+			id: value,
+			customerName:ecustomerName,
+			area: earea,
+			grade: egrade,
+			category: ecategory,
+			product: eproduct,
+			lastDelivery: elastDelivery,
+			representative: erepresentative,
+			phoneNumber: ephoneNumber,
+			
+			currentRemark: ecurrentRemark,
+			
+			nextDate: enextDate,
+			currentIssue: ecurrentIssue,
+			
+			op:"uedt"
+		},
+		function (data, status) {
+			console.log("check edit wala data");
+			console.log(data);
+			console.log(status);
+			setInterval('refreshPage()', 500);
+		}
+		);
+    }
+</script>
+
+<script>
+
+
+
+    function edit(value)
+    {
+        console.log("3333333333333333333333333333333");
+        console.log(value);
+		
+		let ecustomerName = document.getElementById("ecustomerName").value;
+        let earea = document.getElementById("earea").value;
+        let egrade = document.getElementById("egrade").value;
+        let ecategory = document.getElementById("ecategory").value;
+        let eproduct = document.getElementById("eproduct").value;
+        let elastDelivery = document.getElementById("elastDelivery").value;
+        let erepresentative = document.getElementById("erepresentative").value;
+        let ephoneNumber = document.getElementById("ephoneNumber").value;
+        let emeetingDates = document.getElementById("emeetingDates").value;
+        let ecurrentRemark = document.getElementById("ecurrentRemark").value;
+        let eremarkStatus = document.getElementById("eremarkStatus").value;
+        let enextDate = document.getElementById("enextDate").value;
+        let ecurrentIssue = document.getElementById("ecurrentIssue").value;
+        let eanalysed = document.getElementById("eanalysed").value;
+        let eupdateTimeStamp = document.getElementById("eupdateTimeStamp").value;
+        let etotalIssue = document.getElementById("etotalIssue").value;
+        
+
+
+        $.post("/marketPlanPigIron",
+            {
+                id: value,
+                customerName:ecustomerName,
+                area: earea,
+                grade: egrade,
+                category: ecategory,
+                product: eproduct,
+                lastDelivery: elastDelivery,
+                representative: erepresentative,
+                phoneNumber: ephoneNumber,
+                meetingDates: emeetingDates,
+                currentRemark: ecurrentRemark,
+                remarkStatus: eremarkStatus,
+                nextDate: enextDate,
+                currentIssue: ecurrentIssue,
+                analysed: eanalysed,
+                updateTimeStamp: eupdateTimeStamp,
+                totalIssue: etotalIssue,
+                op:"edt"
+            },
+            function (data, status) 
+			{
+                console.log(data);
+                console.log(status);
+				setInterval('refreshPage()', 500);
+            });
+        
+    }
+</script>
+
+
+<script>
+    function del(value)
+    {
+        console.log(value);
+        $.post("/marketPlanPigIron",
+            {
+                id: value,
+                op:"del"
+            },
+            function (data, status) {
+                console.log(data);
+                console.log(status);
+				setInterval('refreshPage()', 500);
+            }
+            );
+    }
+
+	function refreshPage() {
+    	location.reload(true);
+	}
+
+
+	function ueedit(value)
+    {
+        console.log(value);
+        let sub = 'pigIron';
+        let result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+			console.log("qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq")
+            let customerName = $(this).find(".customerName")[0].innerText;    
+            let area = $(this).find(".area").html();    
+            let grade = $(this).find(".grade").html();    
+            let category = $(this).find(".category").html();    
+            let product = $(this).find(".product").html();    
+            let lastDelivery = $(this).find(".lastDelivery").html();    
+            let representative = $(this).find(".representative").html();    
+            let phoneNumber = $(this).find(".phoneNumber").html();    
+            let meetingDates = $(this).find(".meetingDates").html();    
+            let currentRemark = $(this).find(".currentRemark").html();    
+            let remarkStatus = $(this).find(".remarkStatus").html();    
+            let nextDate = $(this).find(".nextDate").html();    
+            let currentIssue = $(this).find(".currentIssue").html();    
+            let analysed = $(this).find(".analysed").html();     
+            let updateTimeStamp = $(this).find(".updateTimeStamp").html();     
+            let totalIssue = $(this).find(".totalIssue").html();     
+            
+
+
+			console.log(customerName)
+			console.log(area)
+			console.log("++++++++++++++++++++++++++++++++++++++++")
+			console.log(result)
+			
+			
+            let tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >customerName</td> <td class="form-control ecustomerName" name="ecustomerName" id="ecustomerName">'+customerName+'</td> </tr> <tr> <td>area</td> <td class="form-control earea" name="earea" id="earea">'+area+' </td> </tr> </tr> <tr> <td>grade</td> <td class="form-control egrade" name="egrade" id="egrade">'+grade+' </td> </tr> <tr> <td>category</td> <td class="form-control ecategory" name="ecategory" id="ecategory">'+category+' </td> </tr> <tr> <td>product</td> <td class="form-control eproduct" name="eproduct" id="eproduct">'+product+' </td> </tr> <tr> <td>lastDelivery</td> <td class="form-control elastDelivery" name="elastDelivery" id="elastDelivery">'+lastDelivery+' </td> </tr> <tr> <td>representative</td> <td class="form-control erepresentative" name="erepresentative" id="erepresentative">'+representative+' </td> </tr> <tr> <td>phoneNumber</td> <td class="form-control ephoneNumber" name="ephoneNumber" id="ephoneNumber">'+phoneNumber+' </td> </tr> <tr> <td>meetingDates</td> <td class="form-control emeetingDates" name="emeetingDates" id="emeetingDates">'+meetingDates+' </td> </tr>  <tr> <td>currentRemark</td> <td><input type="text" value="'+currentRemark+'" class="form-control ecurrentRemark" name="ecurrentRemark" id="ecurrentRemark"></td> </tr> <tr> <td>remarkStatus</td> <td>'+remarkStatus+' </td> </tr> <tr> <td>nextDate</td> <td><input type="date" value="'+nextDate+'" class="form-control enextDate" name="enextDate" id="enextDate"></td> </tr> <tr> <td>currentIssue</td> <td><input type="text" value="'+currentIssue+'" class="form-control ecurrentIssue" name="ecurrentIssue" id="ecurrentIssue"></td> </tr> <tr> <td>analysed</td> <td>'+analysed+' </td> </tr> <tr> <td>updateTimeStamp</td> <td>'+updateTimeStamp+' </td> </tr> <tr> <td>totalIssue</td> <td>'+totalIssue+' </td> </tr> </table> </div>'
+				
+			let bt="<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button> <button type='submit' onclick='uEdit("+result+")' data-dismiss='modal' class='btn bg-teal-400'>Save</button>"
+			console.log("Ujjwal")
+			document.getElementById("ublast").innerHTML=tek;
+			document.getElementById("uoff").innerHTML=bt;
+			console.log("++++++++++++++++++++++++++++++++++++++++")
+			
+		});
+    }
+	
+	function eedit(value)
+    {
+        console.log(value);
+        let sub = 'pigIron';
+        let result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+			console.log("qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq")
+            let customerName = $(this).find(".customerName")[0].innerText;    
+            let area = $(this).find(".area").html();    
+            let grade = $(this).find(".grade").html();    
+            let category = $(this).find(".category").html();    
+            let product = $(this).find(".product").html();    
+            let lastDelivery = $(this).find(".lastDelivery").html();    
+            let representative = $(this).find(".representative").html();    
+            let phoneNumber = $(this).find(".phoneNumber").html();    
+            let meetingDates = $(this).find(".meetingDates").html();    
+            let currentRemark = $(this).find(".currentRemark").html();    
+            let remarkStatus = $(this).find(".remarkStatus").html();    
+            let nextDate = $(this).find(".nextDate").html();    
+            let currentIssue = $(this).find(".currentIssue").html();    
+            let analysed = $(this).find(".analysed").html();     
+            let updateTimeStamp = $(this).find(".updateTimeStamp").html();     
+            let totalIssue = $(this).find(".totalIssue").html();     
+            
+
+
+			console.log(customerName)
+			console.log(area)
+			console.log("++++++++++++++++++++++++++++++++++++++++")
+			console.log(result)
+			
+			
+            let tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >customerName</td> <td><input type="text" value="'+customerName+'" class="form-control ecustomerName" name="ecustomerName" id="ecustomerName"></td> </tr> <tr> <td>area</td> <td><input type="text" value="'+area+'" class="form-control earea" name="earea" id="earea"></td> </tr> <tr> <td>grade</td> <td><input type="text" value="'+grade+'" class="form-control egrade" name="egrade" id="egrade"></td> </tr> <tr> <td>category</td> <td><input type="text" value="'+category+'" class="form-control ecategory" name="ecategory" id="ecategory"></td> </tr> <tr> <td>product</td> <td><input type="text" value="'+product+'" class="form-control eproduct" name="eproduct" id="eproduct"></td> </tr> <tr> <td>lastDelivery</td> <td><input type="text" value="'+lastDelivery+'" class="form-control elastDelivery" name="elastDelivery" id="elastDelivery"></td> </tr> <tr> <td>representative</td> <td><input type="text" value="'+representative+'" class="form-control erepresentative" name="erepresentative" id="erepresentative"></td> </tr> <tr> <td>phoneNumber</td> <td><input type="text" value="'+phoneNumber+'" class="form-control ephoneNumber" name="ephoneNumber" id="ephoneNumber"></td> </tr>   <tr> <td>meetingDates</td> <td><input type="date" value="'+meetingDates+'" class="form-control emeetingDates" name="emeetingDates" id="emeetingDates"></td> </tr>  <tr> <td>currentRemark</td> <td><input type="text" value="'+currentRemark+'" class="form-control ecurrentRemark" name="ecurrentRemark" id="ecurrentRemark"></td> </tr> <tr> <td>remarkStatus</td> <td><input type="text" value="'+remarkStatus+'" class="form-control eremarkStatus" name="eremarkStatus" id="eremarkStatus"></td> </tr> <tr> <td>nextDate</td> <td><input type="date" value="'+nextDate+'" class="form-control enextDate" name="enextDate" id="enextDate"></td> </tr> <tr> <td>currentIssue</td> <td><input type="text" value="'+currentIssue+'" class="form-control ecurrentIssue" name="ecurrentIssue" id="ecurrentIssue"></td> </tr> <tr> <td>analysed</td> <td><input type="text" value="'+analysed+'" class="form-control eanalysed" name="eanalysed" id="eanalysed"></td> </tr> <tr> <td>updateTimeStamp</td> <td><input type="text" value="'+updateTimeStamp+'" class="form-control eupdateTimeStamp" name="eupdateTimeStamp" id="eupdateTimeStamp"></td> </tr> <tr> <td>totalIssue</td> <td><input type="text" value="'+totalIssue+'" class="form-control etotalIssue" name="etotalIssue" id="etotalIssue"></td> </tr> </table> </div>'
+				
+			let bt="<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button> <button type='submit' onclick='edit("+result+")' data-dismiss='modal' class='btn bg-teal-400'>Save</button>"
+			console.log("Ujjwal")
+			document.getElementById("blast").innerHTML=tek;
+			document.getElementById("off").innerHTML=bt;
+			console.log("++++++++++++++++++++++++++++++++++++++++")
+			
+		});
+    }
+	
+	function ddel(value)
+    {
+        console.log(value);
+        let sub = 'pigIron';
+        let result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+			console.log("aaaaaaaaaaaaaaaaaaaaaaaa")
+            let customerName = $(this).find(".customerName")[0].innerText;    
+            let area = $(this).find(".area").html();    
+            let grade = $(this).find(".grade").html();    
+            let category = $(this).find(".category").html();    
+            let product = $(this).find(".product").html();    
+            let lastDelivery = $(this).find(".lastDelivery").html();    
+            let representative = $(this).find(".representative").html();    
+            let phoneNumber = $(this).find(".phoneNumber").html();    
+            let meetingDates = $(this).find(".meetingDates").html();    
+            let currentRemark = $(this).find(".currentRemark").html();    
+            let remarkStatus = $(this).find(".remarkStatus").html();    
+            let nextDate = $(this).find(".nextDate").html();    
+            let currentIssue = $(this).find(".currentIssue").html();    
+            let analysed = $(this).find(".analysed").html();     
+            let updateTimeStamp = $(this).find(".updateTimeStamp").html();     
+            let totalIssue = $(this).find(".totalIssue").html();     
+                
+			console.log(result)
+
+
+            let tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >customerName</td> <td>'+customerName+'</td> </tr> <tr> <td>area</td> <td>'+area+' </td> </tr> </tr> <tr> <td>grade</td> <td>'+grade+' </td> </tr> <tr> <td>category</td> <td>'+category+' </td> </tr> <tr> <td>product</td> <td>'+product+' </td> </tr> <tr> <td>lastDelivery</td> <td>'+lastDelivery+' </td> </tr> <tr> <td>representative</td> <td>'+representative+' </td> </tr> <tr> <td>phoneNumber</td> <td>'+phoneNumber+' </td> </tr> <tr> <td>meetingDates</td> <td>'+meetingDates+' </td> </tr> <tr> <td>currentRemark</td> <td>'+currentRemark+' </td> </tr> <tr> <td>remarkStatus</td> <td>'+remarkStatus+' </td> </tr> <tr> <td>nextDate</td> <td>'+nextDate+' </td> </tr> <tr> <td>currentIssue</td> <td>'+currentIssue+' </td> </tr> <tr> <td>analysed</td> <td>'+analysed+' </td> </tr> <tr> <td>updateTimeStamp</td> <td>'+updateTimeStamp+' </td> </tr> <tr> <td>totalIssue</td> <td>'+totalIssue+' </td> </tr> </table> </div>'
+
+			let bt="<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button> <button type='submit' onclick='del("+result+")' data-dismiss='modal' class='btn bg-teal-400'>Delete</button>"
+			console.log("Ujjwal")
+			document.getElementById("blasto").innerHTML=tek;
+			document.getElementById("offo").innerHTML=bt;
+
+		});
+    }
+
+ </script>
+
+ <script>
+	  function fil() {
+		 
+        let formData = {
+            customerNameFil: $("#customerNameFil").val(),
+            areaFil: $("#areaFil").val(),
+            gradeFil: $("#gradeFil").val(),
+            categoryFil: $("#categoryFil").val(),
+            productFil: $("#productFil").val(),
+            representativeFil: $("#representativeFil").val(),
+            op: "fil"
+        };
+
+        // Send POST request to server
+        $.post("/marketPlanPigIron", formData, function (dataFil, status) {
+            console.log("Filter data:");
+            console.log(dataFil);
+			
+            if (Array.isArray(dataFil)) {
+            // If dataFil is already an array, call getData directly
+            getData(dataFil);
+        } else {
+            // If dataFil is not an array, convert it into an array
+            let dataArray = [dataFil];
+            // Call getData with the converted array
+            getData(dataArray);
+        }
+        });
+    }
+
+    // JavaScript function to initialize DataTable with data
+    function check(tableData) {
+        // Destroy existing DataTable, if any
+        $('#myTable').DataTable().destroy();
+		console.log("tableData" ,tableData);
+
+		$('#myTable').DataTable({  
+    data: tableData, 
+	pagingType: 'simple_numbers',
+
+	buttons: ['copy', 'csv', 'excel', 'pdf', 'print'], // Specify buttons directly, not within layout
+    dom: 'lBfrtip',
+	select: {
+        style: 'multi'
+    },
+    columns: [
+        { data: 'customerName' },
+        { data: 'area' },
+        { data: 'grade' },
+        // Define a column for displaying products
+        {
+            data: null,
+            render: function (data, type, row) {
+                // Generate HTML for displaying products
+                let productsHtml = '';
+                if (data.products && data.products.length > 0) {
+                    data.products.forEach(function (product) {
+                        productsHtml += product.productName + '<br>';
+                    });
+                }
+                return productsHtml;
+            }
+        },
+		{
+            data: null,
+            render: function (data, type, row) {
+                // Generate HTML for displaying products
+                let categoryHtml = '';
+                if (data.categories && data.categories.length > 0) {
+                    data.categories.forEach(function (category) {
+                        categoryHtml += category.categoriesType + '<br>';
+                    });
+                }
+                return categoryHtml;
+            }
+        }
+    ]
+});
+    }
+
+
+	function getData(initialData){
+		console.log("///////////////////////////" , initialData)
+		let categorydata = <%- JSON.stringify(categorydata) %>;
+ 		let productData = <%- JSON.stringify(productData) %>;
+ 		let custCateg = <%- JSON.stringify(custCateg) %>;
+		 let custProdData = <%- JSON.stringify(custProdData) %>;
+		 let areaData = <%- JSON.stringify(areaData) %>;
+		 let gradeData = <%- JSON.stringify(gradeData) %>;
+
+		 let customerProducts = [];
+		 let customerCategories = [];
+ 
+		 // Loop through each customer data
+// Assuming initialData, custProdData, and productData are defined and populated elsewhere in your code
+
+for (let i = 0; i < initialData.length; i++) {
+    let customerId = initialData[i].customerId;
+    let customerProducts = []; // Reset the customerProducts array for each customer
+
+    // Filter custProdData to get products related to the current customer
+    for (let j = 0; j < custProdData.length; j++) {
+        if (parseInt(custProdData[j].customerName) === customerId) {
+            // Find the product details using productId from productData
+            let productId = custProdData[j].product;
+            let productDetails = productData.find(product => product.productId === parseInt(productId));
+            
+            // Add the product details to the customerProducts array
+            if (productDetails) {
+                customerProducts.push(productDetails);
+            }
+        }
+    }
+
+    // Add the customerProducts array to the customer object
+    initialData[i].products = customerProducts;
+}
+
+ // Assuming initialData, custCateg, and categorydata are defined and populated elsewhere in your code
+
+for (let i = 0; i < initialData.length; i++) {
+    let customerId = initialData[i].customerId;
+    let customerCategories = []; // Reset the customerCategories array for each customer
+
+    // Filter custProdData to get products related to the current customer
+    for (let j = 0; j < custCateg.length; j++) {
+        if (parseInt(custCateg[j].customerName) === customerId) {
+            // Find the product details using productId from productData
+            let categoryId = custCateg[j].category;
+            let categoryDetails = categorydata.find(category => category.categoriesId === parseInt(categoryId));
+            
+            // Add the product details to the customerProducts array
+            if (categoryDetails) {
+                if(!customerCategories.includes(categoryDetails)){
+                    customerCategories.push(categoryDetails);
+                }
+            }
+        }
+    }
+
+    // Add the customerProducts array to the customer object
+    initialData[i].categories = customerCategories;
+}
+
+for (let i = 0; i < initialData.length; i++) {
+    let customerId = initialData[i].customerId;
+
+    // Find the corresponding area details using areaId
+    const area = areaData.find(area => area.areaId === parseInt(initialData[i].area));
+
+    if (area) {
+        // Construct areaData string using area details
+        const areaDataString = `${area.area}, ${area.district}, ${area.state}, ${area.zone}`;
+
+        // Add areaDataString to the customer object
+        initialData[i].area = areaDataString;
+
+        console.log("Updated area details for customerId:", customerId, "Area Details:", initialData[i].area);
+    } else {
+        console.log('Area details not found for customerId:', customerId);
+    }
+}
+
+
+
+// grade
+for (let i = 0; i < initialData.length; i++) {
+    let customerId = initialData[i].customerId;
+
+    // Find the corresponding area details using areaId
+    const grade = gradeData.find(grade => grade.gradeId === parseInt(initialData[i].grade));
+
+    if (grade) {
+  
+        // Add areaDataa to the customer object
+        initialData[i].grade = grade.gradeType;
+
+        console.log(grade);
+    } else {
+        console.log('Area details not found for customerId:', customerId);
+    }
+}
+
+console.log("initialData" ,initialData);
+
+		 console.log("***************************" );
+
+		 console.log("categorydata" ,categorydata);
+		 console.log("productData" ,productData);
+		 console.log("custProdData" ,custProdData);
+        check(initialData);
+	}
+
+
+// ////////////////////////////////////////////////////////////// market plain submission
+
+	 // Listen for input events on the input fields
+	 $('#submitSelected').click(function() {   
+ 
+
+	
+ let selectedRows = $('#myTable').DataTable().rows('.selected').data().toArray();
+ // console.log("------------------------------- selectedRows" , selectedRows)
+ var customerIds = selectedRows.map(row => row.customerId)  // Assuming 'id' is the unique identifier for each customer
+
+
+ if(customerIds.length == 0){
+	 Swal.fire({
+		 icon: "error",
+		 title: "Oops...",
+		 text: "No customers were selected.",
+	  });
+ } else {
+	 const container = document.getElementById('invoiceContainer');
+	 container.innerHTML = '';
+	 let divElement = document.createElement("div");
+	 divElement.innerHTML = `<div class="px-4 py-0" style="background:#9155FD; color: white ;text-align:center;"><h4>${customerIds.length} customers   Selected</h4></div>`;
+	 container.appendChild(divElement);
+
+	 Swal.fire({
+		 position: "center-center",
+		 icon: "success",
+		 title: `<h1>${customerIds.length} customers are added to Market Plan</h1>`,
+		 showConfirmButton: false,
+		 timer: 1500
+	 });
+ }
+ // $.ajax({
+ // 	url: '/allotmentlist', // Endpoint to handle the request
+ // 	type: 'POST',
+ // 	data: {
+ // 		customerIds: customerIds,
+		  
+ // 	},
+ // 	success: function(response) {
+  // 		// console.log("555555555555555555555555555555" , response)
+ // 		creatTable(response)
+ // 	},
+ // 	error: function(xhr, status, error) {
+ // 		// alert('An error occurred: ' + error);
+ // 	}
+ // });
+ })
+
+	 // function creatTable(data) {
+	 // 	console.log("ddddddddddddddd" ,data)
+	  
+
+	 // 				// Get the container
+	 // 	const container = document.getElementById('invoiceContainer');
+
+	 // 	// Remove the existing table if it exists
+	 // 	const existingTable = container.querySelector('table');
+	 // 	if (existingTable) {
+	 // 	container.removeChild(existingTable);
+	 // 	}
+
+	 // 	// Create the table
+	 // 	const table = document.createElement('table');
+	 // 	table.style.borderCollapse = 'collapse';
+
+	 // 	// Create the table header
+	 // 	const thead = document.createElement('thead');
+	 // 	const headerRow = document.createElement('tr');
+
+	 // 	['customerName', 'status', 'address', 'CustomerStatus'].forEach(text => {
+	 // 	const th = document.createElement('th');
+	 // 	th.textContent = text;
+	 // 	headerRow.appendChild(th);
+	 // 	});
+
+	 // 	thead.appendChild(headerRow);
+	 // 	table.appendChild(thead);
+
+	 // 	// Create the table body
+	 // 	const tbody = document.createElement('tbody');
+
+	 // 	data.customer.forEach(item => {
+	 // 	const row = document.createElement('tr');
+
+	 // 	['customerName', 'status', 'address', 'CustomerStatus'].forEach(key => {
+	 // 		const td = document.createElement('td');
+	 // 		td.textContent = item[key];
+	 // 		row.appendChild(td);
+	 // 	});
+
+	 // 	tbody.appendChild(row);
+	 // 	});
+
+	 // 	table.appendChild(tbody);
+
+	 // 	// Append the table to the document
+	 // 	document.getElementById('invoiceContainer').appendChild(table);
+
+	 // 	// Add border styles
+	 // 	const style = document.createElement('style');
+	 // 	style.innerHTML = `
+	 // 	table, th, td {
+	 // 		border: 1px solid black;
+	 // 		padding: 8px;
+	 // 		text-align: left;
+	 // 	}
+	 // 	`;
+	 // 	document.head.appendChild(style);
+	 // }
+
+		 
+
+	 // create allotment 
+				 
+		 $('#createAllotment').click(function() {   
+		 
+			 alert("hellow")
+			 
+		 let selectedRows = $('#myTable').DataTable().rows('.selected').data().toArray();
+		 // console.log("------------------------------- selectedRows" , selectedRows)
+		 var customerIds = selectedRows.map(row => row.customerId)  // Assuming 'id' is the unique identifier for each customer
+
+		 // console.log("------------------------------- customerIds" , customerIds)
+
+		 var representativeName = $('#representativeName').val();
+		 var representativeEmail = $('#representativeEmail').val();
+		 
+		 manageMarketPlan('create', { name: 'New Market Plan', startDate: '2023-04-01', endDate: '2023-04-30' });
+		 manageMarketPlan('addMultipleCustomers', { customers:  customerIds });
+		 manageMarketPlan('reassignSalesperson', { marketPlanId: 1, salesPersonId: 2 });
+
+
+		 // $.ajax({
+		 // 	url: '/createAllotment', // Endpoint to handle the request
+		 // 	type: 'POST',
+		 // 	data: {
+		 // 		customerIds: customerIds,
+				 
+		 // 	},
+		 // 	success: function(response) {
+		 // 		// console.log("555555555555555555555555555555" , response)
+		 // 		creatTable(response)
+		 // 	},
+		 // 	error: function(xhr, status, error) {
+		 // 		// alert('An error occurred: ' + error);
+		 // 	}
+		 // });
+		 // })
+
+		 function manageMarketPlan(op, data) {
+			 $.ajax({
+				 url: '/manage-market-plan',
+				 type: 'POST',
+				 contentType: 'application/json',
+				 data: JSON.stringify({ op,...data }),
+				 success: function(response) {
+				 console.log(response);
+				 // Handle response (e.g., show success/error messages, update UI)
+				 },
+				 error: function(jqXHR, textStatus, errorThrown) {
+				 console.error(textStatus, errorThrown);
+				 // Handle error
+				 }
+			 });
+			 }
+		 })
+// ////////////////////////////////////////////////////////////// end market plain submission
+
+
+
+
+
+
+
+ // ////////////////////////////////////////////////////////////// end market plain submission
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Initialize DataTable with initial data
+    $(document).ready(function () {
+		let initialData = <%- JSON.stringify(data) %>;
+
+		getData(initialData)
+    });
+ </script>
+
+	<script>
+		
+		function exportData(){
+			let table = document.getElementById("tbl");
+			console.log(table)
+
+			
+			let rows =[];
+ 
+      
+			for(let i=0,row; row = table.rows[i];i++){
+				
+				column1 = row.cells[0].innerText;
+				column2 = row.cells[1].innerText;
+				column3 = row.cells[2].innerText;
+				column4 = row.cells[3].innerText;
+				column5 = row.cells[4].innerText;
+				column6 = row.cells[5].innerText;
+				column7 = row.cells[6].innerText;
+				column8 = row.cells[7].innerText;
+				column9 = row.cells[8].innerText;
+				column10 = row.cells[9].innerText;
+				column11 = row.cells[10].innerText;
+				column12 = row.cells[11].innerText;
+				column13 = row.cells[12].innerText;
+				column14 = row.cells[13].innerText;
+				column15 = row.cells[14].innerText;
+				column16 = row.cells[15].innerText;
+				rows.push(
+					[
+						column1,
+						column2,
+						column3,
+						column4,
+						column5,
+						column6,
+						column7,
+						column8,
+						column9,
+						column10,
+						column12,
+						column13,
+						column14,
+						column15,
+						column16,
+					]
+				);
+ 
+        	}
+			console.log(rows)
+        	csvContent = "data:text/csv;charset=utf-8,";
+         
+			rows.forEach(function(rowArray){
+				row = rowArray.join(",");
+				csvContent += row + "\r\n";
+			});
+ 
+			let encodedUri = encodeURI(csvContent);
+			let link = document.createElement("a");
+			link.setAttribute("href", encodedUri);
+			link.setAttribute("download", "Market_Plan_Pig_Iron.csv");
+			document.body.appendChild(link);
+			link.click();
+}
+	</script>
+
+<script type="text/javascript">
+    $('#example-multiple-selected').multiselect();
+</script>
+
+
+<script>
+
+function custInfo(value){
+		console.log(value);
+		$.post("/masterCustomer",
+        {
+            value:value,
+            op:"cinf"
+        },
+        function (data, status) {
+			
+			console.log("data9999999999999999999999999999999999999999" , data)
+			console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+            console.log(data);
+			console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+			// console.log(Object.keys(data).length)
+			// console.log(data[0].product)
+			custmod(data);
+            console.log(status);
+        }
+		)
+	}
+
+	function custmod(data)
+	{
+		
+		var productData = <%- JSON.stringify(productData) %>;
+console.log("data11111111111111111111111111" ,data )
+console.log("productData" ,productData )
+		if(data)
+		{
+			// area
+			const address = `area - ${data.area} district -  ${data.district} zone - ${data.zone} state - ${data.state}`;
+			console.log("data1333333333333" ,address  )
+
+			console.log("data" ,data[0].product )
+			console.log("data1111111111111111111111" ,data  )
+			var index=Object.keys(data).length;
+			console.log(index)
+			index=index-14;
+			console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+			var holiname=data[0].customerName
+			console.log("holiname");
+			console.log(holiname);
+			
+			var ishuProdTable = "<table id='' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+				ishuProdTable += "<thead> <tr> <th class='col-lg-6'>Index</th> <th>Product</th> </tr> </thead>";
+				for (let i = 0; i <= index; i++) {
+				  ishuProdTable += "<tr>";
+				 
+				   // Check if data[i].product is defined
+    if (data[i] && data[i].product) {
+        for (var a = 0; a < productData.length; a++) {
+            console.log("data[i].product", data[i].product);
+            if (productData[a].productId == data[i].product) {
+				ishuProdTable += "<td >"+ (a+1) +"</td>";
+                ishuProdTable += "<td> " + productData[a].productName + "</td>";
+                break;
+            }
+        }
+    }
+				  ishuProdTable += "</tr>";
+				  
+				}
+			ishuProdTable += "</table>";
+
+		 
+			
+			var	tek="<div><button onclick='getCustomerData(\"" + holiname + "\", " + JSON.stringify(data) + ")' class='btn-light'>Print Customer Details</button> <div class='float-right'> <button class='btn-light' data-toggle='modal' data-target='#modal_edit' data-popup='popover' onclick='eedit(\"" + data.customerId + "customer\")'>Edit</button> <button class='btn-light' data-toggle='modal' data-target='#modal_del' data-popup='popover' onclick='ddel(\"" + data.customerId + "customer\")'>Delete</button> </div> </div> <br> <ul class='nav nav-tabs nav-tabs-solid bg-teal-400 border-0 nav-justified'>"	
+
+			tek+=" <li class='nav-item'><a href='#customer-tab1' class='nav-link active' data-toggle='tab'>Detail</a></li>"
+
+			tek+="<li class='nav-item'><a href='#customer-tab2' class='nav-link' data-toggle='tab' onclick='holiContact("+holiname+")'>Contact</a></li>"	
+
+			tek+="<li class='nav-item'><a href='#customer-tab3' class='nav-link' data-toggle='tab' onclick='holiCategory("+holiname+")'>Category</a></li>"	
+
+			tek+="<li class='nav-item'><a href='#customer-tab4' class='nav-link' data-toggle='tab' onclick='holiFirm("+holiname+")'>Firm</a></li>"	
+			
+			tek+="<li class='nav-item'><a href='#customer-tab5' class='nav-link' data-toggle='tab'>Product</a></li>"	
+			
+			tek+="<li class='nav-item' ><a href='#customer-tab6' class='nav-link' data-toggle='tab' onclick='holi("+holiname+")'>Report</a></li>"	
+
+			tek+="</ul> <div class='tab-content'> "	
+
+			tek+="<div class='tab-pane fade show active' id='customer-tab1' style='text-align:center;'> <table class='table datatable-basic table-bordered table-striped table-hover'> <tr> <td>Customer Name</td> <td>"+data.customerName+"</td> </tr> <tr> <td>Area</td> <td>"+address+"</td> </tr> <tr> <td>Status</td> <td>"+data.status+"</td> </tr> <tr> <td>Grade</td> <td>"+data.gradeType+"</td> </tr> <tr> <td>Pincode</td> <td>"+data.pincode+"</td> </tr> <tr> <td>Address</td> <td>"+data.address+"</td> </tr> <tr> <td>REF_NO_1</td> <td>"+data.referenceNumber1+"</td> </tr> <tr> <td>REF_NO_2</td> <td>"+data.referenceNumber2+"</td> </tr> <tr> <td>Credit Limit</td> <td>"+data.creditLimit+"</td> </tr> <tr> <td>Credit Days</td> <td>"+data.creditDays+"</td> </tr> <tr> <td>Customer Status</td> <td>"+data.CustomerStatus+"</td> </tr> </table> </div>"
+			
+			tek+="<div class='tab-pane fade' id='customer-tab2' style='text-align:center;'> </div> "
+
+			tek+="<div class='tab-pane fade' id='customer-tab3' style='text-align:center;'> </div> "
+			
+			tek+="<div class='tab-pane fade' id='customer-tab4' style='text-align:center;'> </div> "
+
+			tek+="<div class='tab-pane fade' id='customer-tab5' style='text-align:center;'> "+ishuProdTable+" </div>"
+			
+			tek+="<div class='tab-pane fade' id='customer-tab6' style='text-align:center;'> <div class='cardRep' id='cardRep'></div> <div class='downloadReport card' id='downloadReport'></div> </div>"
+
+
+			tek+="</div>"
+			
+			console.log("llllllllllllllllllllllllllllllllll" )
+			document.getElementById("ekdin").innerHTML=tek;
+		 
+		}
+		else
+		{
+			 
+			console.log("llllllllllllllllllllllllllllllllll33333333333333333333333333333" )
+			var table="<h5>Verified Master Customer does not exist</h5>"
+			document.getElementById("ekdin").innerHTML=table;
+			
+		}
+	}
+	
+ 
+	function getCustomerData(customerId, customerData) {
+    var fData, ctData, cnData;
+    var dataLoaded = {
+        fData: false,
+        ctData: false,
+        cnData: false
+    };
+
+    function checkDataLoaded() {
+        if (dataLoaded.fData && dataLoaded.ctData && dataLoaded.cnData) {
+            printFunction(customerId, customerData, fData, ctData, cnData);
+        }
+    }
+
+    $.post("/masterCustomer", {
+        value: customerId,
+        op: "customerContact"
+    }, function (data, status) {
+        console.log(data);
+        cnData = data;
+        console.log(status);
+        dataLoaded.cnData = true;
+        checkDataLoaded();
+    });
+
+    $.post("/masterCustomer", {
+        value: customerId,
+        op: "customerCategory"
+    }, function (data, status) {
+        console.log(data);
+        ctData = data;
+        console.log(status);
+        dataLoaded.ctData = true;
+        checkDataLoaded();
+    });
+
+    $.post("/masterCustomer", {
+        value: customerId,
+        op: "customerFirm"
+    }, function (data, status) {
+        console.log(data);
+        fData = data;
+        console.log(status);
+        dataLoaded.fData = true;
+        checkDataLoaded();
+    });
+}
+	  
+
+	  function printFunction(customerId, customerData,fData,ctData,cnData) {
+		var productData = <%- JSON.stringify(productData) %>;
+		// var productData = JSON.stringify(productData);
+		var areaData = JSON.stringify(areaData);
+		var gradeData = JSON.stringify(gradeData);
+		console.log("printing")
+		console.log("customerData" ,customerData)
+		console.log("fData" , fData)
+		console.log("ctData" ,ctData)
+		console.log("cnData", cnData)
+		console.log("areaData", areaData)
+		console.log("gradeData", gradeData)
+		
+		var index=Object.keys(customerData).length;
+		console.log("customerData1111" , customerData.area , customerData.zone )
+		index=index-14;
+		var pData=[];
+		for (let i = 0; i <= index; i++) {
+			for (var a = 0; a < productData.length; a++) {
+				if (customerData[i] && customerData[i].product) {
+					if (productData[a].productId == customerData[i].product) {
+				pData.push(productData[a].productName);
+				break;
+			  }
+				}
+			
+			}
+		  }
+		console.log("///////////////////////////////" ,pData)
+
+		let firms = custFirmPrint(fData);
+		// console.log("firmssssss" , firms)
+		// const firmsData = getfirmsData()
+		// function getfirmsData(){
+		// 	const arrayData = []
+		// 	for(i = 0 ; i < firms.length ; i++){
+		// 		const keys = Object.keys(firms[i])
+		// 		for(a = 0 ; a < keys.length ; a++){
+					
+
+		// 			const data = [keys[a] , firms[i][keys[a]]]
+		// 			console.log("item" ,data)
+		// 			arrayData.push(data)
+		// 		}
+		// 	}
+		// 	console.log("arrayData",arrayData)
+		// return arrayData
+		// }
+		
+
+// console.log("firmsData" ,firmsData);
+
+	 let category =	custCatPrint(ctData)
+	 console.log("category" , category)
+	 console.log("firms" , firms)
+	 let contacts =	custCntctPrint(cnData)
+	 console.log("contacts" , contacts)
+	//  let customerData1 = {...customerData , area : `${customerData.area}`}
+	 CustomerStatus = customerData["CustomerStatus"]
+	 address = customerData["address"]
+	 area = `${customerData.area}`
+	 CustomerStatus = customerData["CustomerStatus"]
+	 customerName = customerData["customerName"]
+	 gradeType = customerData["gradeType"]
+	 reference1ContactNumber = customerData["reference1ContactNumber"]
+	 reference2ContactNumber = customerData["reference2ContactNumber"]
+	 referenceNumber1 = customerData["referenceNumber1"]
+	 referenceNumber2 = customerData["referenceNumber2"]
+	 creditLimit = customerData["creditLimit"]
+	 creditDays = customerData["creditDays"]
+	 status = customerData["status"]
+ 	 zone = customerData["zone"]
+	 district = customerData["district"]
+ 
+	 let customerData1 = {customerName ,CustomerStatus ,address ,area : `${customerData.area}`,status , zone ,district ,CustomerStatus,gradeType ,
+		reference1ContactNumber , reference2ContactNumber ,referenceNumber1 ,referenceNumber2 ,
+		creditLimit ,creditDays , }
+
+	 // Delete keys '0' and '1' if they exist
+delete customerData1['0'];
+delete customerData1['1'];
+delete customerData1['customerId'];
+delete customerData1['grade'];
+delete customerData1['areaId'];
+delete customerData1['gradeId'];
+
+console.log(".................................." , customerData)
+console.log(".................................." , customerData1)
+
+const frimsDAtaArray = []
+const firmDataa = firms.forEach((item) => {
+                // Replace null values with a placeholder
+				let {key, value} = item
+				console.log("dataitem" ,item)
+                 console.log("Data , key"  , key , value)
+				console.log(Object.keys(item)  , Object.values(item))
+				frimsDAtaArray.push(  Object.values(item))
+                // return [Object.keys(item)  , Object.values(item) ]
+				 
+            })
+			console.log("firmDAtaa" , frimsDAtaArray)
+
+			const contactDAtaArray = []
+			console.log( "contacts111" ,contacts)
+			let contactDataa = contacts.forEach((  item) => {
+					// Replace null values with a placeholder
+					console.log("dataitem", item);
+
+					const data3 = Object.values(item);
+					console.log(data3);
+
+					contactDAtaArray.push(data3); // Use push directly without reassigning
+					console.log("acc", contactDAtaArray);
+
+					 // Return the updated acc array
+				} );
+
+				console.log("contactDataArray", contactDataa); 
+
+
+console.log("Customerwwwww" ,customerData1)
+	 console.log("Customer" ,Object.entries(customerData))
+console.log("firms" ,firms)
+console.log("firms" ,Object.entries(firms))
+		var docDefinition =  {
+                content: [
+				{text: 'Master Customer Details', style: 'header'},
+	  
+				// custoer data 
+	  {text: 'PROFILE', style: 'subheader'},
+	   
+	  {
+		  style: 'tableExample',
+		  table: {
+				  widths: [148, 148],
+			  body:  Object.entries(customerData1).map(([key, value]) => {
+                const displayValue = value !== null ? value.toString() : 'N/A';
+				return [key, displayValue];
+            })	
+		  },
+		  layout: {
+				fillColor: function (rowIndex, node, columnIndex) {
+					return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+				}
+			}
+	  },
+   
+	 // fData data 
+	  {text: 'FIRMS', style: 'subheader'},
+	   
+	   {
+		   style: 'tableExample',
+		   table: {
+			widths: [ 'auto', 'auto','auto', 'auto' ,'auto', 'auto','auto', 'auto','auto' ],
+ 			   body: [ ['First Name', 'Address', 'Pincode', 'GST Number', 'Account Number', 'Bank Name', 'IFSC Code', 'Product Produced', 'Quantity'],
+				...frimsDAtaArray
+			],
+				headerRows: 1
+			
+			 
+		   },
+		   layout: {
+				 fillColor: function (rowIndex, node, columnIndex) {
+					 return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+				 }
+			 }
+	   },
+
+	   	 // cData data 
+	  {text: 'CONTACTS', style: 'subheader'},
+	   
+	   {
+		   style: 'tableExample',
+		   table: {
+			widths: [  '*', '*','*', '*'  ],
+
+ 			   body:  [['Contact Name', 'Designation', 'MobileNumber', 'Email' ],
+ ...contactDAtaArray],
+				headerRows: 1
+			
+			 
+		   },
+		   layout: {
+				 fillColor: function (rowIndex, node, columnIndex) {
+					 return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+				 }
+			 }
+	   },
+
+
+
+//  fData
+// ...firms.map((firm) => {
+
+// 	const firmData = []
+// 	let arrayData = [{text: 'Firm', style: 'subheader'},   {
+// 		   style: 'tableExample',
+// 		   table: {
+// 				   widths: [ 'auto','auto','auto', 'auto','auto', 'auto','auto', 'auto','auto' ],
+// 			   body:[
+//                     Object.keys(firms[0]), // Display keys as table headers
+//                     ...firms.map((firm) => Object.values(firm).map(value => value.toString()))
+//                 ]
+//             },
+// 		   layout: {
+// 				 fillColor: function (rowIndex, node, columnIndex) {
+// 					 return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+// 				 }
+// 			 }
+// 	   }]
+		 
+// 				const keys = Object.keys(firm)
+// 				console.log("keys",keys)
+// 				for(a = 0 ; a < keys.length ; a++){
+					
+
+// 					const data = [keys[a] , firm[keys[a]]]
+// 					console.log("item" ,data)
+// 					firmData.push(	data)
+					  
+
+// 				}
+			 
+ 
+// 	console.log("arrayData" ,arrayData)
+			
+	 
+
+
+// 	  return arrayData
+// 	}),
+//  ctData  category
+{text: 'CATEGORY', style: 'subheader', absolutePosition: { x: 400, y:73 }},
+	  
+	  {
+		  style: 'tableExample',
+		  table: {
+				  widths: ['*'],
+			  body:  Object.entries(category ).map(([key, value]) => {
+                // Replace null values with a placeholder
+                const displayValue = value !== null ? value.toString() : 'N/A';
+                return [displayValue];
+            })
+		  },	
+		  layout: {
+				fillColor: function (rowIndex, node, columnIndex) {
+					return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+				}
+			},
+			absolutePosition: { x: 400, y: 90 }
+	  },
+	  //  cnData   contact
+// 	  ...contacts.map((contact) => {
+
+// const contactData = []
+// let arrayContactData = [{text: 'contacts', style: 'subheader'},   {
+// 	   style: 'tableExample',
+// 	   table: {
+// 			   widths: [  '*', '*', '*', '*' , '*', '*'  ],
+// 		   body: [
+//                     Object.keys(contacts[0]), // Display keys as table headers
+//                     ...contacts.map((contact) => Object.values(contact).map(value => value.toString()))
+//                 ]
+//             },
+// 	   layout: {
+// 			 fillColor: function (rowIndex, node, columnIndex) {
+// 				 return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+// 			 }
+// 		 }
+//    }]
+	 
+// 			const keys = Object.keys(contact)
+// 			console.log("keys",keys)
+// 			for(a = 0 ; a < keys.length ; a++){
+				
+
+// 				const data = [keys[a] , contact[keys[a]]]
+// 				console.log("item" ,data)
+// 				contactData.push(	data)
+				  
+
+// 			}
+		 
+
+// console.log("arrayContactData" ,arrayContactData)
+//   return arrayContactData
+// }),
+
+	  	  //  pData   contact
+{text: 'PRODUCTS', style: 'subheader', absolutePosition: { x: 400, y: 180 }},
+	   
+	  {
+		  style: 'tableExample',
+		  table: {
+				  widths: ['*'],
+			  body:  Object.entries(pData  ).map(([key, value]) => {
+                // Replace null values with a placeholder
+                const displayValue = value !== null ? value.toString() : 'N/A';
+                return [displayValue];
+            })
+		  },
+		  layout: {
+				fillColor: function (rowIndex, node, columnIndex) {
+					return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+				}
+			},
+			absolutePosition: { x: 400, y: 197 }
+	  },
+
+	   ],
+	   styles: {
+		header: {
+			fontSize: 10,
+			bold: true,
+			margin: [0, 0, 0, 10],
+		 
+           
+		},
+		subheader: {
+			fontSize: 7,
+			bold: true,
+			margin: [0, 10, 0, 5]
+		},
+		tableExample: {
+			margin: [0, 5, 0, 10],
+			fontSize:7
+		},
+		tableHeader: {
+			bold: true,
+			fontSize: 6,
+			color: 'black'
+		},
+	},
+	//pageOrientation: 'landscape',
+};
+                        
+			console.log()
+
+		pdfMake.createPdf(docDefinition).download();
+}	 
+		  
+
+
+
+	function holi (value)
+	{
+		console.log("hhhhhhhhhhhhhhooooooooooooooolllllllllliiiiiiiiii");
+		console.log(value);
+		$.post("/masterCustomer",
+        {
+            value:value,
+            op:"marktrep"
+        },
+        function (data, status) {
+			console.log("***********************************************")
+            console.log(data);
+			console.log("***********************************************")
+			markrep(data);
+            console.log(status);
+        }
+		)
+	}
+	function markrep(repdata)
+	{
+		console.log(repdata)
+		if(repdata)
+		{
+			var holi="<table id='tRep' class='table repdatatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+			
+			holi+="<thead> <tr> <th>area</th> <th>product</th> <th>lastDelivery</th> <th>representative</th> <th>currentRemark</th> <th>remarkStatus</th> <th>currentIssue</th> </tr> </thead>";
+			
+			for(var i=0; i<repdata.length; i++)
+			{
+				holi+="<tr>"
+				holi+="<td >"+ repdata[i].area+"</td>"
+				holi+="<td >"+ repdata[i].product+"</td>"
+				holi+="<td >"+ repdata[i].lastDelivery+"</td>"
+				holi+="<td >"+ repdata[i].representative+"</td>"
+				holi+="<td >"+ repdata[i].currentRemark+"</td>"
+				holi+="<td >"+ repdata[i].remarkStatus+"</td>"
+				holi+="<td >"+ repdata[i].currentIssue+"</td>"
+				holi+="</tr>"
+			}
+			holi+="</table>";
+			
+			document.getElementById("cardRep").innerHTML=holi;
+
+			var hbtn="<button class='btn-link' onclick=exportReport()> Download list</button>"
+
+			document.getElementById("downloadReport").innerHTML=hbtn;
+		}
+		else
+		{
+			var holi="<h3>NO data </h3>";
+			document.getElementById("cardRep").innerHTML=holi;
+		}
+	}
+
+	function holiContact(value)
+	{
+		console.log("finding customer contact")
+		$.post("/masterCustomer",
+        {
+            value:value,
+            op:"customerContact"
+        },
+        function (data, status) {
+            console.log(data);
+			custCntct(data);
+            console.log(status);
+        }
+		)
+	}
+	
+	function holiCategory(value)
+	{
+		console.log("finding customer category")
+		$.post("/masterCustomer",
+        {
+            value:value,
+            op:"customerCategory"
+        },
+        function (data, status) {
+            console.log(data);
+			custCat(data);
+            console.log(status);
+        }
+		)
+	}
+	
+	function holiFirm(value)
+	{
+		console.log("finding customer firm")
+		$.post("/masterCustomer",
+        {
+            value:value,
+            op:"customerFirm"
+        },
+        function (data, status) {
+            console.log(data);
+			custFirm(data);
+            console.log(status);
+        }
+		)
+	}
+
+
+	function custCntct(cntctdata)
+	{
+		console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy")
+		console.log(cntctdata)
+		if(cntctdata)
+		{
+			var holi="<table id='' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+			
+			holi+="<thead> <tr> <th>Index</th> <th>Contact Name </th> <th>Designation</th> <th>Mobile Number</th> <th>Email</th> </tr> </thead>";
+			
+			for(var i=0; i<cntctdata.length; i++)
+			{
+				holi+="<tr>"
+				holi+="<td >"+ (i+1) +"</td>"
+				holi+="<td >"+ cntctdata[i].contactName+"</td>"
+				holi+="<td >"+ cntctdata[i].designation+"</td>"
+				holi+="<td >"+ cntctdata[i].mobileNumber+"</td>"
+				holi+="<td >"+ cntctdata[i].email+"</td>"
+				holi+="</tr>"
+			}
+			holi+="</table>";
+			
+			document.getElementById("customer-tab2").innerHTML=holi;
+		}
+		else
+		{
+			var holi="<h3>NO data </h3>";
+			document.getElementById("customer-tab2").innerHTML=holi;
+		}
+	}
+
+	function custCat(catdata)
+	{
+		var categorydata = JSON.parse('<%-JSON.stringify(categorydata)%>');
+		console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy")
+		console.log(catdata)
+		if(catdata)
+		{
+			var holi="<table id='' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+			
+			holi+="<thead> <tr> <th class='col-lg-6'>Index</th> <th>Category</th> </tr> </thead>";
+			
+			for(var i=0; i<catdata.length; i++)
+			{
+				holi+="<tr>"
+				holi+="<td >"+ (i+1) +"</td>"
+				for (var a = 0; a < categorydata.length; a++) {
+					if (categorydata[a].categoriesId == catdata[i].category) {
+					  holi += "<td> " + categorydata[a].categoriesType+ "</td>";
+					  break;
+					}
+				  }
+				holi+="</tr>"
+			}
+			holi+="</table>";
+			
+			document.getElementById("customer-tab3").innerHTML=holi;
+		}
+		else
+		{
+			var holi="<h3>NO data </h3>";
+			document.getElementById("customer-tab3").innerHTML=holi;
+		}
+	}
+	function custFirm(firmdata)
+	{
+		var firmData = JSON.parse('<%-JSON.stringify(firmData)%>');
+		console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy")
+		console.log("firmdataaaaa" ,firmdata)
+		if(firmdata)
+		{
+			var holi="<table id='' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+			
+			holi+="<thead> <tr> <th>Index</th> <th>Firm Name</th> <th>Address</th> <th>Pincode</th> <th>GST Number</th> <th>Account Number</th> <th>Bank Name</th> <th>IFSC Code</th> <th>Product Produced</th> <th>Quantity</th> </tr> </thead>";
+			
+			for(var i=0; i<firmdata.length; i++)
+			{
+				holi+="<tr>"
+				holi+="<td >"+ (i+1) +"</td>"
+				for (var a = 0; a < firmData.length; a++) {
+					if (firmData[a].firmId == firmdata[i].firm) {
+					  holi += "<td> " + firmData[a].firmName+ "</td>";
+					  holi += "<td> " + firmData[a].address+ "</td>";
+					  holi += "<td> " + firmData[a].pincode+ "</td>";
+					  holi += "<td> " + firmData[a].GSTNumber+ "</td>";
+					  holi += "<td> " + firmData[a].accountNumber+ "</td>";
+					  holi += "<td> " + firmData[a].bankName+ "</td>";
+					  holi += "<td> " + firmData[a].IFSCcode+ "</td>";
+					  holi += "<td> " + firmData[a].ProductProduced+ "</td>";
+					  holi += "<td> " + firmData[a].Quantity+ "</td>";
+					  break;
+					}
+				}
+				holi+="</tr>"
+			}
+			holi+="</table>";
+			
+			document.getElementById("customer-tab4").innerHTML=holi;
+		}
+		else
+		{
+			var holi="<h3>NO data </h3>";
+			document.getElementById("customer-tab4").innerHTML=holi;
+		}
+	}
+
+	function markrep(repdata)
+	{
+		console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy")
+		console.log(repdata)
+		if(repdata)
+		{
+			let holi="<table id='tRep' class='table repdatatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+			
+			holi+="<thead> <tr> <th>area</th> <th>product</th> <th>lastDelivery</th> <th>representative</th> <th>currentRemark</th> <th>remarkStatus</th> <th>currentIssue</th> </tr> </thead>";
+			
+			for(let i=0; i<repdata.length; i++)
+			{
+				holi+="<tr>"
+				holi+="<td >"+ repdata[i].area+"</td>"
+				holi+="<td >"+ repdata[i].product+"</td>"
+				holi+="<td >"+ repdata[i].lastDelivery+"</td>"
+				holi+="<td >"+ repdata[i].representative+"</td>"
+				holi+="<td >"+ repdata[i].currentRemark+"</td>"
+				holi+="<td >"+ repdata[i].remarkStatus+"</td>"
+				holi+="<td >"+ repdata[i].currentIssue+"</td>"
+				holi+="</tr>"
+			}
+			holi+="</table>";
+			document.getElementById("cardRep").innerHTML=holi;
+
+			let hbtn="<button class='btn-link' onclick=exportReport()> Download list</button>"
+
+			document.getElementById("downloadReport").innerHTML=hbtn;
+		}
+		else
+		{
+			let holi="<h3>NO data </h3>";
+			document.getElementById("customer-tab6").innerHTML=holi;
+		}
+	}
+
+	function exportReport()
+	{
+			console.log("a")
+			
+			let table = document.getElementById("tRep");
+			console.log(table)
+
+			
+			let rows =[];
+ 
+      
+			for(let i=0,row; row = table.rows[i];i++){
+				
+				column1 = row.cells[0].innerText;
+				column2 = row.cells[1].innerText;
+				column3 = row.cells[2].innerText;
+				column4 = row.cells[3].innerText;
+				column5 = row.cells[4].innerText;
+				column6 = row.cells[5].innerText;
+				column7 = row.cells[6].innerText;
+				rows.push(
+					[
+						column1,
+						column2,
+						column3,
+						column4,
+						column5,
+						column6,
+						column7
+					]
+				);
+ 
+        	}
+
+			console.log(rows)
+        	csvContent = "data:text/csv;charset=utf-8,";
+         
+			rows.forEach(function(rowArray){
+				row = rowArray.join(",");
+				csvContent += row + "\r\n";
+			});
+ 
+			let encodedUri = encodeURI(csvContent);
+			let link = document.createElement("a");
+			link.setAttribute("href", encodedUri);
+			link.setAttribute("download", "Market_Report.csv");
+			document.body.appendChild(link);
+			link.click();
+	}
+
+	function custFirmPrint(firmdata) {
+    var firmData = JSON.parse('<%-JSON.stringify(firmData)%>');
+    var firmDetails = [];
+
+    if (firmdata) {
+        for (var i = 0; i < firmdata.length; i++) {
+            for (var a = 0; a < firmData.length; a++) {
+                if (firmData[a].firmId == firmdata[i].firm) {
+                    var firmDetailsArray = {};
+
+                    firmDetailsArray["firstName"] = decodeURIComponent(firmData[a].firmName),
+                    firmDetailsArray["Address"] = decodeURIComponent(firmData[a].address),
+                    firmDetailsArray["Pincode"] = decodeURIComponent(firmData[a].pincode),
+                    firmDetailsArray["GSTNumber"] = decodeURIComponent(firmData[a].GSTNumber),
+                    firmDetailsArray["AccountNumber"] = decodeURIComponent(firmData[a].accountNumber),
+                    firmDetailsArray["BankName"] = decodeURIComponent(firmData[a].bankName),
+                    firmDetailsArray["IFSCCode"] = decodeURIComponent(firmData[a].IFSCcode),
+                    firmDetailsArray["Produced"] = decodeURIComponent(firmData[a].ProductProduced),
+                    firmDetailsArray["Quantity"] = decodeURIComponent(firmData[a].Quantity);
+                    
+                    firmDetails.push(firmDetailsArray);
+                }
+            }
+        }
+
+        return firmDetails;
+    } else {
+        return null;
+    }
+}
+
+function custCatPrint(catdata) {
+    var categorydata = JSON.parse('<%-JSON.stringify(categorydata)%>');
+    console.log("categorydata", categorydata)
+    if (catdata) {
+        let categories = [];
+
+        for (var i = 0; i < catdata.length; i++) {
+            for (var a = 0; a < categorydata.length; a++) {
+                if (categorydata[a].categoriesId == catdata[i].category) {
+                    categories.push(categorydata[a].categoriesType);
+                }
+            }
+        }
+
+        return categories;
+    } else {
+        return null;
+    }
+}
+
+function custCntctPrint(cntctdata) {
+    if (cntctdata) {
+        let contacts =[];
+        for (var i = 0; i < cntctdata.length; i++) {
+			let contactDetails = {}
+			contactDetails['contactName'] = cntctdata[i].contactName
+			contactDetails['Designation'] = cntctdata[i].designation
+			contactDetails['MobileNumber'] = cntctdata[i].mobileNumber
+			contactDetails['Email'] = cntctdata[i].email
+          
+			contacts.push( contactDetails)
+        }
+        return contacts;
+    } else {
+        return null;
+    }
+        }
+   
+</script>
+
+
+
+

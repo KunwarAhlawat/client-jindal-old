@@ -1,0 +1,104 @@
+<h2>masterCategories</h2>
+<h3>User level <%=level%></h3>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity=
+        "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous">
+    </script>
+
+<% if(data.length>0) {%>
+    
+    <table >
+        
+        <thead>
+            <tr>
+                <th>categoriesType</th>
+                <% if(level>2) {%>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                <%}else if(level>1){%>
+                    <th>Edit</th>
+                <%}else{%>
+                <%}%>
+            </tr>
+        </thead >
+        
+        <% for(var i=0; i<data.length; i++) {%>
+            <tr class="<%= data[i].categoriesId%>categories">
+                <%if(level==1) {%>
+                    <td class="categoriesType"><%= data[i].categoriesType%></td>
+                <%} else if(level>2) {%>
+                    <td class="categoriesType" contenteditable="true"><%= data[i].categoriesType%></td>
+                    <td>
+                        <button onclick="edit('<%= data[i].categoriesId%>categories')" name="foo" value="check" >Edit</button>
+                    </td>
+                    <td>
+                        <button onclick="del('<%= data[i].categoriesId %>')" name="foo" value="check" >Delete</button>
+                    </td>
+                <%}else if(level>1){%>
+                    <td class="categoriesType" contenteditable="true"><%= data[i].categoriesType%></td>
+                    <td>
+                        <button onclick="edit('<%= data[i].categoriesId%>categories')" name="foo" value="check" >Edit</button>
+                    </td>
+                <%}%> 
+                
+            </tr>
+        <% } %>
+    </table>
+
+<%}else{%>
+    <h4>No new data</h4>
+<%}%>
+
+<% if(level>2) {%>
+    <p><a href="/addMasterCategories">Add new Master Category</a></p>
+<%}%>
+
+<p><a href="/userDashboard">Dashboard</a></p>
+<p><a href="/">Back to Home Page</a></p>
+
+<script>
+    function del(value)
+    {
+        console.log(value);
+        $.post("/masterCategories",
+            {
+                id: value,
+                op:"del"
+            },
+            function (data, status) {
+                console.log(data);
+                console.log(status);
+            }
+            );
+    }
+</script>
+
+<script>
+    function edit(value)
+    {
+        console.log(value);
+        var sub = 'categories';
+        var result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+            var categoriesType = $(this).find(".categoriesType").html();    
+            console.log(categoriesType);
+            console.log("ujjwal");
+            $.post("/masterCategories",
+            {
+                id: result,
+                categoriesType: categoriesType,
+                op:"edt"
+            },
+            function (data, status) {
+                console.log(data);
+                console.log(status);
+            }
+            );
+        });
+    }
+</script>

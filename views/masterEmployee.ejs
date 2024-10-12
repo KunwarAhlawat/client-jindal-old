@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Jindal Trading | Dashboard</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="global_assets/js/main/jquery.min.js"></script>
+	<script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+
+	<script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+
+
+	<script src="assets/js/app.js"></script>
+	<script src="global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="global_assets/js/demo_pages/form_multiselect.js"></script>
+
+	<script src="global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="global_assets/js/demo_pages/form_layouts.js"></script>
+	<!-- /theme JS files -->
+
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-dark">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="../../../../global_assets/images/logo_light.png" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li>
+			</ul>
+
+			<span class="badge bg-success ml-md-3 mr-md-auto">Online</span>
+
+			<ul class="navbar-nav">
+
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+						<img src="../../../../global_assets/images/demo/users/face11.jpg" class="rounded-circle mr-2" height="34" alt="">
+						<span><%=username%></span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
+						<div class="dropdown-divider"></div>
+						<a href="/logout" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				Navigation
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user">
+					<div class="card-body">
+						<div class="media">
+							<div class="mr-3">
+								<a href="#"><img src="../../../../global_assets/images/demo/users/face11.jpg" width="38" height="38" class="rounded-circle" alt=""></a>
+							</div>
+
+							<div class="media-body">
+								<div class="media-title font-weight-semibold"><%=username%></div>
+								<div class="font-size-xs opacity-50">
+									<i class="icon-pin font-size-sm"></i> &nbsp;Meerut
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/userDashboard" class="nav-link">
+								<i class="icon-home4"></i>
+								<span>
+									Dashboard
+								</span>
+							</a>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/register" class="nav-link">User-Register</a></li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/registeredUsers" class="nav-link">Register-List</a></li>
+							</ul>
+						</li>
+
+                        <li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Market-Plan</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanPigIron" class="nav-link">Pig-Iron</a></li>
+							</ul>
+							
+							<!-- <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+							   <li class="nav-item"><a href="/marketPlanAllotment" class="nav-link">Allotment</a></li>
+						    </ul> -->
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanQuantityLedger" class="nav-link">QuantityLedger</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Master</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterArea" class="nav-link">MasterArea</a></li>
+								<li class="nav-item"><a href="/masterCategories" class="nav-link">MasterCategories</a></li>
+								<li class="nav-item"><a href="/masterGrade" class="nav-link">MasterGrade</a></li>
+								<li class="nav-item"><a href="/masterProducts" class="nav-link">MasterProducts</a></li>
+								<li class="nav-item"><a href="/masterProductGroup" class="nav-link">MasterProductGroup</a></li>
+								<li class="nav-item"><a href="/masterTeams" class="nav-link">MasterTeams</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Customers</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterCustomer" class="nav-link">MasterCustomer</a></li>
+								<li class="nav-item"><a href="/masterFirm" class="nav-link">MasterFirm</a></li>
+								<li class="nav-item nav-item-submenu ">
+									<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Datatables</span></a>
+									<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+										<li class="nav-item"><a href="/customerContact" class="nav-link">Contact</a></li>
+										<li class="nav-item"><a href="/customerCategory" class="nav-link">Categories</a></li>
+										<li class="nav-item"><a href="/customerFirm" class="nav-link">Firms</a></li>
+										<li class="nav-item"><a href="/customerProduct" class="nav-link">Products</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Transport</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/transportDetails" class="nav-link">Details</a></li>
+								<li class="nav-item"><a href="/transportContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/transportStations" class="nav-link">Stations</a></li>
+								<li class="nav-item"><a href="/transportTrucks" class="nav-link">Trucks</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Vendor</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterVendors" class="nav-link">MasterVendors</a></li>
+								<li class="nav-item"><a href="/vendorContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/vendorFirm" class="nav-link">Firm</a></li>
+								<li class="nav-item"><a href="/vendorProduct" class="nav-link">Product</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+							<a href="#" class="nav-link active"><i class="icon-copy"></i> <span>Employee</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterEmployee" class="nav-link active">MasterEmployee</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/contacts" class="nav-link"><i class="icon-copy"></i> <span>Contacts</span></a>
+						</li>
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+			
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+				<div class="page-header-content header-elements-md-inline">
+					<div class="page-title d-flex">
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Master Employees</span> - Master</h4>
+						<a href="#" class="header-elements-toggle text-default d-md-none"></a>
+					</div>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content ">
+
+				<!-- Dashboard content -->
+				<div class="row ">
+					<div class="col-md-12 ">
+						<div class="errInfo" id="errInfo" style=" background-color: rgb(255, 0, 0); margin: 1%;">
+							<% if(msg){ %>
+								<h6 style="text-align: center; font-weight: 600"><%=msg%></h6>
+							<% } %>
+						</div>
+						<div class="card" style="overflow-x: auto;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Master Employees</h5>
+								<% if(level>2) {%>
+									<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_form_vertical" title="Add Master Employee" >Add new Master Employee</button></td>
+									<!-- <p><a href="/addMasterCustomer">Add new Master Customer</a></p> -->
+								<%}%>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+										<a class="list-icons-item" data-action="remove"></a>
+									</div>
+								</div>
+							</div>
+
+							<% if(data.length>0) {%>
+    
+								<table class="table datatable-basic table-bordered table-striped table-hover ">
+									
+									<thead>
+										<tr>
+                                            <th>Employee-Name</th>
+                                            <th>Gender</th>
+                                            <th>Designation</th>
+                                            <th>Date Of Joining</th>
+                                            <th>Date Of Leaving</th>
+                                            <th>Date Of Birth</th>
+                                            <th>Blood Group</th>
+                                            <th>Address</th>
+                                            <th>Mobile Number</th>
+                                            <th>Email Id</th>
+                                            <th>FatherName</th>
+                                            <th>Father Mobile Number</th>
+                                            <th>MotherName</th>
+                                            <th>Mother Mobile Number</th>
+                                            <th>Spouse Name</th>
+                                            <th>Spouse Mobile Number</th>
+                                            <th>Bank Name</th>
+                                            <th>Bank Account Number</th>
+                                            <th>IFSC Code</th>
+                                            <th>AadharNumber</th>
+                                            <th>PanNumber</th>
+                                            <th>Reference</th>
+                                            <th>Reference Mobile Number</th>
+                                            <th>Photo</th>
+                                            <% if(level>2) {%>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            <%}else if(level>1){%>
+                                                <th>Edit</th>
+                                            <%}else{%>
+                                            <%}%>
+                                        </tr>
+									</thead >
+									
+									<% for(var i=0; i<data.length; i++) {%>
+										<tr class="<%= data[i].employeeNumber%>employee">
+                                            <%if(level==1) {%>
+                                                <td class="employeeName"><%= data[i].employeeName%></td>
+												<td class="gender"><%= data[i].gender%></td>
+                                                <td class="designation"><%= data[i].designation%></td>
+                                                <td class="dateOfJoining"><%= data[i].dateOfJoining%></td>
+                                                <td class="dateOfLeaving"><%= data[i].dateOfLeaving%></td>
+                                                <td class="dateOfBirth"><%= data[i].dateOfBirth%></td>
+                                                <td class="bloodGroup"><%= data[i].bloodGroup%></td>
+                                                <td class="address"><%= data[i].address%></td>
+                                                <td class="primaryMobileNumber"><%= data[i].primaryMobileNumber%></td>
+                                                <td class="emailId"><%= data[i].emailId%></td>
+                                                <td class="fatherName"><%= data[i].fatherName%></td>
+                                                <td class="fatherMobileNumber"><%= data[i].fatherMobileNumber%></td>
+                                                <td class="motherName"><%= data[i].motherName%></td>
+                                                <td class="motherMobileNumber"><%= data[i].motherMobileNumber%></td>
+                                                <td class="spouseName"><%= data[i].spouseName%></td>
+                                                <td class="spouseMobileNumber"><%= data[i].spouseMobileNumber%></td>
+                                                <td class="bankName"><%= data[i].bankName%></td>
+                                                <td class="bankAccountNumber"><%= data[i].bankAccountNumber%></td>
+                                                <td class="ifscCode"><%= data[i].ifscCode%></td>
+                                                <td class="aadharNumber"><%= data[i].aadharNumber%></td>
+                                                <td class="panNumber"><%= data[i].panNumber%></td>
+                                                <td class="reference"><%= data[i].reference%></td>
+                                                <td class="referenceContactNumber"><%= data[i].referenceContactNumber%></td>
+                                                <td class="photo"><img width="100px" src="/<%= data[i].photo%>" alt="<%= data[i].employeeName%>"></td>
+                                            <%} else if(level>2) {%>
+												<td class="employeeName"><%= data[i].employeeName%></td>
+												<td class="gender"><%= data[i].gender%></td>
+                                                <td class="designation"><%= data[i].designation%></td>
+                                                <td class="dateOfJoining"><%= data[i].dateOfJoining%></td>
+                                                <td class="dateOfLeaving"><%= data[i].dateOfLeaving%></td>
+                                                <td class="dateOfBirth"><%= data[i].dateOfBirth%></td>
+                                                <td class="bloodGroup"><%= data[i].bloodGroup%></td>
+                                                <td class="address"><%= data[i].address%></td>
+                                                <td class="primaryMobileNumber"><%= data[i].primaryMobileNumber%></td>
+                                                <td class="emailId"><%= data[i].emailId%></td>
+                                                <td class="fatherName"><%= data[i].fatherName%></td>
+                                                <td class="fatherMobileNumber"><%= data[i].fatherMobileNumber%></td>
+                                                <td class="motherName"><%= data[i].motherName%></td>
+                                                <td class="motherMobileNumber"><%= data[i].motherMobileNumber%></td>
+                                                <td class="spouseName"><%= data[i].spouseName%></td>
+                                                <td class="spouseMobileNumber"><%= data[i].spouseMobileNumber%></td>
+                                                <td class="bankName"><%= data[i].bankName%></td>
+                                                <td class="bankAccountNumber"><%= data[i].bankAccountNumber%></td>
+                                                <td class="ifscCode"><%= data[i].ifscCode%></td>
+                                                <td class="aadharNumber"><%= data[i].aadharNumber%></td>
+                                                <td class="panNumber"><%= data[i].panNumber%></td>
+                                                <td class="reference"><%= data[i].reference%></td>
+                                                <td class="referenceContactNumber"><%= data[i].referenceContactNumber%></td>
+                                                <td class="photo"><img width="100px" src="/<%= data[i].photo%>" alt="<%= data[i].employeeName%>"></td>
+                                                <td>
+                                                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" onclick="eedit('<%= data[i].employeeNumber%>employee')" >Edit</button>
+                                                </td>
+                                                <td >
+                                                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_del" onclick="ddel('<%= data[i].employeeNumber%>employee')">Delete</button>
+                                                </td>
+                                            <%}else if(level>1){%>
+                                                <td class="employeeName"><%= data[i].employeeName%></td>
+												<td class="gender"><%= data[i].gender%></td>
+                                                <td class="designation"><%= data[i].designation%></td>
+                                                <td class="dateOfJoining"><%= data[i].dateOfJoining%></td>
+                                                <td class="dateOfLeaving"><%= data[i].dateOfLeaving%></td>
+                                                <td class="dateOfBirth"><%= data[i].dateOfBirth%></td>
+                                                <td class="bloodGroup"><%= data[i].bloodGroup%></td>
+                                                <td class="address"><%= data[i].address%></td>
+                                                <td class="primaryMobileNumber"><%= data[i].primaryMobileNumber%></td>
+                                                <td class="emailId"><%= data[i].emailId%></td>
+                                                <td class="fatherName"><%= data[i].fatherName%></td>
+                                                <td class="fatherMobileNumber"><%= data[i].fatherMobileNumber%></td>
+                                                <td class="motherName"><%= data[i].motherName%></td>
+                                                <td class="motherMobileNumber"><%= data[i].motherMobileNumber%></td>
+                                                <td class="spouseName"><%= data[i].spouseName%></td>
+                                                <td class="spouseMobileNumber"><%= data[i].spouseMobileNumber%></td>
+                                                <td class="bankName"><%= data[i].bankName%></td>
+                                                <td class="bankAccountNumber"><%= data[i].bankAccountNumber%></td>
+                                                <td class="ifscCode"><%= data[i].ifscCode%></td>
+                                                <td class="aadharNumber"><%= data[i].aadharNumber%></td>
+                                                <td class="panNumber"><%= data[i].panNumber%></td>
+                                                <td class="reference"><%= data[i].reference%></td>
+                                                <td class="referenceContactNumber"><%= data[i].referenceContactNumber%></td>
+                                                <td class="photo"><img width="100px" src="/<%= data[i].photo%>" alt="<%= data[i].employeeName%>"></td>
+                                                <td>
+                                                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" onclick="eedit('<%= data[i].employeeNumber%>employee')">Edit</button>
+                                                </td>
+                                            <%}%>  
+                                            
+                                        </tr>
+									<% } %>
+								</table>
+							
+							<%}else{%>
+								<h4>No new data</h4>
+							<%}%>
+
+
+
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-2">
+										<label for="employeeName" class="form-control"><span class="font-weight-semibold">employeeName</span></label>
+										<select name="employeeName" class="form-control multiselect-filtering employeeName" id="employeeNameFil" multiple="multiple" data-fouc>
+											<% let dataValuesemployeeName = data.reduce((acc, curr) => {
+												if (curr.employeeName && !acc.includes(curr.employeeName)) {
+												  acc.push(curr.employeeName);
+												}
+												return acc;
+											  }, []); %>
+											  
+											  <% dataValuesemployeeName.forEach(function(value) { %>
+												<option value="<%= value %>"><%= value %></option>
+											  <% }); %>
+										</select>
+									</div>
+									<div class="col-sm-2">
+										<label for="designation" class="form-control"><span class="font-weight-semibold">designation</span></label>
+										<select name="designation" class="form-control multiselect-filtering  designation" id="designationFil" multiple="multiple" data-fouc>
+											<% let dataValuesdesignation = data.reduce((acc, curr) => {
+												if (curr.designation && !acc.includes(curr.designation)) {
+												  acc.push(curr.designation);
+												}
+												return acc;
+											  }, []); %>
+											  
+											  <% dataValuesdesignation.forEach(function(value) { %>
+												<option value="<%= value %>"><%= value %></option>
+											  <% }); %>
+										</select>
+									</div>																	
+									<div class="col-sm-2">
+										<label for="employeeCategories" class="form-control"><span class="font-weight-semibold">employeeCategories</span></label>
+										<select name="employeeCategories" class="form-control multiselect-filtering  employeeCategories" id="employeeCategoriesFil" multiple="multiple" data-fouc>
+											<% let dataValuesemployeeCategories = data.reduce((acc, curr) => {
+												if (curr.employeeCategories && !acc.includes(curr.employeeCategories)) {
+												  acc.push(curr.employeeCategories);
+												}
+												return acc;
+											  }, []); %>
+											  
+											  <% dataValuesemployeeCategories.forEach(function(value) { %>
+												<option value="<%= value %>"><%= value %></option>
+											  <% }); %>
+										</select>
+									</div>																	
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<button onclick="fil()" class="form-control bg-teal-400" type="button">Filter</button>
+								</div>
+							</div>
+							<div class="card" style="overflow-x: auto;" id="koiBhi"></div>
+							<div class="card" style="overflow-x: auto;" id="chlna"></div>
+							
+
+
+
+
+							<!-- EDIT modal -->
+							<div id="modal_edit" class="modal fade" tabindex="-1">
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">Edit Master Customer</h5>
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+								        <div class="modal-body" id="blast">
+									        
+								        </div>
+
+								        <div class="modal-footer" id="off">
+									        
+								        </div>
+						            </div>
+					            </div>
+				            </div>
+							
+							
+							
+							<!-- DEL modal -->
+							<div id="modal_del" class="modal fade" tabindex="-1">
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">Delete Master Customer</h5>
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+								        <div class="modal-body" id="blasto">
+									        
+								        </div>
+
+								        <div class="modal-footer" id="offo">
+									        
+								        </div>
+						            </div>
+					            </div>
+				            </div>
+
+
+
+							
+
+							<!-- Vertical form modal -->
+							<div id="modal_form_vertical" class="modal fade" tabindex="-1">
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">New Master Employee</h5>
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+							            <form action="/masterEmployee" method="POST" enctype="multipart/form-data">
+								            <div class="modal-body">
+									            <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-8">
+												            <label>Employee Namerrr<span class="text-danger">*</span></label>
+												            <input type="text" class="form-control employeeName" name="employeeName" id="employeeName" required>
+											            </div>
+                                                      <div class="col-sm-4">
+												            <label>Gender<span class="text-danger">*</span></label>
+												            <select type="text" class="form-control gender" name="gender" id="gender" required>
+																<option value="" disabled selected>-Select-</option>
+																<option value="Male">Male</option>
+																<option value="Female" >Female</option>
+															</select>
+											            </div>
+										            </div>
+									            </div>
+												<div class="form-group">
+										            <div class="row">
+													</div>
+									            </div>
+                                                
+												<legend class="font-weight-semibold">Employment Details</legend>
+									            <div class="form-group">
+										            <div class="row">
+														<div class="col-sm-4">
+															<label>Designation<span class="text-danger">*</span></label>
+															<input type="text" class="form-control designation" name="designation" id="designation" required>
+														</div>
+
+											            <div class="col-sm-4">
+												            <label>Date Of Joining<span class="text-danger">*</span></label>
+												            <input type="date" class="form-control dateOfJoining" name="dateOfJoining" id="dateOfJoining" required>
+											            </div>
+														
+											            <div class="col-sm-4">
+												            <label>Date Of Leaving</label>
+												            <input type="date" class="form-control dateOfLeaving" name="dateOfLeaving" id="dateOfLeaving" >
+											            </div>
+											            
+										            </div>
+									            </div>
+
+												<div class="form-group">
+										            <div class="row">
+													</div>
+									            </div>
+                                                
+												<legend class="font-weight-semibold">Personal Information</legend>
+									            <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-6">
+												            <label>Date Of Birth<span class="text-danger">*</span></label>
+												            <input type="date" class="form-control dateOfBirth" name="dateOfBirth" id="dateOfBirth" required>
+											            </div>
+
+											            <div class="col-sm-6">
+												            <label>Blood Group</label>
+												            <input type="text" class="form-control bloodGroup" name="bloodGroup" id="bloodGroup" >
+											            </div>
+										            </div>
+									            </div>
+												<div class="form-group">
+										            <div class="row">
+													</div>
+									            </div>
+
+												<legend class="font-weight-semibold">Contact Details</legend>
+									            <div class="form-group">
+													<div class="row">
+														<div class="col-sm-12">
+															<label>Address<span class="text-danger">*</span></label>
+												            <input type="text" required class="form-control address" name="address" id="address">
+											            </div>
+										            </div>
+									            </div>
+												
+									            <div class="form-group">
+										            <div class="row">
+											            
+														<div class="col-sm-6">
+															<label>Email Id<span class="text-danger">*</span></label>
+															<input type="email" placeholder="email" required class="form-control emailId" name="emailId" id="emailId">
+														</div>
+
+														<div class="col-sm-6">
+															<label>Primary Mobile Number<span class="text-danger">*</span></label>
+															<input type="tel" class="form-control primaryMobileNumber" placeholder="10-digit-format" pattern="[0-9]{10}" name="primaryMobileNumber" required id="primaryMobileNumber">
+														</div>
+										            </div>
+									            </div>
+												<div class="form-group">
+										            <div class="row">
+													</div>
+									            </div>
+
+												<legend class="font-weight-semibold">Family Details</legend>
+												<div class="form-group">
+													<div class="row">
+														<div class="col-sm-6">
+															<label>Father Name</label>
+															<input type="text"  class="form-control fatherName" name="fatherName" id="fatherName">
+														</div>
+														<div class="col-sm-6">
+												            <label>Father Mobile Number</label>
+												            <input type="tel" class="form-control fatherMobileNumber" name="fatherMobileNumber" id="fatherMobileNumber" placeholder="10-digit-format" pattern="[0-9]{10}">
+											            </div>
+														
+													</div>
+												</div>
+
+									            <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-6">
+															<label>Mother Name</label>
+															<input type="text" class="form-control motherName" name="motherName" id="motherName">
+														</div>
+											            <div class="col-sm-6">
+												            <label>Mother Mobile Number</label>
+												            <input type="tel" class="form-control motherMobileNumber" name="motherMobileNumber" id="motherMobileNumber" placeholder="10-digit-format" pattern="[0-9]{10}">
+											            </div>
+										            </div>
+									            </div>
+
+									            <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-6">
+												            <label>Spouse Name</label>
+												            <input type="text" class="form-control spouseName" name="spouseName" id="spouseName">
+											            </div>
+											            <div class="col-sm-6">
+												            <label>Spouse Mobile Number</label>
+												            <input type="tel" class="form-control spouseMobileNumber" name="spouseMobileNumber" id="spouseMobileNumber" placeholder="10-digit-format" pattern="[0-9]{10}">
+											            </div>
+										            </div>
+									            </div>
+
+												<legend class="font-weight-semibold">Bank Details</legend>
+									            <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-4">
+												            <label>Bank Name<span class="text-danger">*</span></label>
+												            <input type="text" placeholder="Bank" required class="form-control bankName" name="bankName" id="bankName">
+											            </div>
+														<div class="col-sm-4">
+                                                            <label>Bank Account Number<span class="text-danger">*</span></label>
+                                                            <input type="number" placeholder="11/12/14-digit-format" min="999999999" max="99999999999999" class="form-control bankAccountNumber" name="bankAccountNumber" required id="bankAccountNumber">
+                                                        </div>
+											            <div class="col-sm-4">
+												            <label>Ifsc Code<span class="text-danger">*</span></label>
+												            <input type="text" required class="form-control ifscCode" name="ifscCode" placeholder="IFSC" id="ifscCode">
+											            </div>
+										            </div>
+									            </div>
+												<div class="form-group">
+										            <div class="row">
+													</div>
+									            </div>
+
+												<legend class="font-weight-semibold">Identification Details</legend>
+									            <div class="form-group">
+										            <div class="row">
+											            <div class="col-sm-6">
+												            <label>Aadhar Number<span class="text-danger">*</span></label>
+												            <input type="number" required class="form-control aadharNumber" placeholder="12-digit-format" pattern="[0-9]{12}" name="aadharNumber" id="aadharNumber">
+											            </div>
+											            <div class="col-sm-6">
+												            <label>Pan Number<span class="text-danger">*</span></label>
+												            <input type="text" required class="form-control panNumber" name="panNumber" id="panNumber">
+											            </div>
+										            </div>
+									            </div>
+												<div class="form-group">
+										            <div class="row">
+													</div>
+									            </div>
+
+												<legend class="font-weight-semibold">Reference Details</legend>
+									            <div class="form-group">
+													<div class="row">
+														<div class="col-sm-6">
+                                                            <label>Reference Name</label>
+                                                            <input type="text" class="form-control reference" name="reference" id="reference">
+                                                        </div>
+                                                        <div class="col-sm-6">
+															<label>Reference Moblie Number</label>
+                                                            <input type="text" class="form-control referenceContactNumber" name="referenceContactNumber" id="referenceContactNumber">
+                                                        </div>
+														
+										            </div>
+									            </div>
+												<legend class="font-weight-semibold">Photo Attachment</legend>
+									            <div class="form-group">
+										            <div class="row">
+														
+											            <div class="col-sm-6">
+												            <label>Attach Photo :</label>
+															<input type="file" class="form-input-styled photo" name="photo" id="photo" data-fouc>
+															<span class="form-text text-muted">Accepted formats:png, jpg, jpeg. Max file size 20Kb</span>
+											            </div>
+										            </div>
+									            </div>
+											 	<!-- <div class="form-group">
+													<label>Your CV:</label>
+													<input type="file" class="form-input-styled" data-fouc>
+													<span class="form-text text-muted">Accepted formats: pdf, doc. Max file size 2Mb</span>
+												</div> -->
+
+												<!-- <div class="form-group">
+													<label>Attach screenshot:</label>
+													<input type="file" class="form-input-styled" data-fouc>
+													<span class="form-text text-muted">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
+												</div> -->
+
+								            </div>
+
+								            <div class="modal-footer">
+									            <button type="button" style='color:teal' class="btn btn-link" data-dismiss="modal">Close</button>
+									            <button type="submit" class="btn bg-teal-400">Add</button>
+								            </div>
+							            </form>
+						            </div>
+					            </div>
+				            </div>
+			            </div> 
+		            </div>
+					
+		        </div>
+				<!-- /dashboard content -->
+
+			</div>
+			<!-- /content area -->
+
+
+			<!-- Footer -->
+			<!-- /footer -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+</body>
+
+</html>
+
+
+<script>
+    function edit(value)
+    {
+        console.log(value);
+		var eemployeeName = document.getElementById("eemployeeName").value;
+        var edesignation = document.getElementById("edesignation").value;
+        var eemployeeCategories = document.getElementById("eemployeeCategories").value;
+        var edateOfBirth = document.getElementById("edateOfBirth").value;
+        var efatherName = document.getElementById("efatherName").value;
+        var emotherName = document.getElementById("emotherName").value;
+        var eaddress = document.getElementById("eaddress").value;
+        var eprimaryMobileNumber = document.getElementById("eprimaryMobileNumber").value;
+        var eofficeMobileNumber = document.getElementById("eofficeMobileNumber").value;
+        var efatherMobileNumber = document.getElementById("efatherMobileNumber").value;
+        var emotherMobileNumber = document.getElementById("emotherMobileNumber").value;
+        var espouseName = document.getElementById("espouseName").value;
+        var espouseMobileNumber = document.getElementById("espouseMobileNumber").value;
+        var eofficeEmailId = document.getElementById("eofficeEmailId").value;
+        var earea = document.getElementById("earea").value;
+        var ebankName = document.getElementById("ebankName").value;
+        var ebankAccountNumber = document.getElementById("ebankAccountNumber").value;
+        var eifscCode = document.getElementById("eifscCode").value;
+        var edateOfJoining = document.getElementById("edateOfJoining").value;
+        var eaadharNumber = document.getElementById("eaadharNumber").value;
+        var epanNumber = document.getElementById("epanNumber").value;
+        var ereference = document.getElementById("ereference").value;
+        var ereferenceContactNumber = document.getElementById("ereferenceContactNumber").value;
+        var egender = document.getElementById("egender").value;
+        $.post("/masterEmployee",
+		{
+			id: value,
+			employeeName: eemployeeName,
+			designation: edesignation,
+			employeeCategories: eemployeeCategories,
+			dateOfBirth: edateOfBirth,
+			fatherName: efatherName,
+			motherName: emotherName,
+			address: eaddress,
+			primaryMobileNumber: eprimaryMobileNumber,
+			officeMobileNumber: eofficeMobileNumber,
+			fatherMobileNumber: efatherMobileNumber,
+			motherMobileNumber: emotherMobileNumber,
+			spouseName: espouseName,
+			spouseMobileNumber: espouseMobileNumber,
+			officeEmailId: eofficeEmailId,
+			area: earea,
+			bankName: ebankName,
+			bankAccountNumber: ebankAccountNumber,
+			ifscCode: eifscCode,
+			dateOfJoining: edateOfJoining,
+			aadharNumber: eaadharNumber,
+			panNumber: epanNumber,
+			reference: ereference,
+			referenceContactNumber: ereferenceContactNumber,
+			gender: egender,
+			op:"edt"
+		},
+		function (data, status) {
+			console.log(data);
+			console.log(status);
+			setInterval('refreshPage()', 500);
+		}
+		);
+    }
+</script>
+
+
+<script>
+    function del(value)
+    {
+        console.log(value);
+        $.post("/masterEmployee",
+            {
+                id: value,
+                op:"del"
+            },
+            function (data, status) {
+                console.log(data);
+                console.log(status);
+				setInterval('refreshPage()', 500);
+            }
+            );
+    }
+
+	function refreshPage() {
+    	location.reload(true);
+	}
+
+
+	function eedit(value)
+    {
+        console.log(value);
+        var sub = 'employee';
+        var result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+
+			var employeeName = $(this).find(".employeeName").html();    
+            var designation = $(this).find(".designation").html();    
+            var employeeCategories = $(this).find(".employeeCategories").html();    
+            var dateOfBirth = $(this).find(".dateOfBirth").html();    
+            var fatherName = $(this).find(".fatherName").html();    
+            var motherName = $(this).find(".motherName").html();    
+            var address = $(this).find(".address").html();    
+            var primaryMobileNumber = $(this).find(".primaryMobileNumber").html();    
+            var officeMobileNumber = $(this).find(".officeMobileNumber").html();    
+            var fatherMobileNumber = $(this).find(".fatherMobileNumber").html();    
+            var motherMobileNumber = $(this).find(".motherMobileNumber").html();    
+            var spouseName = $(this).find(".spouseName").html();    
+            var spouseMobileNumber = $(this).find(".spouseMobileNumber").html();    
+            var officeEmailId = $(this).find(".officeEmailId").html();    
+            var area = $(this).find(".area").html();    
+            var bankName = $(this).find(".bankName").html();    
+            var bankAccountNumber = $(this).find(".bankAccountNumber").html();    
+            var ifscCode = $(this).find(".ifscCode").html();    
+            var dateOfJoining = $(this).find(".dateOfJoining").html();    
+            var aadharNumber = $(this).find(".aadharNumber").html();    
+            var panNumber = $(this).find(".panNumber").html();    
+            var reference = $(this).find(".reference").html();    
+            var referenceContactNumber = $(this).find(".referenceContactNumber").html();    
+            var gender = $(this).find(".gender").html();  
+            
+			console.log("++++++++++++++++++++++++++++++++++++++++")
+			console.log(result)
+			
+			
+            var tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >employeeName</td> <td><input type="text" value="'+employeeName+'" class="form-control eemployeeName" name="eemployeeName" id="eemployeeName"></td> </tr> <tr> <td>designation</td> <td><input type="text" value="'+designation+'" class="form-control edesignation" name="edesignation" id="edesignation"></td> </tr> <tr> <td>employeeCategories</td> <td><input type="tel" value="'+employeeCategories+'" class="form-control eemployeeCategories" name="eemployeeCategories" id="eemployeeCategories"></td> </tr> <tr> <td>dateOfBirth</td> <td><input type="tel" value="'+dateOfBirth+'" class="form-control edateOfBirth" name="edateOfBirth" id="edateOfBirth"></td> </tr> <tr> <td>fatherName</td> <td><input type="tel" value="'+fatherName+'" class="form-control efatherName" name="efatherName" id="efatherName"></td> </tr>  <tr> <td>motherName</td> <td><input type="tel" value="'+motherName+'" class="form-control emotherName" name="emotherName" id="emotherName"></td> </tr>  <tr> <td>address</td> <td><input type="tel" value="'+address+'" class="form-control eaddress" name="eaddress" id="eaddress"></td> </tr>  <tr> <td>primaryMobileNumber</td> <td><input type="tel" value="'+primaryMobileNumber+'" class="form-control eprimaryMobileNumber" name="eprimaryMobileNumber" id="eprimaryMobileNumber"></td> </tr>  <tr> <td>officeMobileNumber</td> <td><input type="tel" value="'+officeMobileNumber+'" class="form-control eofficeMobileNumber" name="eofficeMobileNumber" id="eofficeMobileNumber"></td> </tr>  <tr> <td>fatherMobileNumber</td> <td><input type="tel" value="'+fatherMobileNumber+'" class="form-control efatherMobileNumber" name="efatherMobileNumber" id="efatherMobileNumber"></td> </tr>  <tr> <td>motherMobileNumber</td> <td><input type="tel" value="'+motherMobileNumber+'" class="form-control emotherMobileNumber" name="emotherMobileNumber" id="emotherMobileNumber"></td> </tr>  <tr> <td>spouseName</td> <td><input type="tel" value="'+spouseName+'" class="form-control espouseName" name="espouseName" id="espouseName"></td> </tr>  <tr> <td>spouseMobileNumber</td> <td><input type="tel" value="'+spouseMobileNumber+'" class="form-control espouseMobileNumber" name="espouseMobileNumber" id="espouseMobileNumber"></td> </tr>  <tr> <td>officeEmailId</td> <td><input type="tel" value="'+officeEmailId+'" class="form-control eofficeEmailId" name="eofficeEmailId" id="eofficeEmailId"></td> </tr>  <tr> <td>area</td> <td> <select id="earea" name="earea" class="earea form-control"> <option value="null" disabled selected>'+area+'</option> <% for(var i=0; i<areaData.length; i++) {%> <option value="<%=areaData[i].areaId%>"><%=areaData[i].area%></option> <% } %> </select></td> </tr>  <tr> <td>bankName</td> <td><input type="tel" value="'+bankName+'" class="form-control ebankName" name="ebankName" id="ebankName"></td> </tr>  <tr> <td>bankAccountNumber</td> <td><input type="tel" value="'+bankAccountNumber+'" class="form-control ebankAccountNumber" name="ebankAccountNumber" id="ebankAccountNumber"></td> </tr>  <tr> <td>ifscCode</td> <td><input type="tel" value="'+ifscCode+'" class="form-control eifscCode" name="eifscCode" id="eifscCode"></td> </tr>  <tr> <td>dateOfJoining</td> <td><input type="tel" value="'+dateOfJoining+'" class="form-control edateOfJoining" name="edateOfJoining" id="edateOfJoining"></td> </tr>  <tr> <td>aadharNumber</td> <td><input type="tel" value="'+aadharNumber+'" class="form-control eaadharNumber" name="eaadharNumber" id="eaadharNumber"></td> </tr>  <tr> <td>panNumber</td> <td><input type="tel" value="'+panNumber+'" class="form-control epanNumber" name="epanNumber" id="epanNumber"></td> </tr>  <tr> <td>reference</td> <td><input type="tel" value="'+reference+'" class="form-control ereference" name="ereference" id="ereference"></td> </tr> <tr> <td>referenceContactNumber</td> <td><input type="tel" value="'+referenceContactNumber+'" class="form-control ereferenceContactNumber" name="ereferenceContactNumber" id="ereferenceContactNumber"></td> </tr> <tr> <td>gender</td> <td><input type="tel" value="'+gender+'" class="form-control egender" name="egender" id="egender"></td> </tr>   <tr> </table> </div>'
+				
+			var bt="<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button> <button type='submit' onclick='edit("+result+")' data-dismiss='modal' class='btn bg-teal-400'>Save</button>"
+			console.log("Ujjwal")
+			document.getElementById("blast").innerHTML=tek;
+			document.getElementById("off").innerHTML=bt;
+			console.log("++++++++++++++++++++++++++++++++++++++++")
+			
+		});
+    }
+	
+	function ddel(value)
+    {
+        console.log(value);
+        var sub = 'employee';
+        var result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+			var employeeName = $(this).find(".employeeName").html();    
+            var designation = $(this).find(".designation").html();    
+            var employeeCategories = $(this).find(".employeeCategories").html();    
+            var dateOfBirth = $(this).find(".dateOfBirth").html();    
+            var fatherName = $(this).find(".fatherName").html();    
+            var motherName = $(this).find(".motherName").html();    
+            var address = $(this).find(".address").html();    
+            var primaryMobileNumber = $(this).find(".primaryMobileNumber").html();    
+            var officeMobileNumber = $(this).find(".officeMobileNumber").html();    
+            var fatherMobileNumber = $(this).find(".fatherMobileNumber").html();    
+            var motherMobileNumber = $(this).find(".motherMobileNumber").html();    
+            var spouseName = $(this).find(".spouseName").html();    
+            var spouseMobileNumber = $(this).find(".spouseMobileNumber").html();    
+            var officeEmailId = $(this).find(".officeEmailId").html();    
+            var area = $(this).find(".area").html();    
+            var bankName = $(this).find(".bankName").html();    
+            var bankAccountNumber = $(this).find(".bankAccountNumber").html();    
+            var ifscCode = $(this).find(".ifscCode").html();    
+            var dateOfJoining = $(this).find(".dateOfJoining").html();    
+            var aadharNumber = $(this).find(".aadharNumber").html();    
+            var panNumber = $(this).find(".panNumber").html();    
+            var reference = $(this).find(".reference").html();    
+            var gender = $(this).find(".gender").html();    
+            var photo = $(this).find(".photo").html(); 
+                
+			console.log(result)
+
+
+            var tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >employeeName</td> <td>'+employeeName+'</td> </tr> <tr> <td>designation</td> <td>'+designation+' </td> </tr> <tr> <td>employeeCategories</td> <td>'+employeeCategories+' </td> </tr> <tr> <td>dateOfBirth</td> <td>'+dateOfBirth+' </td> </tr> <tr> <td>fatherName</td> <td>'+fatherName+' </td> </tr> <tr> <td>motherName</td> <td>'+motherName+' </td> </tr> <tr> <td>address</td> <td>'+address+' </td> </tr> <tr> <td>primaryMobileNumber</td> <td>'+primaryMobileNumber+' </td> </tr> <tr> <td>officeMobileNumber</td> <td>'+officeMobileNumber+' </td> </tr> <tr> <td>fatherMobileNumber</td> <td>'+fatherMobileNumber+' </td> </tr> <tr> <td>motherMobileNumber</td> <td>'+motherMobileNumber+' </td> </tr> <tr> <td>spouseName</td> <td>'+spouseName+' </td> </tr> <tr> <td>spouseMobileNumber</td> <td>'+spouseMobileNumber+' </td> </tr> <tr> <td>officeEmailId</td> <td>'+officeEmailId+' </td> </tr> <tr> <td>area</td> <td>'+area+' </td> </tr> <tr> <td>bankName</td> <td>'+bankName+' </td> </tr> <tr> <td>bankAccountNumber</td> <td>'+bankAccountNumber+' </td> </tr> <tr> <td>ifscCode</td> <td>'+ifscCode+' </td> </tr> <tr> <td>dateOfJoining</td> <td>'+dateOfJoining+' </td> </tr> <tr> <td>aadharNumber</td> <td>'+aadharNumber+' </td> </tr> <tr> <td>panNumber</td> <td>'+panNumber+' </td> </tr> <tr> <td>reference</td> <td>'+reference+' </td> <td>referenceContactNumber</td> <td>'+referenceContactNumber+' </td> </tr> <tr> <td>gender</td> <td>'+gender+' </td> </tr> </table> </div>'
+
+			var bt="<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button> <button type='submit' onclick='del("+result+")' data-dismiss='modal' class='btn bg-teal-400'>Delete</button>"
+			console.log("Ujjwal")
+			document.getElementById("blasto").innerHTML=tek;
+			document.getElementById("offo").innerHTML=bt;
+
+		});
+    }
+
+
+		
+		function fil()
+		{
+			var mySelEmp = document.getElementById("employeeNameFil").value;
+			var mySelDes = document.getElementById("designationFil").value;
+			var mySelCat = document.getElementById("employeeCategoriesFil").value;
+			
+			console.log(mySelEmp);
+			console.log(mySelDes);
+			console.log(mySelCat);
+			
+			console.log("ujjwal");
+        $.post("/masterEmployee",
+        {
+			employeeNameFil: mySelEmp,
+            designationFil: mySelDes,
+            employeeCategoriesFil: mySelCat,
+            op:"fil"
+        },
+        function (dataFil, status) {
+			console.log("filter kios");
+            console.log(dataFil);
+			check(dataFil);
+            console.log(status);
+        }
+        );
+    }
+
+	function check(tableData)
+		{
+			var table = "<table id='tbl' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;' id='tbl'> <thead> <th>employeeName</th> <th>designation</th> <th>employeeCategories</th> <th>dateOfBirth</th> <th>fatherName</th> <th>motherName</th> <th>address</th> <th>primaryMobileNumber</th> <th>officeMobileNumber</th> <th>fatherMobileNumber</th> <th>motherMobileNumber</th> <th>spouseName</th> <th>spouseMobileNumber</th> <th>officeEmailId</th> <th>area</th> <th>bankName</th> <th>bankAccountNumber</th> <th>ifscCode</th> <th>dateOfJoining</th> <th>aadharNumber</th> <th>panNumber</th> <th>reference</th> <th>referenceContactNumber</th> <th>gender</th> <th>photo</th> </thead> <tbody> "
+			for(var i=0;i<tableData.length;i++)
+			{
+
+				table+="<tr>"
+					table+="<td class='employeeName'>"+tableData[i].employeeName+"</td>"	
+					table+="<td class='designation'>"+tableData[i].designation+"</td>"	                   
+					table+="<td class='employeeCategories'>"+tableData[i].employeeCategories+"</td>"	                   
+					table+="<td class='dateOfBirth'>"+tableData[i].dateOfBirth+"</td>"	                   
+					table+="<td class='fatherName'>"+tableData[i].fatherName+"</td>"	                   
+					table+="<td class='motherName'>"+tableData[i].motherName+"</td>"	                   
+					table+="<td class='address'>"+tableData[i].address+"</td>"	                   
+					table+="<td class='primaryMobileNumber'>"+tableData[i].primaryMobileNumber+"</td>"	                   
+					table+="<td class='officeMobileNumber'>"+tableData[i].officeMobileNumber+"</td>"	                   
+					table+="<td class='fatherMobileNumber'>"+tableData[i].fatherMobileNumber+"</td>"	                   
+					table+="<td class='motherMobileNumber'>"+tableData[i].motherMobileNumber+"</td>"	                   
+					table+="<td class='spouseName'>"+tableData[i].spouseName+"</td>"	                   
+					table+="<td class='spouseMobileNumber'>"+tableData[i].spouseMobileNumber+"</td>"	                   
+					table+="<td class='officeEmailId'>"+tableData[i].officeEmailId+"</td>"	                   
+					table+="<td class='area'>"+tableData[i].area+"</td>"	                   
+					table+="<td class='bankName'>"+tableData[i].bankName+"</td>"	                   
+					table+="<td class='bankAccountNumber'>"+tableData[i].bankAccountNumber+"</td>"	                   
+					table+="<td class='ifscCode'>"+tableData[i].ifscCode+"</td>"	                   
+					table+="<td class='dateOfJoining'>"+tableData[i].dateOfJoining+"</td>"	                   
+					table+="<td class='aadharNumber'>"+tableData[i].aadharNumber+"</td>"	                   
+					table+="<td class='panNumber'>"+tableData[i].panNumber+"</td>"	                   
+					table+="<td class='reference'>"+tableData[i].reference+"</td>"	                   
+					table+="<td class='referenceContactNumber'>"+tableData[i].referenceContactNumber+"</td>"	                   
+					table+="<td class='gender'>"+tableData[i].gender+"</td>"	                   
+					table+="<td class='photo'>"+tableData[i].photo+"</td>"	                   
+				table+="</tr>"
+			}
+			table+="</tbody> </table>"
+			document.getElementById("koiBhi").innerHTML=table;
+			var button = "<button class='btn-link' onclick=exportData()> Download list</button>"
+			document.getElementById("chlna").innerHTML=button;
+
+		}
+
+	function exportData(){
+			console.log("a")
+			
+			var table = document.getElementById("tbl");
+			console.log(table)
+
+			
+			console.log("44444444444444444444444444444444444444")
+			var rows =[];
+			console.log("44444444444444444444444444444444444444")
+      
+			for(var i=0,row; row = table.rows[i];i++){
+				
+				column1 = row.cells[0].innerText;
+				column2 = row.cells[1].innerText;
+				column3 = row.cells[2].innerText;
+				column4 = row.cells[3].innerText;
+				column5 = row.cells[4].innerText;
+				column6 = row.cells[5].innerText;
+				column7 = row.cells[6].innerText;
+				column8 = row.cells[7].innerText;
+				column9 = row.cells[8].innerText;
+				column10 = row.cells[9].innerText;
+				column11 = row.cells[10].innerText;
+				column12 = row.cells[11].innerText;
+				column13 = row.cells[12].innerText;
+				column14 = row.cells[13].innerText;
+				column15 = row.cells[14].innerText;
+				column16 = row.cells[15].innerText;
+				column17 = row.cells[16].innerText;
+				column18 = row.cells[17].innerText;
+				column19 = row.cells[18].innerText;
+				column20 = row.cells[19].innerText;
+				column21 = row.cells[20].innerText;
+				column22 = row.cells[21].innerText;
+				column23 = row.cells[22].innerText;
+				column24 = row.cells[23].innerText;
+				column25 = row.cells[24].innerText;
+				rows.push(
+					[
+						column1,
+						column2,
+						column3,
+						column4,
+						column5,
+						column6,
+						column7,
+						column8,
+						column9,
+						column10,
+						column11,
+						column12,
+						column13,
+						column14,
+						column15,
+						column16,
+						column17,
+						column18,
+						column19,
+						column20,
+						column21,
+						column22,
+						column23,
+						column24,
+						column25
+					]
+				);
+ 
+        	}
+			console.log("----------------------------------------------")
+			console.log(rows)
+        	csvContent = "data:text/csv;charset=utf-8,";
+         
+			rows.forEach(function(rowArray){
+				row = rowArray.join(",");
+				csvContent += row + "\r\n";
+			});
+ 
+			var encodedUri = encodeURI(csvContent);
+			var link = document.createElement("a");
+			link.setAttribute("href", encodedUri);
+			link.setAttribute("download", "Master_Employees.csv");
+			document.body.appendChild(link);
+			link.click();
+		}
+</script>
+

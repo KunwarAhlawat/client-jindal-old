@@ -1,0 +1,4188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Jindal Trading | Dashboard</title>
+
+	<!-- Global stylesheets -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+
+
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- toast -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css" integrity="sha512-wJgJNTBBkLit7ymC6vvzM1EcSWeM9mmOu+1USHaRBbHkm6W9EgM0HY27+UtUaprntaYQJF75rc8gjxllKs5OIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="global_assets/js/main/jquery.min.js"></script>
+	<script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+
+	<!-- fontawesome -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- toast -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js" integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+
+	<script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+
+	<script src="assets/js/app.js"></script>
+	<script src="global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="global_assets/js/demo_pages/form_multiselect.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+	<!-- /theme JS files -->
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+	<style>
+		*{padding:0;margin:0}.wrapper{height:auto;display:none;justify-content:center;align-items:center }.checkmark__circle{stroke-dasharray: 166;stroke-dashoffset: 166;stroke-width: 2;stroke-miterlimit: 10;stroke: #7ac142;fill: none;animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards}.checkmark{width: 35px;height: 35px;border-radius: 50%;display: block;stroke-width: 2;stroke: #fff;stroke-miterlimit: 10;margin: 10% auto;box-shadow: inset 0px 0px 0px #7ac142;animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both}.checkmark__check{transform-origin: 50% 50%;stroke-dasharray: 48;stroke-dashoffset: 48;animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards}@keyframes stroke{100%{stroke-dashoffset: 0}}@keyframes scale{0%, 100%{transform: none}50%{transform: scale3d(1.1, 1.1, 1)}}@keyframes fill{100%{box-shadow: inset 0px 0px 0px 30px #7ac142}}
+
+		/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #25b09b;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+td{
+	min-width: 200px!important;
+}
+		 
+.content-wrapper{
+	overflow: hidden;
+}
+.uploadForm {
+	position: relative;
+ 		background: transparent;
+	 
+
+}
+#firmDropdown , #addressDropdown {
+	width: 100%;
+    background: antiquewhite;
+     margin: 20px 10px;
+    border-radius: 20px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.uploadForm input{
+	background-color: red;
+	cursor: pointer;
+	min-height: 150px;
+    background: white;
+ 	opacity: 0;
+	width: 100%;
+	
+}
+.uploadForm .inner{
+    text-align: center;
+	z-index: -1;
+	padding-top: 31px;
+
+	width: 100%;
+	min-height: 150px; 
+    border: 2px solid rgba(0, 0, 0, 0.3);
+	position: absolute;font-size: 50px;
+	left: 50%; 
+	top: 50%;
+ 
+	display: flex;
+	flex-direction: column;
+	transform: translate(-50% , -50%);
+}
+ 
+.uploadForm .inner span{
+		font-size: 16px!important;
+}
+#uploadForm .inner-btn{
+ 
+	margin : 20px;
+	text-align: right;
+ 
+}
+.shadowlg{  
+	box-shadow: rgba(137, 137, 137, 0.35) 0px -50px 36px -28px inset;
+	border-radius: 8px;	
+	padding: 3px;
+	margin-top: 5px;
+	}	
+	#resultsDropdown{
+		width: 100%;
+		background: antiquewhite;
+ 	margin: 20px 10px;
+	border-radius: 20px;
+ 	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	}
+
+
+	/* modal_form_vertical */
+	#modal_form_vertical .modal-header{
+		width: 100%;
+		background-color: rgba(232, 232, 232, 0.229);
+		box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+		background: #fa991c;
+		padding: 10px;
+		color: white;
+	}
+	input, select{
+		background-color: #EAEAEC!important;
+	}
+	 .multiselect.btn-light{
+		background-color: #EAEAEC!important;
+
+	}
+ 
+
+/* CSS */
+.button-88 {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+
+
+/* CSS */
+button.button-2 {
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button.button-2:focus {
+  outline-style: solid;
+  outline-color: transparent;
+}
+
+button.button-2 {
+  touch-action: manipulation;
+  margin: 3px;
+  cursor: pointer;
+}
+
+button.button-2 {
+  touch-action: manipulation;
+  border: 1px solid #0360df;
+  border-radius: 50px;
+  padding: 12px 16px;
+  background-color: #0360df;
+  background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-shadow: 0 1px 1px #116ee7;
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.2s;
+}
+
+button.button-2:hover {
+  transform: scale(1.04);
+}
+
+button.button-2:active {
+  border-color: #0048d5;
+  transform: scale(0.96);
+  background-color: #0048d5;
+}
+
+.datatable-scroll{
+	overflow: auto;
+}
+#DataTables_Table_0{
+	overflow: auto;
+}
+ 
+
+	</style>
+
+</head>
+
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-dark">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="../../../../global_assets/images/logo_light.png" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li>
+			</ul>
+
+			<span class="badge bg-success ml-md-3 mr-md-auto">Online</span>
+
+			<ul class="navbar-nav">
+
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+						<img src="../../../../global_assets/images/demo/users/face11.jpg" class="rounded-circle mr-2" height="34" alt="">
+						<span><%=username%></span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
+						<div class="dropdown-divider"></div>
+						<a href="/logout" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				Navigation
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user">
+					<div class="card-body">
+						<div class="media">
+							<div class="mr-3">
+								<a href="#"><img src="../../../../global_assets/images/demo/users/face11.jpg" width="38" height="38" class="rounded-circle" alt=""></a>
+							</div>
+
+							<div class="media-body">
+								<div class="media-title font-weight-semibold"><%=username%></div>
+								<div class="font-size-xs opacity-50">
+									<i class="icon-pin font-size-sm"></i> &nbsp;Meerut
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/userDashboard" class="nav-link">
+								<i class="icon-home4"></i>
+								<span>
+									Dashboard
+								</span>
+							</a>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/register" class="nav-link">User-Register</a></li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/registeredUsers" class="nav-link">Register-List</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Market-Plan</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanPigIron" class="nav-link">Create Market-Plan</a></li>
+							</ul>
+							
+							<!-- <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+							   <li class="nav-item"><a href="/marketPlanAllotment" class="nav-link">Allotment</a></li>
+						    </ul> -->
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanQuantityLedger" class="nav-link">QuantityLedger</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu ">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Master</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterArea" class="nav-link">MasterArea</a></li>
+								<li class="nav-item"><a href="/masterCategories" class="nav-link">MasterCategories</a></li>
+								<li class="nav-item"><a href="/masterGrade" class="nav-link">MasterGrade</a></li>
+								<li class="nav-item"><a href="/masterProducts" class="nav-link">MasterProducts</a></li>
+								<li class="nav-item"><a href="/masterProductGroup" class="nav-link">MasterProductGroup</a></li>
+								<li class="nav-item"><a href="/masterTeams" class="nav-link">MasterTeams</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+							<a href="#" class="nav-link active"><i class="icon-copy"></i> <span>Customers</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterCustomer" class="nav-link active">MasterCustomer</a></li>
+								<li class="nav-item"><a href="/masterFirm" class="nav-link">MasterFirm</a></li>
+								<li class="nav-item nav-item-submenu ">
+									<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Datatables</span></a>
+									<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+										<li class="nav-item"><a href="/customerContact" class="nav-link">Contact</a></li>
+										<li class="nav-item"><a href="/customerCategory" class="nav-link">Categories</a></li>
+										<li class="nav-item"><a href="/customerFirm" class="nav-link">Firms</a></li>
+										<li class="nav-item"><a href="/customerProduct" class="nav-link">Products</a></li>
+									</ul>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Transport</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/transportDetails" class="nav-link">Details</a></li>
+								<li class="nav-item"><a href="/transportContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/transportStations" class="nav-link">Stations</a></li>
+								<li class="nav-item"><a href="/transportTrucks" class="nav-link">Trucks</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Vendor</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterVendors" class="nav-link">MasterVendors</a></li>
+								<li class="nav-item"><a href="/vendorContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/vendorFirm" class="nav-link">Firm</a></li>
+								<li class="nav-item"><a href="/vendorProduct" class="nav-link">Product</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Employee</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterEmployee" class="nav-link">MasterEmployee</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/contacts" class="nav-link"><i class="icon-copy"></i> <span>Contacts</span></a>
+						</li>
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+			
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper"> 
+
+
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+				<div class="page-header-content header-elements-md-inline">
+					<div class="page-title d-flex">
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Master Customers</span> - Master</h4>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content">
+
+				<!-- Dashboard content -->
+				<!-- <div class="row">
+					<div class="col">
+						<form id="uploadForm" enctype="multipart/form-data">
+
+							<div class="uploadForm">
+								<input type="file" id="csvFile" name="csvFile">
+							<span class="inner">
+								<i class="fa-solid fa-cloud-arrow-up"></i>
+																<span class="main-text"><b>Drop Files</b> to upload</span>
+							</span>
+
+
+							</div>
+							<div id="fileNameDisplay" class="bg-blue "></div>
+
+							<div class="inner-btn">
+								<button type="submit" class="btn btn-success">Upload CSV</button>
+							</div>
+						  </form>
+
+					</div>
+				</div>
+
+	 -->
+ 				
+				
+				
+				<div class="row my-4">
+					<div class="col">
+											<!-- Nav tabs -->
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item" role="presentation">
+						<button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Master Customers</button>
+						</li>
+						<!-- <li class="nav-item" role="presentation">
+						<button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Master Firms</button>
+						</li>
+						<li class="nav-item" role="presentation">
+						<button class="nav-link" id="messages-tab" data-toggle="tab" data-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Products
+						</button>
+						</li>
+						<li class="nav-item" role="presentation">
+						<button class="nav-link" id="settings-tab" data-toggle="tab" data-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Categories </button>
+						</li> -->
+					</ul>
+					
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<div class="row ">
+								<div class="col-md-12">
+									<div class="card" >
+										
+										<div class="errInfo" id="errInfo" style=" background-color: rgb(255, 0, 0); margin: 1%;">
+										<%= //////console.log("msssssssssssssssssssssssssss" , msg)  %>
+											<% if(msg){ %>
+												<h6 style="text-align: center; font-weight: 600"><%=msg%></h6>
+											<% } %>
+										</div>
+										<div class="row">
+											<div class="col text-right">
+												<button id="downloadBtn" class="mr-3 btn btn-light">Export</button>
+			
+											</div>
+										</div>
+			
+										<div class="card-header header-elements-inline">
+											<h5 class="card-title">Master Customers</h5>
+											<% if(level>=1) {%>
+												<button   type="button"  class="btn btn-light" data-toggle="modal" data-target="#modal_form_vertical">Add new Master Customer</button></td>
+											<%}%>
+											<div class="header-elements">								
+			
+											
+												<div class="list-icons">
+													<a class="list-icons-item" data-action="collapse"></a>
+													<a class="list-icons-item" data-action="reload"></a>
+													<a class="list-icons-item" data-action="remove"></a>
+												</div>
+											</div>
+										</div>
+										 <% if(data.length>0) {%>
+											<% //////console.log("customer data1234s" ,data ) %>
+
+											<table  class="table datatable-basic table-bordered table-striped table-hover">
+												
+												<thead>
+													<tr>
+														<th>CustomerCode</th>
+														<th>customerName</th>
+														<th>category</th>
+														<th>AREA</th>
+														<th>STATUS</th>
+														<th>CustomerStatus</th>
+														<th>GRADE</th>
+														<th>PIN_CODE</th>
+														<th style="display: none;">ADDRESS</th>
+														<th style="display: none;">REF_NO_1</th>
+														<th style="display: none;">reference1ContactNumber</th>
+														<th style="display: none;">REF_NO_2</th>
+														<th style="display: none;">reference2ContactNumber</th>
+														<th style="display: none;">CREDIT_LIMIT</th>
+														<th style="display: none;">CREDIT_DAYS</th>
+														<% if(level>2) {%>
+															<th>Action</th>
+													 
+															 
+														<%}else if(level>1){%>
+															<th>Action</th>
+														
+														<%} %>
+													</tr>
+												</thead >
+												
+												<% for(var i=0; i<data.length; i++) {%>
+												 
+													<tr class="<%= data[i].customerId%>customer">
+														<%if(level==1) {%>
+														 												 
+															<td class="customerName"><button type="button" class="btn btn-light" data-toggle="modal" onclick="custInfo('<%= data[i].customerId%>')" data-target="#customer_information"><%= data[i].customerCode%></button></td>
+															<td class="customerName"><%= data[i].customerName%></td>
+
+														   <td class="custCateg">
+															   <% for (var a = 0; a < custCateg.length; a++) { %>
+																  <% if (custCateg[a].customerName == data[i].customerId) { %>
+																	 <% for (var b = 0; b < categorydata.length; b++) { %>
+																	  <% if (custCateg[a].category == categorydata[b].categoriesId) { %>
+																		<%=categorydata[b].categoriesType %>  
+																		<% //////console.log("customer data1234" ,categorydata[b].categoriesType) %>
+																	  <% } %>
+																 <% } %>
+																   <% } %>
+															 <% } %>												 
+													  </td>
+														   <td class="area">
+															   <% for (var a = 0; a < areaData.length; a++) { %>
+																	 <% if (areaData[a].areaId == data[i].area) { %>
+																	   <%=areaData[a].area %>
+																	 <% } %>
+															   <% } %>
+														   </td>
+														   <td class="status"><%= data[i].status%></td>
+														   <td class="CustomerStatus"><%= data[i].CustomerStatus%></td>
+														   <td class="grade">
+															   <% for (var a = 0; a < gradeData.length; a++) { %>
+																   <% if (gradeData[a].gradeId == data[i].grade) { %>
+																		 <%=gradeData[a].gradeType %>
+																   <% } %>
+																 <% } %>
+														   </td>
+														   <td class="pincode"><%= data[i].pincode%></td>
+														   <td class="address" style="display: none;" ><%= data[i].address%></td>
+														   <td class="referenceName1" style="display: none;"><%= data[i].referenceName1%></td>
+														   <td class="reference1ContactNumber" style="display: none;" ><%= data[i].reference1ContactNumber%></td>
+														   <td class="referenceName2" style="display: none;" ><%= data[i].referenceName2%></td>
+														   <td class="reference2ContactNumber"  style="display: none;"><%= data[i].reference2ContactNumber%></td>
+														   <td class="creditLimit" style="display: none;"><%= data[i].creditLimit%></td>
+														   <td class="creditDays" style="display: none;"><%= data[i].creditDays%></td>														 
+														   
+												 
+														<%} else if(level>2) {%>
+
+															<td class="customerName"><button type="button" class="btn btn-light" data-toggle="modal" onclick="custInfo('<%= data[i].customerId%>')" data-target="#customer_information"><%= data[i].customerCode%></button></td>
+ 															<td class="customerName"><%= data[i].customerName%></td>
+
+															<td class="custCateg">
+																<% for (var a = 0; a < custCateg.length; a++) { %>
+																   <% if (custCateg[a].customerName == data[i].customerId) { %>
+																	  <% for (var b = 0; b < categorydata.length; b++) { %>
+																	   <% if (custCateg[a].category == categorydata[b].categoriesId) { %>
+																		 <%=categorydata[b].categoriesType %>  
+																		 <% //////console.log("customer data1234" ,categorydata[b].categoriesType) %>
+																	   <% } %>
+																  <% } %>
+																	<% } %>
+															  <% } %>												 
+													   </td>
+															<td class="area">
+																<% for (var a = 0; a < areaData.length; a++) { %>
+																	  <% if (areaData[a].areaId == data[i].area) { %>
+																		<%=areaData[a].area %>
+																	  <% } %>
+																<% } %>
+															</td>
+															<td class="status"><%= data[i].status%></td>
+															<td class="CustomerStatus"><%= data[i].CustomerStatus%></td>
+															<td class="grade">
+																<% for (var a = 0; a < gradeData.length; a++) { %>
+																	<% if (gradeData[a].gradeId == data[i].grade) { %>
+																		  <%=gradeData[a].gradeType %>
+																	<% } %>
+																  <% } %>
+															</td>
+															<td class="pincode"><%= data[i].pincode%></td>
+															<td class="address" style="display: none;" ><%= data[i].address%></td>
+															<td class="referenceName1" style="display: none;"><%= data[i].referenceName1%></td>
+															<td class="reference1ContactNumber" style="display: none;" ><%= data[i].reference1ContactNumber%></td>
+															<td class="referenceName2" style="display: none;" ><%= data[i].referenceName2%></td>
+															<td class="reference2ContactNumber"  style="display: none;"><%= data[i].reference2ContactNumber%></td>
+															<td class="creditLimit" style="display: none;"><%= data[i].creditLimit%></td>
+															<td class="creditDays" style="display: none;"><%= data[i].creditDays%></td>															<td>
+															
+																<!-- <button type="button" class="btn btn-success" onclick="viewCustomer('<%= data[i].customerId%> ' )" data-toggle="modal" data-target="#exampleModal">
+																	<i class="fa-solid fa-eye"></i>
+																</button> -->
+																
+																
+ 
+															 
+															 
+																<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" data-popup="popover" onclick="eedit('<%= data[i].customerId%>customer')"><i class="fa-solid fa-pen-to-square"></i></button>
+														 
+														 
+																<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_del" data-popup="popover" onclick="ddel('<%= data[i].customerId%>customer')"><i class="fa-solid fa-trash-can"></i></button>
+														 
+														 
+																<!-- <button type="button" class="btn btn-light"     onclick="printMasterCustomer('<%= data[i].customerId%>customer')">print</button> -->
+			 
+															</td>
+														<%}else if(level>1){%>
+															<td class="customerName"><button type="button" class="btn btn-light" data-toggle="modal" onclick="custInfo('<%= data[i].customerId%>')" data-target="#customer_information"><%= data[i].customerCode%></button></td>
+ 															<td class="customerName"><%= data[i].customerName%></td>
+
+															<td class="custCateg">
+																<% for (var a = 0; a < custCateg.length; a++) { %>
+																   <% if (custCateg[a].customerName == data[i].customerId) { %>
+																	  <% for (var b = 0; b < categorydata.length; b++) { %>
+																	   <% if (custCateg[a].category == categorydata[b].categoriesId) { %>
+																		 <%=categorydata[b].categoriesType %>  
+																		 <% //////console.log("customer data1234" ,categorydata[b].categoriesType) %>
+																	   <% } %>
+																  <% } %>
+																	<% } %>
+															  <% } %>												 
+													   </td>
+															<td class="area">
+																<% for (var a = 0; a < areaData.length; a++) { %>
+																	  <% if (areaData[a].areaId == data[i].area) { %>
+																		<%=areaData[a].area %>
+																	  <% } %>
+																<% } %>
+															</td>
+															<td class="status"><%= data[i].status%></td>
+															<td class="CustomerStatus"><%= data[i].CustomerStatus%></td>
+															<td class="grade">
+																<% for (var a = 0; a < gradeData.length; a++) { %>
+																	<% if (gradeData[a].gradeId == data[i].grade) { %>
+																		  <%=gradeData[a].gradeType %>
+																	<% } %>
+																  <% } %>
+															</td>
+															<td class="pincode"><%= data[i].pincode%></td>
+															<td class="address" style="display: none;" ><%= data[i].address%></td>
+															<td class="referenceName1" style="display: none;"><%= data[i].referenceName1%></td>
+															<td class="reference1ContactNumber" style="display: none;" ><%= data[i].reference1ContactNumber%></td>
+															<td class="referenceName2" style="display: none;" ><%= data[i].referenceName2%></td>
+															<td class="reference2ContactNumber"  style="display: none;"><%= data[i].reference2ContactNumber%></td>
+															<td class="creditLimit" style="display: none;"><%= data[i].creditLimit%></td>
+															<td class="creditDays" style="display: none;"><%= data[i].creditDays%></td>															<td>
+															
+																<!-- <button type="button" class="btn btn-success" onclick="viewCustomer('<%= data[i].customerId%> ' )" data-toggle="modal" data-target="#exampleModal">
+																	<i class="fa-solid fa-eye"></i>
+																</button> -->
+																
+																
+ 
+															 
+															 
+																<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" data-popup="popover" onclick="eedit('<%= data[i].customerId%>customer')"><i class="fa-solid fa-pen-to-square"></i></button>
+														 
+														 
+																<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_del" data-popup="popover" onclick="ddel('<%= data[i].customerId%>customer')"><i class="fa-solid fa-trash-can"></i></button>
+														 
+														 
+																<!-- <button type="button" class="btn btn-light"     onclick="printMasterCustomer('<%= data[i].customerId%>customer')">print</button> -->
+			 
+															</td>
+														<%}%>
+													</tr>
+												 
+												<% } %>
+											</table>
+										
+										<%}else{%>
+											<h4>No new data</h4>
+										<%}%>
+										
+										
+											
+											
+										
+											</div>		
+									 
+										</div>		
+										
+										
+										<!-- view cutomer  -->
+										
+									
+										
+										
+										<!-- Vertical form modal -->
+										<div id="modal_form_vertical" class="modal fade" style="overflow: auto;" tabindex="-1">
+											<div class="modal-dialog modal-xl">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title">New Master Customer</h5>
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+													</div>
+			
+													<form action="/masterCustomer" method="POST" id="customerForm">
+														<div class="modal-body p-5">
+															<div class="form-group " style="background-color: white;">
+																<div class="row d-flex align-items-center justify-content-end">
+																	<div class=" "> <strong> Customer Code :-</strong>  </div>
+ 														 <!-- <span class=" mx-3 text-danger  " id="customerCode" style="font-size: 23px;">FEES215</span>  -->
+														  <input type="text"  class="form-control customerCode" required name="customerCode" value="" id="customerCode">
+
+														 	<!-- HTML !-->
+																<button class="button-2" id="customerCodeBtn" role="button">
+																	<span class="text" id="codeReg">Regenerate</span>
+																</button>
+ 																</div>
+																<div class="row">
+																	<div class="pl-2 pb-3"><h6><strong>Customer Info :- </strong></h6></div>
+ 																</div>
+															
+																<div class="row">
+																	<div class="col-sm-6">
+																		<label>Customer Name<span class="text-danger shadowlg">*</span></label>
+																		<input type="text" class="form-control customerName" required name="customerName" id="customerName">
+																	</div>
+			
+																	<div class="col-sm-6">
+																		<label>Category<span class="text-danger">*</span></label>
+																		<!-- <select name="category" class="category form-control" id="category" required>
+																			<option value="" disabled selected>-Select-</option>
+																			<% for(var j=0; j<categorydata.length; j++) {%>
+																				<option value="<%=categorydata[j].categoriesId%>"><%=categorydata[j].categoriesType%></option>
+																			<% } %>
+																		</select> -->
+																		<select name="categoryFil" class="form-control multiselect-filtering categoryFil" id="categoryFil" multiple="multiple" data-fouc>
+																			<% for(var i=0; i<categorydata.length; i++) {%>
+																				<option value="<%=categorydata[i].categoriesId%>"><%=categorydata[i].categoriesType%></option>
+																			<% } %>	
+																		</select>
+																	</div>
+			
+																</div>
+															</div>
+													
+															<div class="form-group">
+															
+																<div class="row">
+																	<div class="col-sm-6">
+																		<% if( level <= 2){ %>
+																			<label>Status</label>
+																		<select id="status" name="status" class="form-control status" id="status">
+																			<option value="UNVERIFIED">UNVERIFIED</option>
+																		</select>
+																		<% } %>
+																		<% if( level > 2 ){ %>
+																		<label>Status</label>
+																		<select id="status" name="status" class="form-control status" id="status">
+																			<option value="" disabled selected>-Select-</option>
+																			<option value="VERIFIED">VERIFIED</option>
+																			<option value="UNVERIFIED">UNVERIFIED</option>
+																			
+																		</select>
+																		<% } %>
+																	</div>
+																	<div class="col-sm-6">
+																		<label>Customer Status</label>
+																		<% if(level ==1 ){ %>
+																			<select id="CustomerStatus" name="CustomerStatus" class="form-control status" id="CustomerStatus">
+																				  <option value="inactive"  selected>INACTIVE</option>
+																			 </select>
+																		<% } %>
+																		<% if(level > 1 || level > 2 ){ %>
+																		<select id="CustomerStatus" name="CustomerStatus" class="form-control status" id="CustomerStatus">
+																			<option value="" disabled selected>-Select-</option>
+																			<option value="active">ACTIVE</option>
+																			<option value="inactive">INACTIVE</option>
+																			<option value="closed">CLOSED</option>
+																		 </select>
+																		 <% } %>
+																	</div>
+															 </div>
+															</div>
+															<div class="form-group">
+																<div class="row">
+																	<div class="col-sm-6">
+																		<label>Area<span class="text-danger">*</span></label>
+																		<select id="area" name="area" class="form-control area" id="area" >
+																			<option value="" disabled selected>-Select-</option>
+																			<% for(var i=0; i<areaData.length; i++) {%>
+																				<option value="<%=areaData[i].areaId%>"><%=areaData[i].area%></option>
+																			<% } %>																
+																		</select>														
+																	</div>
+																	
+																	<div class="col-sm-6">
+																		<label>Grade<span class="text-danger">*</span></label>
+																		<select id="grade" name="grade" class="form-control grade" id="grade" >
+																			<option value="" disabled selected>-Select-</option>
+																			<% for(var i=0; i<gradeData.length; i++) {%>
+																				<option value="<%=gradeData[i].gradeId%>"><%=gradeData[i].gradeType%></option>
+																			<% } %>
+																		</select>
+																		
+																	</div>											
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="row">
+																	<div class="pl-2 py-3"><h6><strong>Address Info :-  </strong></h6></div>
+																</div>
+
+																
+																<div class="row">											
+																	<div class="col-sm-4">
+																		<label>Pincode</label>
+																		<input type="number" placeholder="6-digit-format" class="form-control pincode" name="pincode" id="pincode" >
+																	</div>
+			
+																	<div class="col-sm-8">
+																		<label>Address<span class="text-danger">*</span></label>
+																		<input type="text"  class="form-control address" name="address" id="address">
+																	</div>
+
+																</div>	
+																<div class="row">
+																	<div id="addressDropdown">
+																	 
+																	  </div>
+																</div>
+
+															</div>
+															<div class="form-group">
+																<div class="row">
+																	<div class="pl-2 py-3"><h6><strong>firm Info :- </strong></h6></div>
+																</div>
+
+														
+															
+															<div class="col-sm-12">
+																<label>Firm2<span class="text-danger">*</span></label>
+																<a style="border: 2px solid black; cursor: default;" class="" data-toggle="modal" data-target="#modal_firm">Add new Firm</a>
+															
+															 
+																<select class="form-control " name="firmFil[]" id="firmFil" multiple="multiple">
+																	 
+																  </select>
+																  <!-- <input type="text" class="form-control contact" placeholder="10-digit-format"   id="firmApiInput"  > -->
+
+															 
+															</div>
+														</div>
+ 															<div class="row">
+																<div class="pl-2 py-3"><h6><strong>Contact Info :- </strong></h6></div>
+															</div>
+
+															<div class="form-group"  id="contactsContainer">
+																<div class="row">
+																	<div class="col-sm-3">
+																		<label>Contact Name<span class="text-danger">*</span></label>
+																		<input type="text" class="form-control contactName" name="contactName[]" id="contactName" >
+																	</div>
+																	<div class="col-sm-2">
+																		<label>Designation<span class="text-danger">*</span></label>
+																		<input type="text" class="form-control designation" name="designation[]" id="designation" >
+																	</div>
+																	<!-- <div class="col-sm-3">
+																		<label>Mobile Number<span class="text-danger">*</span></label>
+																		<input type="text" placeholder="10-digit-format" class="form-control contact" name="contact[]" id="contact" pattern="[0-9]{10}" maxlength="10">
+																	</div> -->
+
+																	<div class="col-sm-3">
+  <label>Mobile Number<span class="text-danger">*</span></label>
+  <!-- Custom input field overlaying the hidden select element -->
+  <div class="custom-select-wrapper">
+    <input type="number" class="form-control contact" placeholder="10-digit-format" name="contact[]" id="contactFill"  >
+ 	
+ 
+  </div>
+ 
+
+</div>
+
+ 
+
+																	<div class="col-sm-2">
+																		<label>Email</label>
+																		<input type="email" class="form-control email" name="email[]" id="email" >
+																	</div>
+			
+																	<div class="col-sm-2">
+																		<button type="button" class="float-right" id="addContactBtn">Add Contact</button>
+																	</div>
+			
+																</div>
+															
+															
+															<div class="row">
+																<div id="resultsDropdown">
+																 
+																  </div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="pl-2 py-3"><h6><strong>Product Info :- </strong></h6></div>
+														</div>
+
+															<div class="form-group">
+
+																<div class="row">
+																	<div class="col-sm-8">
+																		<label>Products<span class="text-danger">*</span></label>
+																		<select name="productFil" class="form-control multiselect-filtering productFil" id="productFil" multiple="multiple" data-fouc>
+																			<% for(var i=0; i<productData.length; i++) {%>
+																				<option value="<%=productData[i].productId%>"><%=productData[i].productName%></option>
+																			<% } %>	
+																		</select>
+																		
+																	</div>
+			
+																</div>
+															</div>
+															
+			
+															<div class="form-group">
+																<div class="row">
+																	<div class="pl-2 py-3"><h6><strong>Reference Info :- </strong></h6></div>
+																</div>
+																<div class="row">
+			
+ 																
+	
+																	<div class="col-sm-6">
+																		<label>Reference 1 Name</label>
+																		<input type="text" placeholder="name" class="form-control referenceName1" name="referenceName1" id="referenceName1" >
+																		
+																	</div>
+			
+																	<div class="col-sm-6">
+																		<label>Reference 1 Contact Number</label>
+																		<input type="number" placeholder="Contact Number" class="form-control reference1ContactNumber" name="reference1ContactNumber"  id="reference1ContactNumber"  >
+																	</div>
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="row">
+																	
+																	<div class="col-sm-6">
+																		<label>Reference 2 Name</label>
+																		<input type="text" placeholder="name" class="form-control referenceName2" name="referenceName2"  id="referenceName2">
+																	</div>
+																	
+																	<div class="col-sm-6">
+																		<label>Reference 2 Contact Number</label>
+																		<input type="number" placeholder="Contact Number" class="form-control reference2ContactNumber" name="reference2ContactNumber"  id="reference2ContactNumber" >
+																	</div>
+																</div>
+															</div>
+			
+															<div class="form-group">
+																<div class="row">
+																	<div class="pl-2 py-3"><h6><strong>Credit Info :- </strong></h6></div>
+																</div>
+																 <div class="row">
+																	<div class="col-sm-6">
+																		<label>Credit Limit</label>
+																		<input type="number" placeholder="amount" class="form-control creditLimit" name="creditLimit" id="creditLimit">									
+																	</div>
+			
+																	<div class="col-sm-6">
+																		<label>Credit Days</label>
+																		<input type="number" placeholder="time period" class="form-control creditDays" name="creditDays" id="creditDays">
+																	</div>
+																</div>
+															</div>
+														</div>
+			
+														<div class="modal-footer">
+															<button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+															<button  class="btn bg-primary">Add</button>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+			
+										<script>
+											$(document).ready(function() {
+												$("#customerForm").validate({ // Replace "yourFormId" with the actual ID of your form
+													rules: {
+														customerName: {
+															required: true,
+															minlength: 2
+														},
+														categoryFil: {
+															required: true
+														},
+														status: {
+															required: true
+														},
+														CustomerStatus: {
+															required: true
+														},
+														area: {
+															required: true
+														},
+														grade: {
+															required: true
+														},
+														pincode: {
+															required: true,
+															minlength: 6
+ 														},
+														address: {
+															required: true
+														},
+														contactName: {
+															required: true
+														},
+														designation: {
+															required: true
+														},
+														contactFill: {
+															required: true,
+															minlength: 10
+ 														},
+														email: {
+															required: true,
+															email: true
+														},
+														productFil: {
+															required: true
+														},
+														referenceName1: {
+															required: true
+														},
+														reference1ContactNumber: {
+															required: true,
+															minlength: 10
+ 														},
+														referenceName2: {
+															required: false
+														},
+														reference2ContactNumber: {
+															required: false,
+															minlength: 10
+ 														},
+														creditLimit: {
+															required: true
+														},
+														creditDays: {
+															required: true
+														}
+													},
+													messages: {
+														customerName: {
+															required: "Please enter your name",
+															minlength: "Your name must be at least 2 characters long"
+														},
+														categoryFil: {
+															required: "Please select a category"
+														},
+														status: {
+															required: "Please select a status"
+														},
+														CustomerStatus: {
+															required: "Please select a customer status"
+														},
+														area: {
+															required: "Please select an area"
+														},
+														grade: {
+															required: "Please select a grade"
+														},
+														pincode: {
+															required: "Please enter a valid pincode",
+ 															minlength: "Your name must be at least 6 characters long"
+
+														},
+														address: {
+															required: "Please enter your address"
+														},
+														contactName: {
+															required: "Please enter a contact name"
+														},
+														designation: {
+															required: "Please enter a designation"
+														},
+														contactFill: {
+															required: "Please enter a mobile number",
+									 
+															minlength: "Your name must be at least 10 characters long"
+
+														},
+														email: {
+															required: "Please enter your email",
+															email: "Please enter a valid email address"
+														},
+														productFil: {
+															required: "Please select products"
+														},
+														referenceName1: {
+															required: "Please enter reference 1 name"
+														},
+														reference1ContactNumber: {
+															required: "Please enter reference 1 contact number",
+															pattern: "The contact number must be exactly 10 digits",
+															minlength: "Your name must be at least 10 characters long"
+
+														},
+														referenceName2: {
+															required: "Please enter reference 2 name"
+														},
+														reference2ContactNumber: {
+															required: "Please enter reference 2 contact number",
+															pattern: "The contact number must be exactly 10 digits",
+															minlength: "Your name must be at least 10 characters long"
+
+														},
+														creditLimit: {
+															required: "Please enter a credit limit"
+														},
+														creditDays: {
+															required: "Please enter credit days"
+														}
+													}
+												});
+											});
+											</script>
+
+
+										<script>
+
+
+// form validation 
+
+
+// Assuming you have elements with the IDs "customerCode" and "codeReg"
+const customerCodeElement = document.getElementById("customerCode");
+const codeReg = document.getElementById("customerCodeBtn");
+
+// Attach the click event listener to the codeReg element
+codeReg.addEventListener("click", generateUniqueIdentifier);
+
+function generateUniqueIdentifier(e) {
+	e.preventDefault()
+   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let identifier = '';
+  for (let i = 0; i < 6; i++) {
+    identifier += chars[Math.floor(Math.random() * chars.length)];
+  }
+  customerCodeElement.value = identifier;
+ }
+
+ 
+
+
+//  mobile number 
+$(document).ready(function() {
+  	let timeout;
+
+    // Separate handlers for focus and blur events
+// 	$('#contactFill').on('focus', function() {
+//     // Optionally, reset or prepare the input field on focus
+//   }).on('blur', function() {
+//     // Clear the contents of #resultsDropdown when the input field loses focus
+//     $('#resultsDropdown').empty();
+//   });
+  
+  $('#contactFill').on(' keyup', function() {
+    let contactNumber = $(this).val();
+
+    // Clear the previous timeout if it exists
+    clearTimeout(timeout);
+ 
+    // Set a new timeout
+    timeout = setTimeout(function() {
+      // Perform the search only if the input meets your criteria (e.g., length)
+
+	  if( contactNumber.length < 10 || contactNumber.length > 10){
+		$('#resultsDropdown').empty();
+
+		$('#resultsDropdown').html("<p class='text-danger p-3'>Contact must be 10 digits</p>");
+	  }
+      if (contactNumber.length == 10) { // Adjust the condition as needed
+	 
+		$.ajax({
+			url: "/masterContactCust",
+			type : 'post',
+			data : {
+				contact :contactNumber
+			},
+			success : function(response){
+ 				//////console.log("data"  ,response)
+				 clearTimeout(timeout);
+
+				 	// Handle the successful response here
+			if (response.contactData.length == 0) {
+			 
+			 $('#resultsDropdown').empty();
+			 $('#resultsDropdown').html("<p class='text-success p-3'>Contact is Alright</p>");
+
+
+		} else {
+				 $('#resultsDropdown').empty();
+
+							let  tableHtml = '<table class="table table-striped table-sm">' +
+							'<thead>' +
+								'<tr>' +
+									'<th>CustomerName</th>' +
+									'<th>ContactName</th>' +
+									'<th>Designation</th>' +
+									'<th>Email</th>' +
+								'</tr>' +
+							'</thead>' +
+							'<tbody>';
+
+			// Iterate over each item in the response.contactData array
+			$.each(response.contactData, function(index, item) {
+				// Add a row for each item
+				tableHtml += '<tr>' +
+							'<td>' + item.customerName + '</td>' +
+							'<td>' + item.contactName + '</td>' +
+							'<td>' + item.designation + '</td>' +
+							'<td>' + item.email + '</td>' +
+							'</tr>';
+			});
+
+			// Close the tbody and the table tags
+			tableHtml += '</tbody></table>';
+
+			//////console.log(tableHtml)
+			// Append the complete table HTML to the div with id resultsDiv
+			$('#resultsDropdown').html(tableHtml);
+		}
+		
+			},
+			error : function(error){
+				//////console.log(error)
+			}
+		})
+      
+      }
+    }, 500); // Wait for 500 milliseconds after the user stops typing
+  });
+});
+
+//  Address 
+$(document).ready(function() {
+  let timeoutAddress; // Declare outside the event handler to maintain its state
+
+  $('#address').on('keyup', function() {
+	let address = $(this).val()
+	// let address = $(this).val().replace(/\s+/g, '').toLowerCase(); // Remove spaces and convert to lowercase
+    //////console.log("Address:", address);
+
+    clearTimeout(timeoutAddress); // Clear any existing timeout
+
+    timeoutAddress = setTimeout(() => { // Use the declared globalTimeout
+      $.ajax({
+        url: "/masterAddressCust",
+        type: 'post',
+        data: {
+          address: address // Send the current input value to the server
+        },
+        success: function(response) {
+           //////console.log("Success Data:", response);
+		  clearTimeout(timeoutAddress);
+       
+ 
+			// Handle the successful response here
+			if (response.customerData.length == 0) {
+			 
+ 				$('#addressDropdown').empty();
+  
+			} else {
+				// Handle the case where the GST number is not unique
+				// For example, clear any existing SVG icon
+ 				$('#addressDropdown').empty();
+
+				let tableHtml = '<table class="table table-striped table-sm">' +
+					'<thead>' +
+						'<tr>' +
+							'<th>Customer Code</th>' +
+							'<th>Customer Name</th>' +
+							'<th>Customer Status</th>' +
+							'<th>Address</th>' +
+							'<th>Pin Code</th>' +
+						'</tr>' +
+					'</thead>' +
+					'<tbody>';
+
+				// Iterate over each item in the response.contactData array
+				$.each(response.customerData, function(index, item) {
+					// Add a row for each item
+					tableHtml += '<tr>' +
+						'<td>' + item.customerCode + '</td>' +
+						'<td>' + item.customerName + '</td>' +
+						'<td>' + item.status + '</td>' +
+						'<td>' + item.address + '</td>' +
+						'<td>' + item.pincode + '</td>' +
+					'</tr>';
+				});
+
+				// Close the tbody and the table tags
+				tableHtml += '</tbody></table>';
+
+				//////console.log(tableHtml);
+				// Append the complete table HTML to the div with id resultsDiv
+				$('#addressDropdown').html(tableHtml);
+
+			}
+
+        },
+        error: function(error) {
+          //////console.log("Error:", error);
+          // Handle the error case here
+        }
+      });
+    }, 500); // Wait for 500 milliseconds before making the AJAX call
+  });
+});
+
+	
+// firm
+$(document).ready(function() {
+
+	$('#GSTNumber').on('keyup', function(event) {
+ 
+	let firmDetails = $("#GSTNumber").val();
+	if (!firmDetails || firmDetails.length!= 15) {
+            // Append warning message to the UI
+            $('#warningMessage').html('<p class="text-warning">Invalid GST number. Please enter a GST number that is not empty and does not exceed 15 characters.</p>').show();
+			$('#firmDropdown').empty();
+			$('.wrapper').hide(); 
+		}else{
+			$('#warningMessage').empty()
+			$('#firmDropdown').empty();
+		} 
+});
+    let timeout;
+
+
+    $('#buttonCheckFirm').on('click', function(event) {
+        // Prevent the default action of the button (if any)
+        event.preventDefault();
+
+        let firmDetails = $("#GSTNumber").val();
+  $('#warningMessage').empty()
+        // Check if firmDetails is empty or exceeds the maximum length
+		if (!firmDetails || firmDetails.length!= 15) {
+            // Append warning message to the UI
+            $('#warningMessage').html('<p class="text-warning">Invalid GST number. Please enter a GST number that is not empty and does not exceed 15 characters.</p>').show();
+			$('#firmDropdown').empty();
+			$('.wrapper').hide(); 
+		} else {
+            // Proceed with the rest of the code if the input is valid
+            // Clear the previous timeout if it exists
+            clearTimeout(timeout);
+			$('#warningMessage').empty()
+			$('#firmDropdown').empty();
+            $('#GSTNumber').attr("disabled", true); // Disables the GSTNumber input
+
+            //////console.log("firms", firmDetails);
+            // Set a new timeout
+            timeout = setTimeout(function() {
+                // Perform the search only if the input meets your criteria (e.g., length)
+                 $.ajax({
+                    url: "/masterFirm",
+                    type: 'post',
+                    data: {
+                        gstNumber: firmDetails,
+                        op: "addFirm"
+                    },
+                    success: function(response) {
+                        //////console.log("Success Data:", response);
+                        $('#GSTNumber').attr("disabled", false); // Enables the GSTNumber input
+
+ 
+                        clearTimeout(timeout);
+
+                        // Handle the successful response here
+                        if (response.result.length == 0) {
+                            // Show the SVG icon indicating uniqueness
+							// $('#buttonCheckFirm').hide()
+                            $('.wrapper').show(); // Ensure the wrapper is visible
+							$('#firmDropdown').empty();
+
+                        } else {
+                            // Handle the case where the GST number is not unique
+                            // For example, clear any existing SVG icon
+                            $('.wrapper').hide(); // Hide the wrapper if needed
+							$('#firmDropdown').empty();
+
+							let tableHtml = '<table class="table table-striped table-sm">' +
+								'<thead>' +
+									'<tr>' +
+										'<th>firmName</th>' +
+										'<th>GSTNumber</th>' +
+										'<th>address</th>' +
+										'<th>ProductProduced</th>' +
+									'</tr>' +
+								'</thead>' +
+								'<tbody>';
+
+							// Iterate over each item in the response.contactData array
+							$.each(response.result, function(index, item) {
+								// Add a row for each item
+								tableHtml += '<tr>' +
+									'<td>' + item.firmName + '</td>' +
+									'<td>' + item.GSTNumber + '</td>' +
+									'<td>' + item.address + '</td>' +
+									'<td>' + item.ProductProduced + '</td>' +
+								'</tr>';
+							});
+
+							// Close the tbody and the table tags
+							tableHtml += '</tbody></table>';
+
+							//////console.log(tableHtml);
+							// Append the complete table HTML to the div with id resultsDiv
+							$('#firmDropdown').html(tableHtml);
+
+                        }
+
+                      
+
+                    },
+                    error: function(error) {
+                        //////console.log("Error:", error);
+                        // Handle the error case here
+                    }
+                });
+            }, 500); // Wait for 500 milliseconds after the user stops typing
+        }
+    });
+});
+
+											// Function to add dynamic contact input fields
+											   function addContactInput() {
+												var container = document.getElementById("contactsContainer");							
+												// Create a new row
+												var row = document.createElement("div");
+												row.className = "row";
+										
+												// Create name input field
+												var col1 = document.createElement("div");
+												col1.className = "col-sm-3";
+												var contactNameInput = document.createElement("input");
+												contactNameInput.type = "text";
+												contactNameInput.className = "form-control contactName";
+												contactNameInput.name = "contactName[]";
+												col1.appendChild(contactNameInput);
+												row.appendChild(col1);
+										
+												// Create designation input field
+												var col2 = document.createElement("div");
+												col2.className = "col-sm-2";
+												var designationInput = document.createElement("input");
+												designationInput.type = "text";
+												designationInput.className = "form-control designation";
+												designationInput.name = "designation[]";
+												col2.appendChild(designationInput);
+												row.appendChild(col2);
+										
+												// Create contact input field
+												var col3 = document.createElement("div");
+												col3.className = "col-sm-3";
+												var contactInput = document.createElement("input");
+												contactInput.type = "tel";
+												contactInput.className = "form-control contact";
+												contactInput.name = "contact[]";
+												contactInput.pattern = "[0-9]{10}";
+												contactInput.placeholder = "10-digit-format";
+												col3.appendChild(contactInput);
+												row.appendChild(col3);
+										
+												// Create email input field
+												var col4 = document.createElement("div");
+												col4.className = "col-sm-2";
+												var emailInput = document.createElement("input");
+												emailInput.type = "email";
+												emailInput.className = "form-control email";
+												emailInput.name = "email[]";
+												col4.appendChild(emailInput);
+												row.appendChild(col4);
+										
+												// Create remove button
+												var col5 = document.createElement("div");
+												col5.className = "col-sm-2";
+												var removeBtn = document.createElement("button");
+												removeBtn.type = "button";
+												removeBtn.className = "btn btn-danger float-right";
+												removeBtn.textContent = "Remove";
+												removeBtn.addEventListener("click", function() {
+													container.removeChild(row);
+												});
+												col5.appendChild(removeBtn);
+												row.appendChild(col5);
+										
+												// Append the row to the contacts container
+												container.appendChild(row);
+											}
+			
+											// Event listener for the "Add Contact" button
+											document.getElementById("addContactBtn").addEventListener("click", addContactInput);
+										</script>
+										
+			
+			
+			
+										<div id="modal_firm" class="modal fade"  tabindex="-1">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title">New Master Firm</h5>
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+													</div>
+			
+													<form  id="addFirmForm">
+														<div class="modal-body">
+															<div class="form-group">
+																<div class="row">
+																	<div class="col-sm-6">
+																		<label>Firm Name</label>
+																		<input type="text" placeholder="Firm Name" class="form-control firmName" name="firmName" id="firmName">
+																	</div>
+																	<div class="col-sm-6">
+																		<label>Address</label>
+																		<input type="text" placeholder="Address" class="form-control address" name="address" id="address">
+																	</div>
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="row">
+																	<div class="col-sm-6">
+																		<label>Pincode</label>
+																		<input type="number" placeholder="Pin Code" class="form-control pincode" name="pincode" id="pincode"  >
+																	</div>
+																	<div class="col-sm-6">
+																		<label>GST Number</label>
+																		<div class="d-flex">
+
+																		
+																	<div class="d-flex flex-column  ">	<input type="text" placeholder="GST Number" class="form-control   GSTNumber" name="GSTNumber" id="GSTNumber"   >
+																
+
+																		</div>
+																		<div class="wrapper">
+																			<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+														   </svg>
+														   </div>
+																		<div class="btn btn-light button-88 mr-2" id="buttonCheckFirm" style="width: 75px; margin-left: 10px; height: 40px; border-radius: 0; padding: 010px;" >Check</div></div>
+																		<div id="warningMessage"></div>
+																		<div id="loader"></div>
+																
+																		
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div id="firmDropdown">
+																 
+																  </div>
+															</div>
+															<div class="form-group">
+																<div class="row">
+																	<div class="col-sm-4">
+																		<label>Account Number</label>
+																		<input type="text" placeholder="Account Number" class="form-control accountNumber" name="accountNumber" id="accountNumber"  >
+																	</div>
+																	<div class="col-sm-4">
+																		<label>Bank Name</label>
+																		<input type="text" placeholder="Bank Name" class="form-control bankName" name="bankName" id="bankName">
+																	</div>
+																	<div class="col-sm-4">
+																		<label>IFSC Code</label>
+																		<input type="text" placeholder="IFSC Code" class="form-control IFSCcode" name="IFSCcode" id="IFSCcode" >
+																	</div>
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="row">
+																	<div class="col-sm-6">
+																		<label>Product Produced</label>
+																		<input type="text" placeholder="Product Produced" class="form-control pincode" name="ProductProduced" id="ProductProduced">
+																	</div>
+																	<div class="col-sm-6">
+																		<label>Quantity</label>
+																		<input type="number" placeholder="Quantity" class="form-control Quantity" name="Quantity" id="Quantity">
+																	</div>
+																</div>
+															</div>
+														</div>
+			
+														<div class="modal-footer">
+															<button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+															<input type="submit" class="btn bg-primary" > 
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+			
+							
+										<script>
+											$(document).ready(function() {
+												$("#addFirmForm").validate({ // Replace "yourFormId" with the actual ID of your form
+												rules: {
+													firmName: {
+														required: true,
+														minlength: 2
+													},
+													address: {
+														required: true
+													},
+													pincode: {
+														required: true,
+													 
+ 													},
+													GSTNumber: {
+														required: true,
+														minlength: 15,
+														maxlength: 15,
+ 													},
+													accountNumber: {
+														required: true,
+														minlength: 11,
+														maxlength: 16,
+ 													},
+													ProductProduced: {
+														required: true
+													},
+													Quantity: {
+														required: true,
+														min: 1
+													}
+												},
+												
+												messages: {
+													firmName: {
+														required: "Please enter the Firm Name.",
+														minlength: "Firm Name must be at least 2 characters long."
+													},
+													address: {
+														required: "Please enter the Address."
+													},
+													pincode: {
+														required: "Please enter the Pin Code.",
+											 
+														pattern: "Pin Code must be numeric and exactly 6 digits."
+													},
+													GSTNumber: {
+														required: "Please enter the GST Number.",
+														minlength: "GST Number must be exactly 15 characters long.",
+														maxlength: "GST Number must be exactly 15 characters long.",
+														pattern: "GST Number must match the format XX XXXXXXXXXX X Z 9X."
+													},
+													accountNumber: {
+														required: "Please enter the Account Number.",
+														minlength: "Account Number must be between 11 and 16 digits.",
+														maxlength: "Account Number must be between 11 and 16 digits.",
+														pattern: "Account Number must be numeric and between 11 and 16 digits."
+													},
+													ProductProduced: {
+														required: "Please enter the Product Produced."
+													},
+													Quantity: {
+														required: "Please enter the Quantity.",
+														min: "Quantity must be at least 1."
+													}
+												},
+												submitHandler : function (form) {
+													//////console.log("Submit handler triggered");
+											 
+
+												event.preventDefault(); // Prevent the default form submission behavior
+												$.post("/masterFirm",
+												{
+													data: $(form).serialize(),
+													op:"addFirm"
+												},
+												function (data, status) 
+												{
+													//////console.log("data" , data);
+													    updateFirmSelectDropdown();
+			
+													// for( i=0 ; i < data.result.length ; i++){
+													// 	updateFirmSelectDropdown(data.result[i]);
+													// }
+												 
+													$("#modal_firm").modal("hide");
+													if (data.msg) {
+																	let selectElement = $("#firmFil");
+																	//////console.log(selectElement);
+																	selectElement.next('.error').remove();
+																	$(".error").remove();
+																	// Clear previous content and append the error message div after the select element
+																	selectElement.html('').after('<div class="error">' + data.msg + '</div>');
+																}
+			
+													// window.location.reload() 
+													//////console.log(status);
+													// //////console.log(updatedFirmData)
+												});
+											}
+												});
+											});
+											</script>
+										
+										
+										<script>
+			
+								 
+												
+											// var firmData = <%- JSON.stringify(firmData) %>;
+											function updateFirmSelectDropdown() {
+											 
+												$.ajax({
+													url: "/masterFirmApi",
+													dataType: 'json',
+													success: function (data) {
+														//////console.log("Raw data from server:", data);
+			
+														let formattedData = $.map(data, function (item) {
+															return {
+																id: item.firmId,
+																text: item.firmName
+															};
+														});
+			
+														//////console.log("Formatted data for Select2:", formattedData);
+														
+														if(formattedData){
+															$("#firmFil").select2({
+																placeholder: 'Select an Firm',
+															width: '100%',
+																data: formattedData
+															});
+														}
+			
+													},
+													error: function (error) {
+														console.error("Error fetching data:", error);
+													}
+												});
+											}
+			
+											// Call the function to update Select2
+											updateFirmSelectDropdown();
+			
+			
+										 
+											 
+											
+												 
+											
+										</script>
+			 
+			
+									
+			
+												
+										
+										<!-- EDIT modal -->
+										<div id="modal_edit" class="modal fade" tabindex="-1" style="z-index: 1050; ">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title">Edit Master Customer</h5>
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+													</div>
+			
+													<div class="modal-body" id="blast">
+														
+													</div>
+			
+													<div class="modal-footer" id="off">
+														
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+										
+										<!-- DEL modal -->
+										<div id="modal_del" class="modal fade" tabindex="-1">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title">Delete Master Customer</h5>
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+													</div>
+			
+													<div class="modal-body" id="blasto">
+														
+													</div>
+			
+													<div class="modal-footer" id="offo">
+														
+													</div>
+												</div>
+											</div>
+										</div>
+			
+			
+										<!-- Customer Information modal -->
+										<div id="customer_information" class="modal fade" tabindex="-1" style="z-index: 1049;">
+											<div class="modal-dialog modal-lg">
+												<div class="modal-content ">
+													<div class="modal-header">
+														<h4 class="modal-title">Master Customer </h4>
+														
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+													</div>
+						
+													<div class="modal-body" id="ekdin">
+													</div>
+						
+													<div class="modal-footer">
+														<button type="button" class="btn btn-link text-white" data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+			
+										
+									</div>
+
+
+						</div>
+						<div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+							<div class="row card p-4">
+								<h3>Unverified Customer</h3>	
+			
+			
+								<% if(data.length>0) {%>
+		
+									<table class="table datatable-basic table-bordered table-striped table-hover">
+										
+										<thead>
+											<tr>
+												<th>customerName</th>
+												<th>category</th>
+												<th>AREA</th>
+												<th>STATUS</th>
+												<th>CustomerStatus</th>	
+												<th>GRADE</th>
+												<th>PIN_CODE</th>
+												<th>ADDRESS</th>
+												<th>REF_NO_1</th>
+												<th>reference1ContactNumber</th>
+												<th>REF_NO_2</th>
+												<th>reference2ContactNumber</th>
+												<th>CREDIT_LIMIT</th>
+												<th>CREDIT_DAYS</th>
+												<% if(level>2) {%>
+													
+													<th>Edit</th>
+													<th>Delete</th>
+													<th>Print</th>
+												<%}else if(level>1){%>
+													<th>Edit</th>
+												<%}else{%>
+												<%}%>
+											</tr>
+										</thead>
+										
+										<% for(var i=0; i<data.length; i++) {%>
+											<%if(data[i].status=='UNVERIFIED') {%>
+											<tr class="<%= data[i].customerId%>customer">
+												<%if(level==1) {%>
+													<td class="customerName" ><%= data[i].customerName%></td>
+													<td class="custCateg">
+														<% for (var a = 0; a < custCateg.length; a++) { %>
+														   <% if (custCateg[a].customerName == data[i].customerId) { %>
+															 <%=custCateg[a].category %>
+															 <% for (var b = 0; b < categorydata.length; b++) { %>
+															   <% if (custCateg[a].category == categorydata[b].categoriesId) { %>
+																 <%=categorydata[b].categoriesType %>
+																 <% //////console.log("customer data1234" ,categorydata[b].categoriesType) %>
+															   <% } %>
+														  <% } %>
+															<% } %>
+													  <% } %>
+													 
+											   </td>
+													<td class="area">
+														<% for (var a = 0; a < areaData.length; a++) { %>
+															  <% if (areaData[a].areaId == data[i].area) { %>
+																<%=areaData[a].area %>
+															  <% } %>
+														<% } %>
+													</td>
+													<td class="status" ><%= data[i].status%></td>
+													<td class="status"><%= data[i].CustomerStatus%></td>
+													<td class="grade" >
+														<% for (var a = 0; a < gradeData.length; a++) { %>
+															<% if (gradeData[a].gradeId == data[i].grade) { %>
+																  <%=gradeData[a].gradeType %>
+															<% } %>
+													  <% } %>
+													</td>
+													<td class="pincode" ><%= data[i].pincode%></td>
+													<td class="address" ><%= data[i].address%></td>
+													<td class="referenceName1" ><%= data[i].referenceName1%></td>
+													<td class="reference1ContactNumber" ><%= data[i].reference1ContactNumber%></td>
+													<td class="referenceName2" ><%= data[i].referenceName2%></td>
+													<td class="reference2ContactNumber" ><%= data[i].reference2ContactNumber%></td>
+													<td class="creditLimit" ><%= data[i].creditLimit%></td>
+													<td class="creditDays" ><%= data[i].creditDays%></td>
+												<%} else if(level>2) {%>
+													<td class="customerName"><%= data[i].customerName%></td>
+													<td class="custCateg">
+														<% for (var a = 0; a < custCateg.length; a++) { %>
+														   <% if (custCateg[a].customerName == data[i].customerId) { %>
+															  <% for (var b = 0; b < categorydata.length; b++) { %>
+															   <% if (custCateg[a].category == categorydata[b].categoriesId) { %>
+																 <%=categorydata[b].categoriesType %> 
+																 <% //////console.log("customer data1234" ,categorydata[b].categoriesType) %>
+															   <% } %>
+														  <% } %>
+															<% } %>
+													  <% } %>
+													 
+											   </td>
+													<td class="area">
+														<% for (var a = 0; a < areaData.length; a++) { %>
+															  <% if (areaData[a].areaId == data[i].area) { %>
+																<%=areaData[a].area %>
+															  <% } %>
+														<% } %>
+													</td>
+													<td class="status"><%= data[i].status%></td>
+													<td class="CustomerStatus"><%= data[i].CustomerStatus%></td>
+													<td class="grade">
+														<% for (var a = 0; a < gradeData.length; a++) { %>
+															<% if (gradeData[a].gradeId == data[i].grade) { %>
+																  <%=gradeData[a].gradeType %>
+															<% } %>
+														  <% } %>
+													</td>
+													<td class="pincode"><%= data[i].pincode%></td>
+													<td class="address"><%= data[i].address%></td>
+													<td class="referenceName1"><%= data[i].referenceName1%></td>
+													<td class="reference1ContactNumber" ><%= data[i].reference1ContactNumber%></td>
+													<td class="referenceName2" ><%= data[i].referenceName2%></td>
+													<td class="reference2ContactNumber" ><%= data[i].reference2ContactNumber%></td>
+													<td class="creditLimit"><%= data[i].creditLimit%></td>
+													<td class="creditDays"><%= data[i].creditDays%></td>
+													<td>
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" data-popup="popover" onclick="eedit('<%= data[i].customerId%>customer')" >Edit</button>
+												</td>
+													<td >
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_del" data-popup="popover" onclick="ddel('<%= data[i].customerId%>customer')">Delete</button>
+												</td>
+												<td>
+													<button type="button" class="btn btn-light"     onclick="printMasterCustomer('<%= data[i].customerId%>customer')">print</button>
+												</td>
+												<%}else if(level>1){%>
+													<td class="customerName"><%= data[i].customerName%></td>
+													<td class="custCateg">
+														 <% for (var a = 0; a < custCateg.length; a++) { %>
+															<% if (custCateg[a].customerName == data[i].customerId) { %>
+															  <%=custCateg[a].category %>
+															  <% for (var b = 0; b < categorydata.length; b++) { %>
+																<% if (custCateg[a].category == categorydata[b].categoriesId) { %>
+																  <%=categorydata[b].categoriesType %>
+																  <% //////console.log("customer data1234" ,categorydata[b].categoriesType) %>
+																<% } %>
+														   <% } %>
+															 <% } %>
+													   <% } %>
+													  
+												</td>
+													<td class="area">
+														<% for (var a = 0; a < areaData.length; a++) { %>
+															  <% if (areaData[a].areaId == data[i].area) { %>
+																<%=areaData[a].area %>
+															  <% } %>
+														<% } %>
+													</td>
+													<td class="status"><%= data[i].status%></td>
+													<td class="status"><%= data[i].CustomerStatus%></td>
+													<td class="grade">
+														<% for (var a = 0; a < gradeData.length; a++) { %>
+															<% if (gradeData[a].gradeId == data[i].grade) { %>
+																  <%=gradeData[a].gradeType %>
+															<% } %>
+														  <% } %>
+													</td>
+													<td class="pincode"><%= data[i].pincode%></td>
+													<td class="address"><%= data[i].address%></td>
+													<td class="referenceName1"><%= data[i].referenceName1%></td>
+													<td class="reference1ContactNumber" ><%= data[i].reference1ContactNumber%></td>
+													<td class="referenceName2" ><%= data[i].referenceName2%></td>
+													<td class="reference2ContactNumber" ><%= data[i].reference2ContactNumber%></td>
+													<td class="creditLimit"><%= data[i].creditLimit%></td>
+													<td class="creditDays"><%= data[i].creditDays%></td>
+													<td>
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" data-popup="popover" onclick="eedit('<%= data[i].customerId%>customer')" data-popup="popover" title="Edit <%= data[i].customerName%>" data-trigger="hover" data-content="Click to change data">Edit</button>
+													</td>
+												<%}%>
+											</tr>
+											<% } %>
+										<% } %>
+									</table>
+								
+								<%}else{%>
+									<h4>No new data</h4>
+								<%}%>
+								
+								
+								
+							</div>
+						</div>
+						<div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+						 
+							<h3>INACTIVE Customer</h3>	
+							
+							
+							<% if(data.length>0) {%>
+	
+								<table class="table datatable-basic table-bordered table-striped table-hover">
+									
+									<thead>
+										<tr>
+											<th>customerName</th>
+											<th>AREA</th>
+											<th>STATUS</th>
+											
+											<th>GRADE</th>
+											<th>PIN_CODE</th>
+											<th>ADDRESS</th>
+									 
+											<% if(level>2) {%>
+												<th>Edit</th>
+												<th>Delete</th>
+												<%}else if(level>1){%>
+													<th>Edit</th>
+											<%}else{%>
+												<%}%>
+											</tr>
+										</thead >
+										
+										<% for(var i=0; i<data.length; i++) {%>
+											<%if(data[i].status=='INACTIVE') {%>
+												<tr class="<%= data[i].customerId%>customer">
+													<%if(level==1) {%>
+														<td class="customerName" ><%= data[i].customerName%></td>
+														<td class="area" >
+															<% for (var a = 0; a < areaData.length; a++) { %>
+																  <% if (areaData[a].areaId == data[i].area) { %>
+																	<%=areaData[a].area %>
+																  <% } %>
+															<% } %>
+														</td>
+														<td class="status" ><%= data[i].status%></td>
+														<td class="grade" >
+															<% for (var a = 0; a < gradeData.length; a++) { %>
+													<% if (gradeData[a].gradeId == data[i].grade) { %>
+													  <%=gradeData[a].gradeType %>
+													<% } %>
+												  <% } %>
+														</td>
+														<td class="pincode" ><%= data[i].pincode%></td>
+														<td class="address" ><%= data[i].address%></td>
+														<td class="referenceName1" ><%= data[i].referenceName1%></td>
+														<td class="reference1ContactNumber" ><%= data[i].reference1ContactNumber%></td>
+														<td class="referenceName2" ><%= data[i].referenceName2%></td>
+														<td class="reference2ContactNumber" ><%= data[i].reference2ContactNumber%></td>
+														<td class="creditLimit" ><%= data[i].creditLimit%></td>
+														<td class="creditDays" ><%= data[i].creditDays%></td>
+														<%} else if(level>2) {%>
+															<td class="customerName"><%= data[i].customerName%></td>
+												<td class="area">
+													<% for (var a = 0; a < areaData.length; a++) { %>
+														<% if (areaData[a].areaId == data[i].area) { %>
+															<%=areaData[a].area %>
+														<% } %>
+													<% } %>
+												</td>
+												<td class="status"><%= data[i].status%></td>
+												<td class="grade">
+													<% for (var a = 0; a < gradeData.length; a++) { %>
+													<% if (gradeData[a].gradeId == data[i].grade) { %>
+													  <%=gradeData[a].gradeType %>
+													<% } %>
+												  <% } %>
+												</td>
+												<td class="pincode"><%= data[i].pincode%></td>
+												<td class="address"><%= data[i].address%></td>
+												<td class="referenceName1" ><%= data[i].referenceName1%></td>
+												<td class="reference1ContactNumber" ><%= data[i].reference1ContactNumber%></td>
+												<td class="referenceName2" ><%= data[i].referenceName2%></td>
+												<td class="reference2ContactNumber" ><%= data[i].reference2ContactNumber%></td>
+												<td class="creditLimit"><%= data[i].creditLimit%></td>
+												<td class="creditDays"><%= data[i].creditDays%></td>
+												<td>
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" data-popup="popover" onclick="eedit('<%= data[i].customerId%>customer')">Edit</button>
+													<!-- data-popup="popover" title="Edit <%= data[i].customerName%>" data-trigger="hover" data-content="Click to change data" -->
+												</td>
+												<td >
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_del" data-popup="popover" onclick="ddel('<%= data[i].customerId%>customer')" >Delete</button>
+													<!-- data-popup="popover" title="Delete <%= data[i].customerName%>" data-trigger="hover" data-content="Click Delete Button to remove Master Customer and reload page to see changes" -->
+												</td>
+												<%}else if(level>1){%>
+													<td class="customerName"><%= data[i].customerName%></td>
+													<td class="area">
+														<% for (var a = 0; a < areaData.length; a++) { %>
+															<% if (areaData[a].areaId == data[i].area) { %>
+																<%=areaData[a].area %>
+															<% } %>
+														<% } %>
+													</td>
+													<td class="status"><%= data[i].status%></td>
+													<td class="grade">
+														<% for (var a = 0; a < gradeData.length; a++) { %>
+															<% if (gradeData[a].gradeId == data[i].grade) { %>
+															<%=gradeData[a].gradeType %>
+															<% } %>
+														  <% } %>
+													</td>
+													<td class="pincode"><%= data[i].pincode%></td>
+													<td class="address"><%= data[i].address%></td>
+													<td class="referenceName1" ><%= data[i].referenceName1%></td>
+													<td class="reference1ContactNumber" ><%= data[i].reference1ContactNumber%></td>
+													<td class="referenceName2" ><%= data[i].referenceName2%></td>
+													<td class="reference2ContactNumber" ><%= data[i].reference2ContactNumber%></td>
+													<td class="creditLimit"><%= data[i].creditLimit%></td>
+													<td class="creditDays"><%= data[i].creditDays%></td>														
+													<td>
+														<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" data-popup="popover" onclick="eedit('<%= data[i].customerId%>customer')" data-popup="popover">Edit</button>
+													</td>
+													<%}%>
+												</tr>
+												<% } %>
+												<% } %>
+											</table>
+											
+											<%}else{%>
+												<h4>No new data</h4>
+											<%}%>
+
+						</div>
+						<div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
+					</div>
+					</div>
+				</div>
+				
+				 
+					
+				</div>
+				<!-- /dashboard content -->
+
+			</div>
+			<!-- /content area -->
+
+
+			<!-- Footer -->
+			<!-- /footer -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+	
+
+
+
+	<!-- view customer moda l -->
+	
+<!-- Modal -->
+<div class="modal fade "  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-xl" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">				<h3><strong>Customer Profile</strong></h3>
+		  </h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body" id="customModalBody" >
+		  <!-- Content goes here -->
+		  <div class="row">
+			 
+
+			<div class="col-12">
+				<div class=" w-100 p-2 shadowlg" style="background-color: #7d94f2; color: white; box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;">Profile Details</div>	
+
+			</div>
+			<div class="col-4 d-flex p-4 d-flex flex-column " style="background-color: white;
+			 ">
+				<div class="w-100 p-1" style="background-color: #9f9e9e; color: white; border-radius: 8px; 
+				box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;">
+				Personal  Details</div>	
+				<div class="col ">
+					 <div class=" w-100 d-flex flex-column  pt-3">
+						<strong>Customer Name :-</strong> <input type="text" name="customerName_customerModal" disabled class="shadowlg" value=""> <br>
+						<strong>Customer Status :-</strong> <input type="text" name="customerStatus_customerModal" disabled class="shadowlg" value=""> <br>
+						<strong>Status  :-</strong> <input type="text" disabled name="status_customerModal" class="shadowlg" value=""> <br>
+						<strong>Area :-</strong> <input type="text" disabled name="area_customerModal" class="shadowlg" value=""> <br>
+						<strong>Grade :-</strong> <input type="text" disabled name="grade_customerModal" class="shadowlg" value=""> <br>
+</div>
+			</div>
+			<div class="w-100 p-1" style="background-color: #9f9e9e; color: white; border-radius: 8px; 
+			box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;">
+			Address</div>	
+			<div class="col ">
+				 <div class=" w-100 mt-2 d-flex flex-column  ">
+						 <strong>Address :-</strong> <input type="text" name="address" disabled class="shadowlg"	 value="Nead metro plaza"> <br>
+						 <strong>pin Code :-</strong> <input type="text" name="pincode" disabled class="shadowlg"	 value="250002"> <br>
+		 
+						   
+				</div>
+		</div>
+
+				
+				  
+					
+			</div>
+
+			<div class="col-8 p-4" style="background-color: white;border-left: 5px solid rgba(0, 0, 0, 0.156);">
+				<div class="col-12">
+					<div class="w-100 p-1" style="background-color: #9f9e9e;; color: white; border-radius: 8px;box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;">Firm Details</div>	
+					<div class=" w-100 d-flex justify-content-around align-items-center  p-3">
+							 <strong>Firm Name :-</strong> <input type="text" name="firm_customerModal" disabled class="shadowlg"	  > <br>
+							<strong>GST Number :-</strong> <input type="text" disabled class="shadowlg"	 name="gst_customerModal"  > <br>
+							  
+					</div>
+			</div>
+
+			<div class="col-12 my-3">
+				<div class="w-100 p-1" style="background-color: #9f9e9e; color: white; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;">Product Details</div>	
+				<div class=" w-100 d-flex justify-content-around align-items-center  p-3">
+						 <strong>Product Name :-</strong> <input type="text" disabled class="shadowlg" name="product_customerModal"	  > <br>
+						<strong>Product Quantity :-</strong> <input type="text" disabled  name="productGrp_customerModal"	 class="shadowlg"  value="12% Coak"> 
+					
+						 
+				</div>
+		</div>
+
+		
+		<div class="col-12 my-3">
+			<div class="w-100 p-1" style="background-color: #9f9e9e; color: white; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;">Credit Details</div>	
+			<div class=" w-100 d-flex justify-content-around align-items-center  p-3">
+					 <strong>Credit Limit :-</strong> <input type="text" disabled class="shadowlg" name="creditLimit_customerModal"	  > <br>
+					<strong>Credit Days :-</strong> <input type="text" disabled	 class="shadowlg"  name="creditDay_customerModal" > 
+				
+					 
+			</div>
+	</div>
+
+		<div class="col-12">
+			<div class="w-100 p-1" style="background-color: #9f9e9e;; color: white; border-radius: 8px;box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;">Contact Details</div>	
+			<div class=" w-100 d-flex justify-content-around align-items-center p-3">
+					 <strong>Reference Name1 :-</strong> <input type="text" disabled  name="refName1_customerModal"	class="shadowlg"  > <br>
+					<strong>Reference Number1 :-</strong> <input type="number" disabled name="refNum1_customerModal"	class="shadowlg"  >  <br>
+			 
+				
+					 
+			</div>
+
+			<div class=" w-100 d-flex justify-content-around align-items-center p-3">
+				 
+			   <strong>Reference Name2 :-</strong> <input type="text" disabled name="refName2_customerModal"	class="shadowlg"  > <br>
+			   <strong>Reference Number2 :-</strong> <input type="number" disabled name="refNum2_customerModal"	 class="shadowlg"  > 
+		   
+				
+	   </div>
+	</div>
+		</div>
+		  </div>
+		</div>
+		 
+	  </div>
+	</div>
+  </div>
+
+</body>
+
+</html>
+
+
+<!-- <script>
+	function validation()
+	{
+		
+		const categorySelect = document.getElementById('categoryFil');
+		const statusSelect = document.getElementById('status');
+		const firm = document.getElementById('firmFil');
+		const area = document.getElementById('area');
+		const grade = document.getElementById('grade');
+		const designation = document.getElementById('designation');
+		const contact = document.getElementById('contact');
+		const productFil = document.getElementById('productFil');
+		const pincode = document.getElementById('pincode');
+		const address = document.getElementById('address');
+
+		categorySelect.addEventListener('change', () => {
+			//////console.log("changeCategory")
+			//////console.log(categorySelect.value)
+
+			if (categorySelect.value === 'Retail') {
+				area.required = false;
+				grade.required = false;
+				designation.required = false;
+				contact.required = false;
+				productFil.required = false;
+				pincode.required = false;
+				address.required = false;
+			} else {
+				area.required = true;
+				grade.required = true;
+				designation.required = true;
+				contact.required = true;
+				productFil.required = true;
+				pincode.required = true;
+				address.required = true;
+			}
+		});
+		
+		statusSelect.addEventListener('change', () => {
+			//////console.log("changeStatus")
+			//////console.log(statusSelect.value)
+
+			if (statusSelect.value === 'UNVERIFIED') {
+				firm.required = false;
+			} else {
+				firm.required = true;
+			}
+		});
+	}
+</script> -->
+
+
+<!-- ================================================= export master customer table data in csv file -->
+<script>
+	    document.getElementById('downloadBtn').addEventListener('click', async () => {
+			
+			try {
+			$.ajax({
+            url: '/download-csv',
+            type: 'GET',
+            success: function(response) {
+				//////console.log("response" , response)
+                // Display the CSV data in the browser
+			      // Create a data URI for the CSV data
+				  const csvDataUri = 'data:text/csv;charset=utf-8,' + encodeURIComponent(response);
+                    
+                    // Create an anchor element
+                    const link = document.createElement('a');
+                    link.href = csvDataUri;
+                    link.download = 'customers.csv';
+
+                    // Programmatically trigger a click event to initiate download
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+            },
+            error: function(xhr, status, error) {
+                alert('An error occurred: ' + error);
+            }
+        });
+	} catch (error) {
+        console.error('There was an error downloading the CSV:', error);
+      }
+		})
+ 
+</script>
+
+<!-- ================================================= import master customer table data in csv file -->
+
+ <script>
+	$(document).ready(function() {
+
+// Set the name of the file
+$('#csvFile').on('change', function(event) {
+  const fileInput = $(this);
+  const fileNameDisplay = $('#fileNameDisplay');
+
+  // Clear any previous file name display
+  fileNameDisplay.text('');
+
+  if (event.target.files.length > 0) {
+	const file = event.target.files[0];
+
+	// Display the selected file name
+	fileNameDisplay.text(file.name);
+
+	// Check if the file is a CSV
+	if (file.type!== 'text/csv') {
+	  alert("Please select a CSV file.");
+	  // Optionally clear the file input after showing the alert
+	  fileInput.val('');
+	}
+  } else {
+	//////console.log('No file selected.');
+  }
+});
+
+let hasSubmitted = false; // Flag to track if the form has been submitted
+
+// Upload data to database
+$('#uploadForm').on('submit', function(event) {
+  event.preventDefault();
+
+  const file = $('#csvFile')[0].files[0];
+  //////console.log('Selected file:', file);
+
+  if (file &&!hasSubmitted) {
+	const formData = new FormData();
+	formData.append('csvFile', file);
+	//////console.log('FormData:', formData);
+
+	$.ajax({
+	  url: '/upload-csv',
+	  type: 'POST',
+	  data: formData,
+	  processData: false,
+	  contentType: false,
+	  success: function(response) {
+		//////console.log('CSV file uploaded successfully:', response);
+		hasSubmitted = true;
+
+		// Clear the displayed file name after successful upload
+		$('#fileNameDisplay').text('');
+
+		if (response) {
+		  $.toast({
+			heading: 'Success',
+			text: 'File Uploaded Successfully',
+			showHideTransition: 'fade',
+			icon: 'success',
+			position: 'top-right',
+		  })
+		}
+	  },
+	  error: function(xhr, status, error) {
+		console.error('Error uploading CSV file:', error);
+		var errorMessage = 'An error occurred while uploading the CSV file.';
+		if (xhr.responseJSON && xhr.responseJSON.error) {
+		  errorMessage = xhr.responseJSON.error; // Use server-provided error message
+		}
+		$.toast({
+		  heading: 'Error',
+		  text: errorMessage,
+		  position: 'top-right',
+		  allowToastClose: true,
+		  hideAfter: 3000,
+		  closeOnClick: true,
+		  pauseOnHover: true,
+		  draggable: true,
+		  draggablePercent: 0.6,
+		  showProgressBars: true,
+		  progressBar: 'true'
+		});
+	  }
+	});
+  } else {
+	//////console.log('No file selected.');
+	$.toast({
+        heading: 'Warning',
+        text: 'No file selected.',
+        position: 'top-right',
+        allowToastClose: true,
+        hideAfter: 3000,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        draggablePercent: 0.6,
+        showProgressBars: true,
+        progressBar: 'true'
+      });
+  }
+});
+});
+
+
+ </script>
+<script>
+
+
+    function edit(value)
+    {
+ 
+        //////console.log(value);
+        //////console.log("3333333333333333333333333333333");
+		
+		var ecustomerName = document.getElementById("ecustomerName").value;
+        var earea = document.getElementById("earea").value;
+        var estatus = document.getElementById("estatus").value;
+        var egrade = document.getElementById("egrade").value;
+        var epincode = document.getElementById("epincode").value;
+        var eaddress = document.getElementById("eaddress").value;
+        var ereferenceName1 = document.getElementById("ereferenceName1").value;
+        var ereference1ContactNumber = document.getElementById("ereference1ContactNumber").value;
+        var ereferenceName2 = document.getElementById("ereferenceName2").value;
+        var ereference2ContactNumber = document.getElementById("ereference2ContactNumber").value;
+        var ecreditLimit = document.getElementById("ecreditLimit").value;
+        var ecreditDays = document.getElementById("ecreditDays").value;
+        var eCustomerStatus = document.getElementById("eCustomerStatus").value;
+		//////console.log(ecustomerName);
+		//////console.log(earea);
+        
+        $.post("/masterCustomer",
+            {
+                id: value,
+                customerName:ecustomerName,
+                area: earea,
+                status: estatus,
+                grade: egrade,
+                pincode: epincode,
+                address: eaddress,
+                referenceName1: ereferenceName1,
+                referenceName2: ereferenceName2,
+				reference1ContactNumber:ereference1ContactNumber,
+				reference2ContactNumber:ereference2ContactNumber,
+                creditLimit: ecreditLimit,
+                creditDays: ecreditDays,
+				CustomerStatus : eCustomerStatus,
+                op:"edt"
+            },
+            function (data, status) 
+			{
+                //////console.log(data);
+                //////console.log(status);
+				setInterval('refreshPage()', 500);
+            });
+        
+    }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/pdfmake.min.js" integrity="sha512-5wC3oH3tojdOtHBV6B4TXjlGc0E2uk3YViSrWnv1VUmmVlQDAs1lcupsqqpwjh8jIuodzADYK5xCL5Dkg/ving==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/vfs_fonts.min.js" integrity="sha512-EFlschXPq/G5zunGPRSYqazR1CMKj0cQc8v6eMrQwybxgIbhsfoO5NAMQX3xFDQIbFlViv53o7Hy+yCWw6iZxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+	
+	function printMasterCustomer(value){
+	 
+	
+		$.post("/masterCustomer", {
+		    id: value, 
+		  op: "pMasterCustomer"
+		}, function(data, status) {
+		    //////console.log("datassssssssssssssssssssssssssssss" , data)
+		    //////console.log("status " , status)
+			
+			var docDefinition =  {
+                content: [
+				{text: 'Master Customer Details', style: 'header'},
+	  
+	  {text: 'Profile', style: 'subheader'},
+	  'The following table has nothing more than a body array',
+	  {
+		  style: 'tableExample',
+		  table: {
+				  widths: [  '*', '*'  ],
+			  body:  Object.entries(data).map(([key, value]) => {
+                // Replace null values with a placeholder
+                const displayValue = value !== null ? value.toString() : 'N/A';
+                return [key, displayValue];
+            })
+		  }
+	  },
+   
+	   ]
+                
+            }
+            
+			//////console.log()
+
+		pdfMake.createPdf(docDefinition).download();
+		});
+
+	}
+
+	function excelMasterCustomer(value){
+		$.post("/masterCustomer", {
+		    id: value, 
+		  op: "excelMasterCustomer"
+		}, function(data, status) {
+		    //////console.log("data " , data)
+		    //////console.log("status " , status)
+			
+               // Convert the binary data to a Uint8Array
+    const uint8Array = new Uint8Array(data.length);
+    for (let i = 0; i < data.length; i++) {
+      uint8Array[i] = data.charCodeAt(i) & 0xff;
+    }
+
+    // Create a Blob from the Uint8Array
+    const blob = new Blob([uint8Array], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+
+    // Create a temporary URL for the Blob
+    const url = window.URL.createObjectURL(blob);
+
+    // Create a hidden anchor element
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'output.xlsx';
+
+    // Append the anchor to the document and trigger a click event
+    document.body.appendChild(a);
+    a.click();
+
+    // Remove the anchor from the document
+    document.body.removeChild(a);
+
+    // Clean up the temporary URL
+    window.URL.revokeObjectURL(url);
+		});
+
+	}
+
+    function del(value)
+    {
+        //////console.log(value);
+        $.post("/masterCustomer",
+            {
+                id: value,
+                op:"del"
+            },
+            function (data, status) {
+                //////console.log(data);
+                //////console.log(status);
+				setInterval('refreshPage()', 500);
+            }
+            );
+    }
+
+	function refreshPage() {
+    	location.reload(true);
+	}
+
+
+
+	function fil()
+	{
+		var mySelcust = document.getElementById("customerNameFil").value;
+		var mySelArea = document.getElementById("areaFil").value;
+		var mySelStat = document.getElementById("statusFil").value;
+		var mySelGrad = document.getElementById("gradeFil").value;
+		
+		//////console.log(mySelcust);
+		//////console.log(mySelArea);
+		//////console.log(mySelStat);
+		//////console.log(mySelGrad);
+		
+		//////console.log("ujjwal");
+        $.post("/masterCustomer",
+        {
+			customerNameFil: mySelcust,
+            areaFil: mySelArea,
+            statusFil: mySelStat,
+            gradeFil: mySelGrad,
+            op:"fil"
+        },
+        function (dataFil, status) {
+			//////console.log("filter kios");
+            //////console.log(dataFil);
+			check(dataFil);
+            //////console.log(status);
+        }
+        );
+    }
+
+
+		//  ================================================== view all customer data --======================================
+		function viewCustomer(customerData,modalId) {
+			let data = <%- JSON.stringify(data) %>;
+			let gradeData = <%- JSON.stringify(gradeData) %>;
+			let areaData = <%- JSON.stringify(areaData) %>;
+			let firmData = <%- JSON.stringify(firmData) %>;
+			let custFirmData = <%- JSON.stringify(custFirm) %>;
+ 			let cust_productData = <%- JSON.stringify(custProduct) %>;
+ 			let  productData = <%- JSON.stringify(productData) %>;
+
+			let customerName = document.querySelector('[name="customerName_customerModal"]');
+let customerStatus = document.querySelector('[name="customerStatus_customerModal"]');
+let status = document.querySelector('[name="status_customerModal"]');
+let grade = document.querySelector('[name="grade_customerModal"]');
+let area = document.querySelector('[name="area_customerModal"]');
+let firm = document.querySelector('[name="firm_customerModal"]');
+let gst = document.querySelector('[name="gst_customerModal"]');
+let product = document.querySelector('[name="product_customerModal"]');
+let productGroup = document.querySelector('[name="productGrp_customerModal"]');
+let creditLimit = document.querySelector('[name="creditLimit_customerModal"]');
+let creditDay = document.querySelector('[name="creditDay_customerModal"]');
+let refNum1 = document.querySelector('[name="refNum1_customerModal"]');
+let refNum2 = document.querySelector('[name="refNum2_customerModal"]');
+let refName1 = document.querySelector('[name="refName1_customerModal"]');
+let refName2 = document.querySelector('[name="refName2_customerModal"]');
+		 
+			//////console.log("customer name " , customerName)
+		// Select the modal body based on the provided modal ID
+		let modalBody = document.getElementById('customModalBody');
+		//////console.log("dddddddddddddddddddd" , data)
+			// Convert customerData to a string if it's not already
+			const trimmedTargetUuid = customerData.trim();
+						//////console.log("dddddddddddddddddddd" , trimmedTargetUuid)
+
+			// Find the customer in the data array
+			const customer = data.find(item => item.customerId.trim() === trimmedTargetUuid);
+			//////console.log("dddddddddddddddddddd" , customer)
+
+			// grade
+
+
+
+		if(customer){
+			customerName.value = customer.customerName;
+    customerStatus.value = customer.CustomerStatus;
+    status.value = customer.status;
+	area.value  = areaData.find(item => item.areaId  === parseInt(customer.area)).area;
+grade.value  = gradeData.find(item => item.gradeId  === parseInt(customer.grade)).gradeType;
+
+
+// firm data
+		firmId  = custFirmData.find(item => item.customerName.trim()  ===  trimmedTargetUuid).firm;
+		firm.value  = firmData.find(item => item.firmId  ===  parseInt(firmId)).firmName;
+		gst.value	= firmData.find(item => item.firmId  ===  parseInt(firmId)).GSTNumber;
+		
+		// product data
+		productId  = cust_productData.find(item => item.customerName.trim()  ===  trimmedTargetUuid).product;
+		product.value  = productData.find(item => item.productId  ===   productId ).productName;
+		productGroup.value  = productData.find(item => item.productId  ===   productId ).productGroup;
+
+
+		// credit limit
+		creditLimit.value = customer.creditLimit;  			
+		creditDay.value = customer.creditDays;  			
+		refNum1.value = customer.reference1ContactNumber;  			
+		refNum2.value = customer.reference2ContactNumber;  		
+		refName1.value = customer.referenceName1;  		
+		refName2.value = customer.referenceName2;  		
+
+		 //////console.log("cistoemr" , customer)
+		}
+
+ 
+    // Show the modal
+    $('#' + modalId).modal('show');
+}
+
+
+
+function eedit(value)
+    {
+        //////console.log("value11111111111111" ,value);
+        var sub = 'customer';
+        var result = value.replace(sub,'');
+        //////console.log("result1111111" ,result);
+        
+        $('.'+value).each(function() 
+        {   
+			//////console.log("qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq" , this)
+            var customerName = $(this).find(".customerName")[0].innerText;    
+            var area = $(this).find(".area").html();    
+            var status = $(this).find(".status").html();    
+            var grade = $(this).find(".grade").html();    
+            var pincode = $(this).find(".pincode").html();    
+            var address = $(this).find(".address").html();    
+            var referenceName1 = $(this).find(".referenceName1").html();    
+            var reference1ContactNumber = $(this).find(".reference1ContactNumber").html();    
+            var referenceName2 = $(this).find(".referenceName2").html();    
+            var reference2ContactNumber = $(this).find(".reference2ContactNumber").html();    
+            var creditLimit = $(this).find(".creditLimit").html();    
+            var creditDays = $(this).find(".creditDays").html();     
+            var CustomerStatus = $(this).find(".CustomerStatus").html();     
+            
+
+
+			//////console.log("CustomerStatus" ,CustomerStatus)
+			//////console.log(area)
+			//////console.log("++++++++++++++++++++++++++++++++++++++++")
+			//////console.log(result)
+			
+			 
+            var tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >customerName</td> <td><input type="text" value="'+customerName+'" class="form-control ecustomerName" name="ecustomerName" id="ecustomerName"></td> </tr> <tr> <td>area</td> <td><select id="earea" name="earea" class="form-control earea"> <option value="null" disabled selected>'+area+'</option> <% for(var i=0; i<areaData.length; i++) {%> <option value="<%=areaData[i].areaId%>"><%=areaData[i].area%></option> <% } %> </select> </td> </tr> <tr> <td>status</td> <td><select id="estatus" name="estatus" class="form-control estatus"> <option value="null" disabled selected>'+status+'</option> <option value="VERIFIED">VERIFIED</option> <option value="UNVERIFIED">UNVERIFIED</option> </select> </td> </tr> <tr> <td>Customer status</td> <td><select id="eCustomerStatus" name="eCustomerStatus" class="form-control eCustomerStatus"> <option value="null" disabled selected>'+CustomerStatus+'</option> <option value="active">ACTIVE</option><option value="inactive">INACTIVE</option> </select> </td> </tr><tr> <td>grade</td> <td><select id="egrade" name="egrade" class="form-control egrade"> <option value="null" disabled selected>'+grade+'</option> <% for(var i=0; i<gradeData.length; i++) {%> <option value="<%=gradeData[i].gradeId%>"><%=gradeData[i].gradeType%></option> <% } %> </select> </td> </tr> <tr> <td>pincode</td> <td><input type="text" value="'+pincode+'" class="form-control epincode" name="epincode" id="epincode"> </tr> <tr> <td>address</td> <td><input type="text" value="'+address+'" class="form-control eaddress" name="eaddress" id="eaddress"> </tr> <tr> <td>reference 1 Name</td> <td><input type="text" value="'+referenceName1+'" class="form-control ereferenceName1" name="ereferenceName1" id="ereferenceName1"> </tr> <tr> <td>reference 1 ContactNumber</td> <td><input type="text" value="'+reference1ContactNumber+'" class="form-control ereference1ContactNumber" name="ereference1ContactNumber" id="ereference1ContactNumber"> </tr> <tr> <td>reference 2 Name</td> <td><input type="text" value="'+referenceName2+'" class="form-control ereferenceName2" name="ereferenceName2" id="ereferenceName2"> </tr> <tr> <td>reference 2 ContactNumber</td> <td><input type="text" value="'+reference2ContactNumber+'" class="form-control ereference2ContactNumber" name="ereference2ContactNumber" id="ereference2ContactNumber"> </tr> <tr> <td>Credit Limit</td> <td><input type="text" value="'+creditLimit+'" class="form-control ecreditLimit" name="ecreditLimit" id="ecreditLimit"> </tr>   <tr> <td>Credit Days</td> <td><input type="text" value="'+creditDays+'" class="form-control ecreditDays" name="ecreditDays" id="ecreditDays"> </tr></table> </div>'
+				let bt = `
+<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button>
+<button type='submit' onclick='edit("${result}")' data-dismiss='modal' class='btn bg-teal-400'>Save</button>
+`;
+
+ 			//////console.log("Ujjwal")
+			document.getElementById("blast").innerHTML=tek;
+			document.getElementById("off").innerHTML=bt;
+		});
+    }
+
+	function ddel(value)
+    {
+	 
+        //////console.log(value);
+        var sub = 'customer';
+        var result = value.replace(sub,'');
+        //////console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+			//////console.log("aaaaaaaaaaaaaaaaaaaaaaaa")
+            var customerName = $(this).find(".customerName").html();    
+            var area = $(this).find(".area").html();    
+            var status = $(this).find(".status").html();    
+            var grade = $(this).find(".grade").html();    
+            var pincode = $(this).find(".pincode").html();    
+            var address = $(this).find(".address").html();    
+            var referenceName1 = $(this).find(".referenceName1").html();    
+            var reference1ContactNumber = $(this).find(".reference1ContactNumber").html();    
+            var referenceName2 = $(this).find(".referenceName2").html();    
+            var reference2ContactNumber = $(this).find(".reference2ContactNumber").html();    
+            var creditLimit = $(this).find(".creditLimit").html();    
+            var creditDays = $(this).find(".creditDays").html();     
+			//////console.log(result)
+
+
+            var tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >customerName</td> <td>'+customerName+'</td> </tr> <tr> <td>area</td> <td>'+area+' </td> </tr> <tr> <td>status</td> <td>'+status+' </td> </tr> <tr> <td>grade</td> <td>'+grade+' </td> </tr> <tr> <td>pincode</td> <td>'+pincode+' </td> </tr> <tr> <td>address</td> <td>'+address+' </td> </tr> <tr> <td>referenceName1</td> <td>'+referenceName1+' </td> </tr> <tr> <td>reference1ContactNumber</td> <td>'+reference1ContactNumber+' </td> </tr> <tr> <td>referenceName2</td> <td>'+referenceName2+' </td> </tr> <tr> <td>reference1ContactNumber</td> <td>'+reference1ContactNumber+' </td> </tr> <tr> <td>creditLimit</td> <td>'+creditLimit+' </td> </tr> <tr> <td>creditDays</td> <td>'+creditDays+' </td> </tr>  </table> </div>'
+
+			let bt = `
+<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button>
+<button type='submit' onclick='del("${result}")' data-dismiss='modal' class='btn bg-teal-400'>Delete</button>
+`;			//////console.log("Ujjwal")
+			document.getElementById("blasto").innerHTML=tek;
+			document.getElementById("offo").innerHTML=bt;
+		});
+    }
+
+
+
+
+
+	async function check(tableData) {
+		var gradeData = JSON.parse('<%-JSON.stringify(gradeData)%>');
+		var areaData = JSON.parse('<%-JSON.stringify(areaData)%>');
+	  
+		var table = "<table class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;' id='tbl'> <thead> <th>Customer Name</th> <th>Customer Status</th><th>Area</th> <th>Status</th> <th>Grade</th> <th>Pincode</th> <th>Address</th> <th>Contact</th> </thead> <tbody> ";
+	//   //////console.log("tablData" , custCateg)
+		for (var i = 0; i < tableData.length; i++) {
+		  table += "<tr>";
+		  table += "<td class='customerName'>" + tableData[i].customerName + "</td>";
+    // Check if CustomerStatus is null
+    if (tableData[i].CustomerStatus !== null) {
+        table += "<td class='customerName'>" + tableData[i].CustomerStatus + "</td>";
+    } else {
+        table += "<td class='customerName'>N/A</td>";
+    }		
+	  for (var a = 0; a < areaData.length; a++) {
+			if (areaData[a].areaId == tableData[i].area) {
+			  table += "<td class='area'>" + areaData[a].area + "</td>";
+			  break;
+			}
+		  }
+		  table += "<td class='status'>" + tableData[i].status + "</td>";
+		  for (var a = 0; a < gradeData.length; a++) {
+			if (gradeData[a].gradeId == tableData[i].grade) {
+			  table += "<td class='grade'>" + gradeData[a].gradeType + "</td>";
+			  break;
+			}
+		  }
+		  table += "<td class='pincode'>" + tableData[i].pincode + "</td>";
+		  table += "<td class='address'>" + tableData[i].address + "</td>";
+	  
+		  // Make AJAX call to fetch contact details using async/await
+		  var contactDetails = await fetchContactDetails(tableData[i].customerId);
+		  var ct = "<td>";
+		  for (var l = 0; l < contactDetails.length; l++) {
+			if(l!=0) ct+="<hr>";
+			ct += "<p>" + contactDetails[l].designation + "</p>";
+			ct += "<p> Mobile : " + contactDetails[l].mobileNumber + "</p>";
+			ct += "<p> Email : " + contactDetails[l].email + "</p>";
+		  }
+		  ct += "</td>";
+		  table += ct;
+	  
+	  
+		  table += "</tr>";
+		}
+	  
+		table += "</tbody> </table>";
+		document.getElementById("koiBhi").innerHTML = table;
+	  
+		var button = "<button class='btn-link' onclick=exportData()> Download list</button>";
+		document.getElementById("chlna").innerHTML = button;
+	  }
+	  
+	  function fetchContactDetails(customerId) {
+		return new Promise(function (resolve, reject) {
+		  $.post("/masterCustomer", {
+			customerId: customerId,
+			op: "filterContact"
+		  }, function (data, status) {
+			//////console.log(data);
+			//////console.log(status);
+	  
+			// Parse the contact details from the response data
+			var contactDetails = data.map(function (item) {
+			  return {
+				customerName: item.customerName,
+				designation: item.designation,
+				email: item.email,
+				mobileNumber: item.mobileNumber
+			  };
+			});
+	  
+			// Resolve the promise with the retrieved contact details
+			resolve(contactDetails);
+		  });
+		});
+	  }
+	  
+  
+	  
+	  
+	</script>
+
+	<script>
+	
+		
+		function exportData() {
+			var table = document.getElementById("tbl");
+			var csvContent = "";
+		  
+			for (var i = 0; i < table.rows.length; i++) {
+			  var row = table.rows[i];
+			  for (var j = 0; j < row.cells.length; j++) {
+				var cellContent = row.cells[j].innerText;
+		  
+				// Remove line breaks and escape double quotes within cell content
+				cellContent = cellContent.replace(/[\r\n]+/g, " ");
+				cellContent = cellContent.replace(/"/g, '""');
+		  
+				// Enclose cell content in double quotes
+				csvContent += '"' + cellContent + '",';
+			  }
+			  // Add line break after each row
+			  csvContent += "\r\n";
+			}
+		  
+			// Remove the trailing comma at the end of each row
+			csvContent = csvContent.replace(/,\r\n/g, "\r\n");
+		  
+			var encodedUri = "data:text/csv;charset=utf-8," + encodeURI(csvContent);
+			var link = document.createElement("a");
+			link.setAttribute("href", encodedUri);
+			link.setAttribute("download", "Master_Customers.csv");
+			document.body.appendChild(link);
+			link.click();
+		  }
+		  
+	  
+
+
+
+
+	function custInfo(value){
+	 
+		//////console.log(value);
+		$.post("/masterCustomer",
+        {
+            value:value,
+            op:"cinf"
+        },
+        function (data, status) {
+			 
+			//////console.log("data9999999999999999999999999999999999999999" , data)
+			//////console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+          console.log(data);
+			//////console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+			// //////console.log(Object.keys(data).length)
+			// //////console.log(data[0].product)
+			
+			custmod(data);
+		 
+           console.log(status);
+        }
+		)
+	}
+	</script>
+	
+
+	<script>
+
+	function custmod(data)
+	{
+		alert(data)
+		let productData = <%- JSON.stringify(productData) %>;
+		let custProductData = <%- JSON.stringify(custProduct) %>;
+		let custCategData = <%- JSON.stringify(custCateg) %>;
+		let custFirmData = <%- JSON.stringify(custFirm) %>;
+		let CategData = <%- JSON.stringify(categorydata) %>;
+ 
+		let FirmData = <%- JSON.stringify(firmData) %>;
+		let contactData = <%- JSON.stringify(contact) %>;
+
+
+ console.log("data11111111111111111111111111" ,data )
+//////console.log("productData" ,productData )
+		if(data)
+		{
+			// area
+			const address = `area - ${data.area} district -  ${data.district} zone - ${data.zone} state - ${data.state}`;
+ 
+  			var index=Object.keys(data).length;
+ 			index=index-14;
+ 			// var holiname=data.customerName
+ 			let holiname=data.customerId
+		 
+			// product
+			let ishuProdTable = "<table id='' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+				ishuProdTable += "<thead> <tr> <th class='col-lg-6'>Customer Code</th> <th>Product</th> </tr> </thead>";
+			 
+				   // Check if data[i].product is defined
+				 
+				   if (data && data.customerId) {
+  
+				for (let a = 0; a < custProductData.length; a++) {
+					//////console.log("custProductData[a].customerName", custProductData[a].customerName);
+					//////console.log("data[i].customerId", data.customerId);
+					if (custProductData[a].customerName === data.customerId) {
+						for (let j = 0; j < productData.length; j++) { // Corrected loop condition
+							if (custProductData[a].product === productData[j].productId) {
+								//////console.log("custProductData[a].productData",productData.length);
+								//////console.log("custProductData[a].productData",productData[j]);
+								ishuProdTable += "<tr>";
+								ishuProdTable += "<td >" + data.customerCode + "</td>";
+								ishuProdTable += "<td> " + productData[j].productName + "</td>";
+								ishuProdTable += "</tr>";
+								break
+								// Removed break statement to allow handling of multiple matches
+							}
+						}
+					}
+					
+				}
+				}
+
+
+
+			ishuProdTable += "</table>";
+
+
+			// Contact
+			let ishuContactTable = "<table id='' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+				ishuContactTable += "<thead> <p><strong> Below are the contact details of customer </strong></p> </thead>";
+			 
+				   // Check if data[i].product is defined
+				 
+				   if (data && data.customerId) {
+  
+				for (let a = 0; a < contactData.length; a++) {
+ 					if (contactData[a].customerName === data.customerId) {
+ 				 
+						 
+								ishuContactTable += "<tr>";
+ 
+								ishuContactTable += "<th class='col-lg-6'>  Owner Name</th>";
+								ishuContactTable += "<td> " + contactData[a].contactName + "</td>";
+ 
+								ishuContactTable += "</tr>";
+
+								ishuContactTable += "<tr>";
+ 
+								ishuContactTable += "<th class='col-lg-6'>  Mobile Number</th>";
+								ishuContactTable += "<td> " + contactData[a].mobileNumber + "</td>";
+
+								ishuContactTable += "</tr>";
+								ishuContactTable += "<tr>";
+ 
+								ishuContactTable += "<th class='col-lg-6'>  Designation</th>";
+								ishuContactTable += "<td> " + contactData[a].designation + "</td>";
+
+								ishuContactTable += "</tr>";
+
+								ishuContactTable += "<tr>";
+ 
+								ishuContactTable += "<th class='col-lg-6'>  Email</th>";
+								ishuContactTable += "<td> " + contactData[a].email + "</td>";
+
+								ishuContactTable += "</tr>";
+
+								ishuContactTable += "<tr>";
+									ishuContactTable += "<td class='bg-info'> </td>";
+									ishuContactTable += "<td class='bg-info'> </td>";
+
+									ishuContactTable += "</tr>";
+						 
+					}
+					
+				}
+				}
+
+
+
+			ishuContactTable += "</table>";
+			
+			
+
+			// category
+			var ishuCategTable = "<table id='' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+				ishuCategTable += "<thead> <tr> <th class='col-lg-6'>Customer Code</th> <th>Category</th> </tr> </thead>";
+			 
+				 
+				   // Check if data[i].product is defined
+				 
+				   if (data && data.customerId) {
+  
+    for (let a = 0; a < custCategData.length; a++) {
+        //////console.log("custCategData[a].customerName", custCategData[a].customerName);
+        //////console.log("data[i].customerId", data.customerId);
+        if (custCategData[a].customerName === data.customerId) {
+            for (let j = 0; j < CategData.length; j++) { // Corrected loop condition
+                if (custCategData[a].category === CategData[j].categoriesId) {
+					//////console.log("custCategData[a].CategData",CategData.length);
+					//////console.log("custCategData[a].CategData",CategData[j]);
+					ishuCategTable += "<tr>";
+                    ishuCategTable += "<td >" + data.customerCode + "</td>";
+                    ishuCategTable += "<td> " + CategData[j].categoriesType + "</td>";
+					ishuCategTable += "</tr>";
+					
+					break
+                    // Removed break statement to allow handling of multiple matches
+                }
+            }
+        }
+		
+    }
+}
+
+				
+				  
+			 
+			ishuCategTable += "</table>";
+
+						
+			// firm
+						var ishuFirmTable = "<table id='' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+				ishuFirmTable += "<thead>  </thead>";
+			 
+				 
+				   // Check if data[i].product is defined
+				 
+				   if (data && data.customerId) {
+  
+    for (let a = 0; a < custFirmData.length; a++) {
+        //////console.log("custFirmData[a].customerName", custFirmData[a].customerName);
+        //////console.log("data[i].customerId", data.customerId);
+        if (custFirmData[a].customerName === data.customerId) {
+            for (let j = 0; j < FirmData.length; j++) { // Corrected loop condition
+                if (custFirmData[a].category === FirmData[j].categoriesId) {
+					//////console.log("custFirmData[a].FirmData",FirmData.length);
+					//////console.log("custFirmData[a].FirmData",FirmData[j]);
+					ishuFirmTable += "<tr>";
+					 
+
+					ishuFirmTable += "</tr>";
+					ishuFirmTable += "<tr>";
+                    ishuFirmTable += "<th > Firm Name</th>";
+                    ishuFirmTable += "<td> " + FirmData[j].firmName + "</td>";
+					ishuFirmTable += "</tr>";
+
+					ishuFirmTable += "<tr>";
+                    ishuFirmTable += "<th > GST Number </th>";
+                    ishuFirmTable += "<td> " + FirmData[j].GSTNumber + "</td>";
+					ishuFirmTable += "</tr>";
+
+					ishuFirmTable += "<tr>";
+                    ishuFirmTable += "<th > Product Produced  </th>";
+                    ishuFirmTable += "<td> " + FirmData[j].ProductProduced + "</td>";
+					ishuFirmTable += "</tr>";
+
+					ishuFirmTable += "<tr>";
+                    ishuFirmTable += "<th > Product Quantity </th>";
+                    ishuFirmTable += "<td> " + FirmData[j].Quantity + "</td>";
+					ishuFirmTable += "</tr>";
+
+
+					ishuFirmTable += "<tr>";
+                    ishuFirmTable += "<th > Address </th>";
+                    ishuFirmTable += "<td> " + FirmData[j].address + "</td>";
+					ishuFirmTable += "</tr>";
+
+
+					ishuFirmTable += "<tr>";
+                    ishuFirmTable += "<th > Bank Name </th>";
+                    ishuFirmTable += "<td> " + FirmData[j].bankName + "</td>";
+					ishuFirmTable += "</tr>";
+
+
+					ishuFirmTable += "<tr>";
+                    ishuFirmTable += "<th > Account Number </th>";
+                    ishuFirmTable += "<td> " + FirmData[j].accountNumber + "</td>";
+					ishuFirmTable += "</tr>";
+
+
+					ishuFirmTable += "<tr>";
+                    ishuFirmTable += "<th > IFSCcode </th>";
+                    ishuFirmTable += "<td> " + FirmData[j].IFSCcode + "</td>";
+					ishuFirmTable += "</tr>";
+
+					ishuFirmTable += "<tr>";
+						ishuFirmTable += "<td class='bg-info'> </td>";
+						ishuFirmTable += "<td class='bg-info'> </td>";
+
+					ishuFirmTable += "</tr>";
+					break
+                    // Removed break statement to allow handling of multiple matches
+                }
+            }
+        }
+		
+    }
+}
+
+				
+				  
+			 
+			ishuFirmTable += "</table>";
+
+
+		
+			
+			
+ 				let tek = `
+<div>
+  <button onclick='getCustomerData("${holiname}", ${JSON.stringify(data)})' class='btn-light'>Print Customer Details</button>
+  <div class='float-right'>
+    <button class='btn-light' data-toggle='modal' data-target='#modal_edit' data-popup='popover' onclick='eedit("${data.customerId}customer")'>Edit</button>
+    <button class='btn-light' data-toggle='modal' data-target='#modal_del' data-popup='popover' onclick='ddel("${data.customerId}customer")'>Delete</button>
+  </div>
+</div>
+<br>
+<ul class='nav nav-tabs nav-tabs-solid bg-teal-400 border-0 nav-justified'>
+`;
+			tek+=" <li class='nav-item'><a href='#customer-tab1' class='nav-link active' data-toggle='tab'>Detail</a></li>"
+
+			tek+="<li class='nav-item'><a href='#customer-tab2' class='nav-link' data-toggle='tab' onclick='holiContact("+holiname+")'>Contact</a></li>"	
+
+			tek+="<li class='nav-item'><a href='#customer-tab3' class='nav-link' data-toggle='tab' onclick='holiCategory("+holiname+")'>Category</a></li>"	
+
+			tek+= `<li class="nav-item">
+                          <a href="#customer-tab4" class="nav-link" data-toggle="tab" onclick="holiFirm('${holiname}')">Firm</a>
+                        </li>`;	
+			
+			tek+="<li class='nav-item'><a href='#customer-tab5' class='nav-link' data-toggle='tab'>Product</a></li>"	
+			
+			tek+="<li class='nav-item' ><a href='#customer-tab6' class='nav-link' data-toggle='tab' onclick='holi("+holiname+")'>Report</a></li>"	
+
+			tek+="</ul> <div class='tab-content' style='overflow:auto;'> "	
+
+			tek+="<div class='tab-pane fade show active' id='customer-tab1' style='text-align:center;'> <table class='table datatable-basic table-bordered table-striped table-hover'> <tr> <td>Customer Name</td> <td>"+data.customerName+"</td> </tr> <tr> <td>Area</td> <td>"+address+"</td> </tr> <tr> <td>Status</td> <td>"+data.status+"</td> </tr> <tr> <td>Grade</td> <td>"+data.gradeType+"</td> </tr> <tr> <td>Pincode</td> <td>"+data.pincode+"</td> </tr> <tr> <td>Address</td> <td>"+data.address+"</td> </tr> <tr> <td>REF_NO_1</td> <td>"+data.referenceName1+"</td> </tr> <tr> <td>REF_NO_2</td> <td>"+data.referenceName2+"</td> </tr> <tr> <td>Credit Limit</td> <td>"+data.creditLimit+"</td> </tr> <tr> <td>Credit Days</td> <td>"+data.creditDays+"</td> </tr> <tr> <td>Customer Status</td> <td>"+data.CustomerStatus+"</td> </tr> </table> </div>"
+			
+			tek+="<div class='tab-pane fade' id='customer-tab2' style='text-align:center;'> "+ishuContactTable+" </div> "
+
+			tek+="<div class='tab-pane fade' id='customer-tab3' style='text-align:center;'> "+ishuCategTable+" </div> "
+			
+			tek+="<div class='tab-pane fade' id='customer-tab4' style='text-align:center;'> "+ishuFirmTable+" </div> "
+
+			tek+="<div class='tab-pane fade' id='customer-tab5' style='text-align:center;'> "+ishuProdTable+" </div>"
+			
+			tek+="<div class='tab-pane fade' id='customer-tab6' style='text-align:center;'> <div class='cardRep' id='cardRep'></div> <div class='downloadReport card' id='downloadReport'></div> </div>"
+
+
+			tek+="</div>"
+			
+			//////console.log("llllllllllllllllllllllllllllllllll" )
+			document.getElementById("ekdin").innerHTML=tek;
+		 
+		}
+		else
+		{
+			 
+			//////console.log("llllllllllllllllllllllllllllllllll33333333333333333333333333333" )
+			var table="<h5>Verified Master Customer does not exist</h5>"
+			document.getElementById("ekdin").innerHTML=table;
+			
+		}
+	}
+
+
+
+	function getCustomerData(customerId, customerData) {
+  
+    var fData, ctData, cnData;
+    var dataLoaded = {
+        fData: false,
+        ctData: false,
+        cnData: false
+    };
+
+    function checkDataLoaded() {
+        if (dataLoaded.fData && dataLoaded.ctData && dataLoaded.cnData) {
+            printFunction(customerId, customerData, fData, ctData, cnData);
+        }
+    }
+
+    $.post("/masterCustomer", {
+        value: customerId,
+        op: "customerContact"
+    }, function (data, status) {
+        cnData = data; 
+		//////console.log("ddddddddddddddddddd" , data);
+		//////console.log("dddddddddddddddddddcnData" , cnData);
+
+        //////console.log(status);
+        dataLoaded.cnData = true;
+        checkDataLoaded();
+    });
+
+    $.post("/masterCustomer", {
+        value: customerId,
+        op: "customerCategory"
+    }, function (data, status) {
+        //////console.log(data);
+        ctData = data;
+        //////console.log(status);
+        dataLoaded.ctData = true;
+        checkDataLoaded();
+    });
+
+    $.post("/masterCustomer", {
+        value: customerId,
+        op: "customerFirm"
+    }, function (data, status) {
+        //////console.log(data);
+        fData = data;
+        //////console.log(status);
+        dataLoaded.fData = true;
+        checkDataLoaded();
+    });
+}
+	  
+
+	  function printFunction(customerId, customerData,fData,ctData,cnData) {
+		 
+ 		// var productData = JSON.stringify(productData);
+		let productData = <%- JSON.stringify(productData) %>;
+		let custProductData = <%- JSON.stringify(custProduct) %>;
+ 
+		var areaData = <%- JSON.stringify(areaData) %>;
+		var gradeData = <%- JSON.stringify(gradeData) %>;
+ 		console.log("printing")
+		console.log("customerData" ,customerData)
+		console.log("fData" , fData)
+		console.log("ctData" ,ctData)
+		console.log("cnData", cnData)
+		console.log("areaData", areaData)
+		console.log("gradeData", gradeData)
+		console.log("productData", productData)
+		console.log("custProductData", custProductData)
+		
+		var index=Object.keys(customerData).length;
+		//////console.log("customerData1111" , customerData.area , customerData.zone )
+		index=index-14;
+		let pData = []; // Initialize pData as an empty array
+
+for (let i = 0; i < custProductData.length; i++) {
+   
+        // Correctly compare customerId with another customerId
+        if ( custProductData[i].customerName === customerData.customerId) {
+
+            // Find the product associated with the current customer
+            const pro = productData.find(product =>  product.productId === custProductData[i].product);
+			console.log("///////////////////////////////" ,pro)
+
+            if (pro && !pData.includes(pro.productName)) { // Check if product exists and isn't already in pData
+                // If not, push the productId into pData
+			 
+                pData.push(pro.productName);
+            }
+        }
+
+}
+
+		 console.log("///////////////////////////////" ,pData)
+
+		let firms = custFirmPrint(fData);
+		// //////console.log("firmssssss" , firms)
+		// const firmsData = getfirmsData()
+		// function getfirmsData(){
+		// 	const arrayData = []
+		// 	for(i = 0 ; i < firms.length ; i++){
+		// 		const keys = Object.keys(firms[i])
+		// 		for(a = 0 ; a < keys.length ; a++){
+					
+
+		// 			const data = [keys[a] , firms[i][keys[a]]]
+		// 			//////console.log("item" ,data)
+		// 			arrayData.push(data)
+		// 		}
+		// 	}
+		// 	//////console.log("arrayData",arrayData)
+		// return arrayData
+		// }
+		
+
+// //////console.log("firmsData" ,firmsData);
+
+	 let category =	custCatPrint(ctData)
+	 //////console.log("category" , category)
+	 //////console.log("firms" , firms)
+	 let contacts =	custCntctPrint(cnData)
+	 //////console.log("contacts" , contacts)
+	//  let customerData1 = {...customerData , area : `${customerData.area}`}
+	 CustomerStatus = customerData["CustomerStatus"]
+	 address = customerData["address"]
+	 area = `${customerData.area}`
+	 CustomerStatus = customerData["CustomerStatus"]
+	 customerName = customerData["customerName"]
+	 gradeType = customerData["gradeType"]
+	 reference1ContactNumber = customerData["reference1ContactNumber"]
+	 reference2ContactNumber = customerData["reference2ContactNumber"]
+	 referenceName1 = customerData["referenceName1"]
+	 referenceName2 = customerData["referenceName2"]
+	 creditLimit = customerData["creditLimit"]
+	 creditDays = customerData["creditDays"]
+	 status = customerData["status"]
+ 	 zone = customerData["zone"]
+	 district = customerData["district"]
+ 
+	 let customerData1 = {customerName ,CustomerStatus ,address ,area : `${customerData.area}`,status , zone ,district ,CustomerStatus,gradeType ,
+		  referenceName1 ,reference1ContactNumber , referenceName2 ,reference2ContactNumber,
+		creditLimit ,creditDays , }
+
+	 // Delete keys '0' and '1' if they exist
+delete customerData1['0'];
+delete customerData1['1'];
+delete customerData1['customerId'];
+delete customerData1['grade'];
+delete customerData1['areaId'];
+delete customerData1['gradeId'];
+
+//////console.log(".................................." , customerData)
+//////console.log(".................................." , customerData1)
+
+const frimsDAtaArray = []
+const firmDataa = firms.forEach((item) => {
+                // Replace null values with a placeholder
+				let {key, value} = item
+				//////console.log("dataitem" ,item)
+                 //////console.log("Data , key"  , key , value)
+				//////console.log(Object.keys(item)  , Object.values(item))
+				frimsDAtaArray.push(  Object.values(item))
+                // return [Object.keys(item)  , Object.values(item) ]
+				 
+            })
+			//////console.log("firmDAtaa" , frimsDAtaArray)
+
+			const contactDAtaArray = []
+			//////console.log( "contacts111" ,contacts)
+			let contactDataa = contacts.forEach((  item) => {
+					// Replace null values with a placeholder
+					//////console.log("dataitem", item);
+
+					const data3 = Object.values(item);
+					//////console.log(data3);
+
+					contactDAtaArray.push(data3); // Use push directly without reassigning
+					//////console.log("acc", contactDAtaArray);
+
+					 // Return the updated acc array
+				} );
+
+				//////console.log("contactDataArray", contactDataa); 
+
+
+//////console.log("Customerwwwww" ,customerData1)
+	 //////console.log("Customer" ,Object.entries(customerData))
+//////console.log("firms" ,firms)
+//////console.log("firms" ,Object.entries(firms))
+ 		var docDefinition =  {
+                content: [
+				{text: 'Master Customer Details', style: 'header'},
+	  
+				// custoer data 
+	  {text: 'PROFILE', style: 'subheader'},
+	   
+	  {
+		  style: 'tableExample',
+		  table: {
+				  widths: [148, 148],
+			  body:  Object.entries(customerData1).map(([key, value]) => {
+                const displayValue = value !== null ? value.toString() : 'N/A';
+				return [key, displayValue];
+            })	
+		  },
+		  layout: {
+				fillColor: function (rowIndex, node, columnIndex) {
+					return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+				}
+			}
+	  },
+   
+	 // fData data 
+	  {text: 'FIRMS', style: 'subheader'},
+	   
+	   {
+		   style: 'tableExample',
+		   table: {
+			widths: [ 'auto', 'auto','auto', 'auto' ,'auto', 'auto','auto', 'auto','auto' ],
+ 			   body: [ ['First Name', 'Address', 'Pincode', 'GST Number', 'Account Number', 'Bank Name', 'IFSC Code', 'Product Produced', 'Quantity'],
+				...frimsDAtaArray
+			],
+				headerRows: 1
+			
+			 
+		   },
+		   layout: {
+				 fillColor: function (rowIndex, node, columnIndex) {
+					 return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+				 }
+			 }
+	   },
+
+	   	 // cData data 
+	  {text: 'CONTACTS', style: 'subheader'},
+	   
+	   {
+		   style: 'tableExample',
+		   table: {
+			widths: [  '*', '*','*', '*'  ],
+
+ 			   body:  [['Contact Name', 'Designation', 'MobileNumber', 'Email' ],
+ ...contactDAtaArray],
+				headerRows: 1
+			
+			 
+		   },
+		   layout: {
+				 fillColor: function (rowIndex, node, columnIndex) {
+					 return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+				 }
+			 }
+	   },
+
+
+
+//  fData
+// ...firms.map((firm) => {
+
+// 	const firmData = []
+// 	let arrayData = [{text: 'Firm', style: 'subheader'},   {
+// 		   style: 'tableExample',
+// 		   table: {
+// 				   widths: [ 'auto','auto','auto', 'auto','auto', 'auto','auto', 'auto','auto' ],
+// 			   body:[
+//                     Object.keys(firms[0]), // Display keys as table headers
+//                     ...firms.map((firm) => Object.values(firm).map(value => value.toString()))
+//                 ]
+//             },
+// 		   layout: {
+// 				 fillColor: function (rowIndex, node, columnIndex) {
+// 					 return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+// 				 }
+// 			 }
+// 	   }]
+		 
+// 				const keys = Object.keys(firm)
+// 				//////console.log("keys",keys)
+// 				for(a = 0 ; a < keys.length ; a++){
+					
+
+// 					const data = [keys[a] , firm[keys[a]]]
+// 					//////console.log("item" ,data)
+// 					firmData.push(	data)
+					  
+
+// 				}
+			 
+ 
+// 	//////console.log("arrayData" ,arrayData)
+			
+	 
+
+
+// 	  return arrayData
+// 	}),
+//  ctData  category
+{text: 'CATEGORY', style: 'subheader', absolutePosition: { x: 400, y:73 }},
+	  
+	  {
+		  style: 'tableExample',
+		  table: {
+				  widths: ['*'],
+			  body:  Object.entries(category ).map(([key, value]) => {
+                // Replace null values with a placeholder
+                const displayValue = value !== null ? value.toString() : 'N/A';
+                return [displayValue];
+            })
+		  },	
+		  layout: {
+				fillColor: function (rowIndex, node, columnIndex) {
+					return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+				}
+			},
+			absolutePosition: { x: 400, y: 90 }
+	  },
+	  //  cnData   contact
+// 	  ...contacts.map((contact) => {
+
+// const contactData = []
+// let arrayContactData = [{text: 'contacts', style: 'subheader'},   {
+// 	   style: 'tableExample',
+// 	   table: {
+// 			   widths: [  '*', '*', '*', '*' , '*', '*'  ],
+// 		   body: [
+//                     Object.keys(contacts[0]), // Display keys as table headers
+//                     ...contacts.map((contact) => Object.values(contact).map(value => value.toString()))
+//                 ]
+//             },
+// 	   layout: {
+// 			 fillColor: function (rowIndex, node, columnIndex) {
+// 				 return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+// 			 }
+// 		 }
+//    }]
+	 
+// 			const keys = Object.keys(contact)
+// 			//////console.log("keys",keys)
+// 			for(a = 0 ; a < keys.length ; a++){
+				
+
+// 				const data = [keys[a] , contact[keys[a]]]
+// 				//////console.log("item" ,data)
+// 				contactData.push(	data)
+				  
+
+// 			}
+		 
+
+// //////console.log("arrayContactData" ,arrayContactData)
+//   return arrayContactData
+// }),
+
+	  	  //  pData   contact
+{text: 'PRODUCTS', style: 'subheader', absolutePosition: { x: 400, y: 180 }},
+	   
+	  {
+		  style: 'tableExample',
+		  table: {
+				  widths: ['*'],
+			  body:  Object.entries(pData).map(([key, value]) => {
+                // Replace null values with a placeholder
+                const displayValue = value !== null ? value.toString() : 'N/A';
+                return [displayValue];
+            })
+		  },
+		  layout: {
+				fillColor: function (rowIndex, node, columnIndex) {
+					return (rowIndex % 2 === 0) ? '#CCCCCC' : null;
+				}
+			},
+			absolutePosition: { x: 400, y: 197 }
+	  },
+
+	   ],
+	   styles: {
+		header: {
+			fontSize: 10,
+			bold: true,
+			margin: [0, 0, 0, 10],
+		 
+           
+		},
+		subheader: {
+			fontSize: 7,
+			bold: true,
+			margin: [0, 10, 0, 5]
+		},
+		tableExample: {
+			margin: [0, 5, 0, 10],
+			fontSize:7
+		},
+		tableHeader: {
+			bold: true,
+			fontSize: 6,
+			color: 'black'
+		},
+	},
+	//pageOrientation: 'landscape',
+};
+ 
+	 
+
+		pdfMake.createPdf(docDefinition).download();
+}	 
+		  
+
+//////console.log("documentDefinition" ,pData)
+		//   $.post("/masterCustomer", {
+		// 	value: customerId,
+		// 	documentDefinition: pData,
+		// 	op: "printReport"
+		//   }, function(data, status) {
+		// 	alert(data)
+		// 	//////console.log(data);
+		// 	//////console.log("status " , status);
+		//   });
+
+
+	  
+
+	function holi (value)
+	{
+		//////console.log("hhhhhhhhhhhhhhooooooooooooooolllllllllliiiiiiiiii");
+		//////console.log(value);
+		$.post("/masterCustomer",
+        {
+            value:value,
+            op:"marktrep"
+        },
+        function (data, status) {
+			//////console.log("***********************************************")
+            //////console.log(data);
+			//////console.log("***********************************************")
+			markrep(data);
+            //////console.log(status);
+        }
+		)
+	}
+
+	function holiContact(value)
+	{
+		//////console.log("finding customer contact")
+		$.post("/masterCustomer",
+        {
+            value:value,
+            op:"customerContact"
+        },
+        function (data, status) {
+            //////console.log(data);
+			custCntct(data);
+            //////console.log(status);
+        }
+		)
+	}
+	
+	function holiCategory(value)
+	{
+		//////console.log("finding customer category")
+		$.post("/masterCustomer",
+        {
+            value:value,
+            op:"customerCategory"
+        },
+        function (data, status) {
+            //////console.log(data);
+			custCat(data);
+            //////console.log(status);
+        }
+		)
+	}
+	
+	function holiFirm(value)
+	{
+		//////console.log("finding customer firm")
+		$.post("/masterCustomer",
+        {
+            value:value,
+            op:"customerFirm"
+        },
+        function (data, status) {
+          console.log(data);
+			custFirm(data);
+         console.log(status);
+        }
+		)
+	}
+
+	function custCntct(cntctdata)
+	{
+		//////console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy")
+		//////console.log(cntctdata)
+		if(cntctdata)
+		{
+			var holi="<table id='' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+			
+			holi+="<thead> <tr> <th>Index</th> <th>Contact Name </th> <th>Designation</th> <th>Mobile Number</th> <th>Email</th> </tr> </thead>";
+			
+			for(var i=0; i<cntctdata.length; i++)
+			{
+				holi+="<tr>"
+				holi+="<td >"+ (i+1) +"</td>"
+				holi+="<td >"+ cntctdata[i].contactName+"</td>"
+				holi+="<td >"+ cntctdata[i].designation+"</td>"
+				holi+="<td >"+ cntctdata[i].mobileNumber+"</td>"
+				holi+="<td >"+ cntctdata[i].email+"</td>"
+				holi+="</tr>"
+			}
+			holi+="</table>";
+			
+			document.getElementById("customer-tab2").innerHTML=holi;
+		}
+		else
+		{
+			var holi="<h3>NO data </h3>";
+			document.getElementById("customer-tab2").innerHTML=holi;
+		}
+	}
+	function custCat(catdata)
+	{
+		var categorydata = JSON.parse('<%-JSON.stringify(categorydata)%>');
+		//////console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy")
+		//////console.log(catdata)
+		if(catdata)
+		{
+			var holi="<table id='' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+			
+			holi+="<thead> <tr> <th class='col-lg-6'>Index</th> <th>Category</th> </tr> </thead>";
+			
+			for(var i=0; i<catdata.length; i++)
+			{
+				holi+="<tr>"
+				holi+="<td >"+ (i+1) +"</td>"
+				for (var a = 0; a < categorydata.length; a++) {
+					if (categorydata[a].categoriesId == catdata[i].category) {
+					  holi += "<td> " + categorydata[a].categoriesType+ "</td>";
+					  break;
+					}
+				  }
+				holi+="</tr>"
+			}
+			holi+="</table>";
+			
+			document.getElementById("customer-tab3").innerHTML=holi;
+		}
+		else
+		{
+			var holi="<h3>NO data </h3>";
+			document.getElementById("customer-tab3").innerHTML=holi;
+		}
+	}
+	function custFirm(firmdata)
+	{
+		var firmData = JSON.parse('<%-JSON.stringify(firmData)%>');
+		//////console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy")
+		//////console.log("firmdataaaaa" ,firmdata)
+		if(firmdata)
+		{
+			var holi="<table   id='' class='table datatable-basic table-bordered table-striped table-hover' style='table-layout: auto;overflow:auto; width: 100%; overflow-x: auto;'>";
+			
+			holi+="<thead> <tr> <th>Index</th> <th>Firm Name</th> <th>Address</th> <th>Pincode</th> <th>GST Number</th> <th>Account Number</th> <th>Bank Name</th> <th>IFSC Code</th> <th>Product Produced</th> <th>Quantity</th> </tr> </thead>";
+			
+			for(var i=0; i<firmdata.length; i++)
+			{
+				holi+="<tr>"
+				holi+="<td >"+ (i+1) +"</td>"
+				for (var a = 0; a < firmData.length; a++) {
+					if (firmData[a].firmId == firmdata[i].firm) {
+					  holi += "<td> " + firmData[a].firmName+ "</td>";
+					  holi += "<td> " + firmData[a].address+ "</td>";
+					  holi += "<td> " + firmData[a].pincode+ "</td>";
+					  holi += "<td> " + firmData[a].GSTNumber+ "</td>";
+					  holi += "<td> " + firmData[a].accountNumber+ "</td>";
+					  holi += "<td> " + firmData[a].bankName+ "</td>";
+					  holi += "<td> " + firmData[a].IFSCcode+ "</td>";
+					  holi += "<td> " + firmData[a].ProductProduced+ "</td>";
+					  holi += "<td> " + firmData[a].Quantity+ "</td>";
+					  break;
+					}
+				}
+				holi+="</tr>"
+			}
+			holi+="</table>";
+			
+			document.getElementById("customer-tab4").innerHTML=holi;
+		}
+		else
+		{
+			var holi="<h3>NO data </h3>";
+			document.getElementById("customer-tab4").innerHTML=holi;
+		}
+	}
+	function markrep(repdata)
+	{
+		//////console.log(repdata)
+		if(repdata)
+		{
+			var holi="<table id='tRep' class='table repdatatable-basic table-bordered table-striped table-hover' style='table-layout: auto; width: 100%; overflow-x: auto;'>";
+			
+			holi+="<thead> <tr> <th>area</th> <th>product</th> <th>lastDelivery</th> <th>representative</th> <th>currentRemark</th> <th>remarkStatus</th> <th>currentIssue</th> </tr> </thead>";
+			
+			for(var i=0; i<repdata.length; i++)
+			{
+				holi+="<tr>"
+				holi+="<td >"+ repdata[i].area+"</td>"
+				holi+="<td >"+ repdata[i].product+"</td>"
+				holi+="<td >"+ repdata[i].lastDelivery+"</td>"
+				holi+="<td >"+ repdata[i].representative+"</td>"
+				holi+="<td >"+ repdata[i].currentRemark+"</td>"
+				holi+="<td >"+ repdata[i].remarkStatus+"</td>"
+				holi+="<td >"+ repdata[i].currentIssue+"</td>"
+				holi+="</tr>"
+			}
+			holi+="</table>";
+			
+			document.getElementById("cardRep").innerHTML=holi;
+
+			var hbtn="<button class='btn-link' onclick=exportReport()> Download list</button>"
+
+			document.getElementById("downloadReport").innerHTML=hbtn;
+		}
+		else
+		{
+			var holi="<h3>NO data </h3>";
+			document.getElementById("cardRep").innerHTML=holi;
+		}
+	}
+
+	function exportReport()
+	{
+			//////console.log("a")
+			
+			var table = document.getElementById("tRep");
+			//////console.log(table)
+
+			
+			var rows =[];
+ 
+      
+			for(var i=0,row; row = table.rows[i];i++){
+				
+				column1 = row.cells[0].innerText;
+				column2 = row.cells[1].innerText;
+				column3 = row.cells[2].innerText;
+				column4 = row.cells[3].innerText;
+				column5 = row.cells[4].innerText;
+				column6 = row.cells[5].innerText;
+				column7 = row.cells[6].innerText;
+				rows.push(
+					[
+						column1,
+						column2,
+						column3,
+						column4,
+						column5,
+						column6,
+						column7
+					]
+				);
+ 
+        	}
+
+			//////console.log(rows)
+        	csvContent = "data:text/csv;charset=utf-8,";
+         
+			rows.forEach(function(rowArray){
+				row = rowArray.join(",");
+				csvContent += row + "\r\n";
+			});
+ 
+			var encodedUri = encodeURI(csvContent);
+			var link = document.createElement("a");
+			link.setAttribute("href", encodedUri);
+			link.setAttribute("download", "Market_Report.csv");
+			document.body.appendChild(link);
+			link.click();
+	}
+	
+function custFirmPrint(firmdata) {
+    var firmData = JSON.parse('<%-JSON.stringify(firmData)%>');
+    var firmDetails = [];
+
+    if (firmdata) {
+        for (var i = 0; i < firmdata.length; i++) {
+            for (var a = 0; a < firmData.length; a++) {
+                if (firmData[a].firmId == firmdata[i].firm) {
+                    var firmDetailsArray = {};
+
+                    firmDetailsArray["firstName"] = decodeURIComponent(firmData[a].firmName),
+                    firmDetailsArray["Address"] = decodeURIComponent(firmData[a].address),
+                    firmDetailsArray["Pincode"] = decodeURIComponent(firmData[a].pincode),
+                    firmDetailsArray["GSTNumber"] = decodeURIComponent(firmData[a].GSTNumber),
+                    firmDetailsArray["AccountNumber"] = decodeURIComponent(firmData[a].accountNumber),
+                    firmDetailsArray["BankName"] = decodeURIComponent(firmData[a].bankName),
+                    firmDetailsArray["IFSCCode"] = decodeURIComponent(firmData[a].IFSCcode),
+                    firmDetailsArray["Produced"] = decodeURIComponent(firmData[a].ProductProduced),
+                    firmDetailsArray["Quantity"] = decodeURIComponent(firmData[a].Quantity);
+                    
+                    firmDetails.push(firmDetailsArray);
+                }
+            }
+        }
+
+        return firmDetails;
+    } else {
+        return null;
+    }
+}
+
+
+	
+// 	function custFirmPrint(firmdata) {
+//     var firmData = JSON.parse('<%-JSON.stringify(firmData)%>');
+//     var firms = []; // Initialize an empty array to store firm details
+
+//     if (firmdata) {
+//         for (var i = 0; i < firmdata.length; i++) {
+//             for (var a = 0; a < firmData.length; a++) {
+//                 if (firmData[a].firmId == firmdata[i].firm) {
+//                     // Create a new firm object and push it to the firms array
+//                     firms.push({
+//                         firmName: firmData[a].firmName,
+//                         address: firmData[a].address,
+//                         pincode: firmData[a].pincode,
+//                         GSTNumber: firmData[a].GSTNumber,
+//                         accountNumber: firmData[a].accountNumber,
+//                         bankName: firmData[a].bankName,
+//                         IFSCcode: firmData[a].IFSCcode
+//                     });
+//                 }
+//             }
+//         }
+
+//         return firms; // Return the array of firm objects
+//     } else {
+//         // Handle the case when firmdata is falsy (null or undefined)
+//         return null;
+//     }
+// }
+
+function custCatPrint(catdata) {
+    var categorydata = JSON.parse('<%-JSON.stringify(categorydata)%>');
+    //////console.log("categorydata", categorydata)
+    if (catdata) {
+        let categories = [];
+
+        for (var i = 0; i < catdata.length; i++) {
+            for (var a = 0; a < categorydata.length; a++) {
+                if (categorydata[a].categoriesId == catdata[i].category) {
+                    categories.push(categorydata[a].categoriesType);
+                }
+            }
+        }
+
+        return categories;
+    } else {
+        return null;
+    }
+}
+
+function custCntctPrint(cntctdata) {
+    if (cntctdata) {
+        let contacts =[];
+        for (var i = 0; i < cntctdata.length; i++) {
+			let contactDetails = {}
+			contactDetails['contactName'] = cntctdata[i].contactName
+			contactDetails['Designation'] = cntctdata[i].designation
+			contactDetails['MobileNumber'] = cntctdata[i].mobileNumber
+			contactDetails['Email'] = cntctdata[i].email
+          
+			contacts.push( contactDetails)
+        }
+        return contacts;
+    } else {
+        return null;
+    }
+        }
+   
+//  function custCntctPrint(cntctdata)
+// 	{
+// 		let contacts = {};
+// 		if(cntctdata)
+// 		{
+			 
+// 			for(var i=0; i<cntctdata.length; i++)
+// 			{
+// 				contacts.contactName = cntctdata[i].contactName
+// 				contacts.designation =  cntctdata[i].designation 
+// 				contacts.mobileNumber = cntctdata[i].mobileNumber 
+// 				contacts.email =  cntctdata[i].email 				 
+// 			}
+		 
+// 			return contacts
+// 		}
+// 		else
+// 		{
+// 			return null; 
+// 		}
+// 	}
+	
+</script>

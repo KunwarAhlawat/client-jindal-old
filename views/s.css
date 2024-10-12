@@ -1,0 +1,1240 @@
+*
+{
+  font-family: 'Kanit', sans-serif; 
+  text-decoration: none;
+  transition: all 0.3s linear;
+  box-sizing: border-box;
+  margin: 0%;
+}
+
+html
+{
+  font-size: 80%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+
+body
+{
+    /* background-color: black; */
+    overflow-x: hidden;
+}
+
+
+
+/* -----------------------scrollbar---------------------  */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(38,50,56, 1); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(38,166,154); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(38,166,154, 0.705); 
+}
+
+
+
+
+.header
+{
+
+    position: fixed;
+    /* height: 7rem; */
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 3%;
+    z-index: 3;
+    /* background-color: rgb(0, 0, 0,0.5); */
+    /* background-color: teal; */
+    background-color: rgba(38,50,56,255);
+}
+
+
+
+.navline 
+{
+    height: 100%;
+    padding: 0%;
+    display: inline-block;
+}
+
+.navline a
+{
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    /* overflow: hidden; */
+}
+
+.navline a:hover
+{
+    color: rgba(38,166,154,255);
+    transform: scale(1.1);
+    text-shadow: none;
+}
+
+
+
+.logo 
+{
+  
+  z-index: 3;
+  font-weight: bolder;
+  color: rgba(38,166,154,255);
+  font-size: 2.5rem;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+
+
+section
+{
+    height: 100vh;
+}
+
+
+.landing 
+{
+    height: 100vh;
+    background: url(coal.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.landing .outer
+{
+    margin-left: 50%;
+    height: 100%;
+    background-color: rgb(255, 192, 144);
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing .inner 
+{
+    width: 90%;
+    font-weight: 900;
+}
+
+.landing span
+{
+  font-size: 4rem;
+  
+}
+
+.landing p
+{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+.about 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.about-text
+{
+    width: 80%;
+    /* height: 50%; */
+}
+
+.about span
+{
+    font-weight: 700;
+    font-size: 3rem;
+    color: rgb(38,50,56);
+}
+
+.about p
+{
+    padding: 7rem 0;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+
+
+
+
+
+
+
+.heritage 
+{
+    height: auto;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(38,50,56,255);
+}
+
+.heritage .heading 
+{
+    width: 100%;
+    height: 30vh;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heritage .heading span 
+{
+    margin-top: 2.5rem;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+
+.heritage h2 
+{
+    color: rgb(38,166,154);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.heritage p 
+{
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+  
+  /* The actual timeline (the vertical r.someer) */
+  .timeline {
+    height: 100%;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical r.someer) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    height: 100%;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 31px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    height: 100%;
+    }
+    
+    /* F.somel-width containers */
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+
+    footer
+    {
+      height: 100vh;
+    }
+
+    footer .some 
+    {
+      margin-bottom: 0%;
+    }
+
+    footer .address
+    {
+      height: 70vh;
+    }
+  }
+
+
+.mission 
+{
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission .heading-box
+{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: rgb(38,50,56);
+}
+
+.mission .content
+{
+  width: 75%;
+  border-left: 6px solid #ff9f55;
+  padding: 5rem 10rem;
+  line-height: 2rem;
+}
+
+.mission li 
+{
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+}
+
+
+
+.vision 
+{
+  height: auto;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vision .heading-box
+{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: rgb(38,50,56);
+}
+
+.vision .content
+{
+  width: 75%;
+  border-right: 6px solid #ff9f55;
+  padding: 5rem 10rem;
+  line-height: 2rem;
+}
+
+.vision p
+{
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+}
+  
+
+.whyus
+{
+
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 700px;
+  height: 70%;
+  perspective: 1000px;
+  margin: 10rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 3s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgb(38,50,56);
+  color: black;
+  font-size: 8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  background-color: rgb(38,166,154);
+  color: white;
+  transform: rotateY(180deg);
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  padding: 1rem;
+  text-shadow: 1px 1px rgba(38,50,56,1);
+}
+
+.whyus  li
+{
+  padding: 0.5rem;
+}  
+
+.whyus .a 
+{
+  color: rgb(255, 255, 255);
+}
+
+.whyus  .b
+{
+  color: rgba(237, 248, 255, 0.888);
+}
+
+.whyus span 
+{
+  margin: 2rem;
+  color: white;
+  text-shadow: 2px 2px #FF9F55;
+}
+
+
+footer
+{
+  height: auto;
+  background-color: rgb(38,50,56);
+}
+
+footer .some 
+{
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.some a {
+  display:block;
+  position:relative;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  font-size:30px;
+  text-align:center;
+  text-decoration:none;
+  color:rgb(38,166,154);
+  margin: 10px 30px 0 10px;
+  transition:.1s;
+}
+.some a span {
+  position:absolute;
+  transition: transform .5s;
+}
+
+
+.facebook:hover {
+  color: #3b5998;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.whatsapp:hover {
+  color: #25D366;
+}
+
+.instagram:hover {
+  color: #c32aa3;
+}
+
+.google:hover {
+  color: #dd4b39;
+}
+
+footer .address
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  padding: 3rem;
+}
+
+footer .a
+{
+  width: 25%;
+  height: 100%;
+  color: rgb(38,166,154);
+  margin: auto;
+  /* padding: 2rem; */
+}
+
+footer span
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: auto;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+footer hr
+{
+  width: 85%;
+  margin: auto;
+}
+
+footer p 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem 0 4rem;
+  margin: auto;
+}
+
+footer code 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 1rem 2rem 0 4rem;
+}
+
+
+
+footer .copy 
+{
+  position: relative;
+  height: 10%;
+  background-color: rgb(38,166,154);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .header
+  {
+
+      position: fixed;
+      /* height: 7rem; */
+      top: 0%;
+      left: 0%;
+      right: 0%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1% 2.5%;
+      z-index: 3;
+      /* background-color: rgb(0, 0, 0,0.5); */
+      /* background-color: teal; */
+      background-color: rgba(38,50,56,255);
+  }
+
+
+
+  .navline 
+  {
+      height: 100%;
+      padding: 0%;
+      display: inline-block;
+  }
+
+  .navline a
+  {
+      display: inline-block;
+      padding: 0.8rem 1rem;
+      font-size: 1rem;
+      color: white;
+      text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+      /* overflow: hidden; */
+  }
+  .heritage .heading 
+  {
+    width: 100%;
+    height: 15vh;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heritage .heading span 
+  {
+      margin:0 1rem;
+      text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+  }
+
+  .mission 
+  {
+  height: auto;
+  margin: 2rem 0;
+  }
+
+  .flip-card-back {
+    background-color: rgb(38,166,154);
+    color: white;
+    transform: rotateY(180deg);
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding: 1rem;
+    text-shadow: 1px 1px rgba(38,50,56,1);
+  }
+
+  footer
+  {
+    height: auto;
+    background-color: rgb(38,50,56);
+  }
+
+  footer .some 
+  {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer .address
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    padding: 3rem;
+  }
+
+  footer span
+  {
+    padding-left: 4rem;
+  }
+
+  footer hr
+  {
+    width: 65%;
+    margin: auto;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .header
+  {
+
+      position: fixed;
+      /* height: 7rem; */
+      top: 0%;
+      left: 0%;
+      right: 0%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1% 2%;
+      z-index: 3;
+      /* background-color: rgb(0, 0, 0,0.5); */
+      /* background-color: teal; */
+      background-color: rgba(38,50,56,255);
+  }
+
+
+
+  .navline 
+  {
+      height: 100%;
+      padding: 0%;
+      display: inline-block;
+  }
+
+  .navline a
+  {
+      display: inline-block;
+      padding: 0.5rem 0.5rem;
+      font-size: 0.8rem;
+      color: white;
+      text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+      /* overflow: hidden; */
+  }
+
+  .about span
+  {
+      font-weight: 700;
+      font-size: 2rem;
+  }
+
+  .about p
+  {
+      padding: 7rem 0;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5rem;
+  }
+
+  .heritage
+  {
+    height: auto;
+  }
+
+  .heritage .heading 
+  {
+      width: 100%;
+      height: 15vh;
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .heritage .heading span 
+  {
+      margin-top: 1rem;
+      text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+  }
+
+
+  .heritage h2 
+  {
+      color: rgb(38,166,154);
+      font-weight: 600;
+      font-size: 1.2rem;
+  }
+
+  .heritage p 
+  {
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+    
+
+  .mission 
+  {
+  height: auto;
+  margin: 2rem 0;
+  }
+
+  .mission .heading-box
+  {
+    width: 25%;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: rgb(38,50,56);
+  }
+
+  .mission .content
+  {
+    width: 75%;
+    border-left: 6px solid #ff9f55;
+    padding: 5rem;
+  }
+
+  .mission li 
+  {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+  }
+
+
+
+  .vision 
+  {
+    height: auto;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vision .heading-box
+  {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: rgb(38,50,56);
+  }
+
+  .vision .content
+  {
+    width: 75%;
+    border-right: 6px solid #ff9f55;
+    padding: 5rem 10rem;
+  }
+
+  .vision p
+  {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+  }
+
+  .flip-card-back {
+    background-color: rgb(38,166,154);
+    color: white;
+    transform: rotateY(180deg);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding: 1rem 2rem 2rem 0rem;
+    text-shadow: 1px 1px rgba(38,50,56,1);
+  }
+
+  .flip-card-front {
+    font-size: 5rem;
+  }
+
+  .flip-card {
+    width: 500px;
+  }
+
+  footer
+  {
+    height: auto;
+    background-color: rgb(38,50,56);
+  }
+
+  footer .some 
+  {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .some a {
+    display:block;
+    position:relative;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    font-size:22px;
+    text-align:center;
+    text-decoration:none;
+    color:rgb(38,166,154);
+    margin: 5px 5px 0 5px;
+    transition:.1s;
+  }
+
+  footer .address
+  {
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 3rem;
+  }
+
+  footer .a 
+  {
+    width: 100%;
+    height: 25vh;
+  }
+
+  footer span
+  {
+    padding-left: 2.5rem;
+  }
+
+  footer hr
+  {
+    width: 65%;
+    margin: auto;
+  }
+  footer p 
+  {
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding: 1rem 2rem 0 4rem;
+    /* margin: auto; */
+  }
+  
+  footer code 
+  {
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* margin: auto; */
+    /* padding: 1rem 2rem 0 4rem; */
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+  section 
+  {
+    height: auto;
+  }
+  .landing span
+  {
+    font-size: 2rem;
+  }
+  .landing p 
+  {
+    font-size: 1rem;
+  }
+
+  .about 
+  {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+  }
+
+.about-text
+{
+    width: 80%;
+    margin: 4rem 0;
+    /* height: 50%; */
+}
+
+.about span
+{
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+  .about p
+  {
+      padding: 1rem 0;
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.7rem;
+  }
+  .heritage
+  {
+    height: auto;
+  }
+
+  .mission 
+  {
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  .mission .heading-box
+  {
+    width: 31%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgb(38,50,56);
+  }
+
+  .mission .content
+  {
+    width: 75%;
+    border-left: 6px solid #ff9f55;
+    padding: 1rem;
+  }
+
+  .mission li 
+  {
+    font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 1.7rem;
+  }
+
+
+
+  .vision 
+  {
+    height: auto;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vision .heading-box
+  {
+    width: 31%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgb(38,50,56);
+  }
+
+  .vision .content
+  {
+    width: 75%;
+    border-right: 6px solid #ff9f55;
+    padding: 1rem;
+  }
+
+  .vision p
+  {
+    font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 1.7rem;
+  }
+
+  .flip-card {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    perspective: none;
+    margin: 4rem;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: none;
+    transform-style: flat;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+  
+  
+  .flip-card-front, .flip-card-back {
+    position: relative;
+    width: 100%;
+    
+    /* -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; */
+  }
+  
+  .flip-card-front {
+    background-color: rgb(38,50,56);
+    height: 15%;
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flip-card-back {
+    height: 85%;
+    background-color: rgb(38,166,154);
+    color: rgb(0, 0, 0);
+    transform: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    padding: 1rem;
+    text-shadow: 1px 1px rgba(38,50,56,1);
+  }
+  
+  .whyus  li
+  {
+    padding: 0.5rem;
+  }  
+  
+  .whyus .a 
+  {
+    color: rgb(0, 0, 0);
+  }
+  
+  .whyus  .b
+  {
+    color: rgba(0, 0, 0, 0.888);
+  }
+  
+  .whyus span 
+  {
+    margin: 2rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px #FF9F55;
+  }
+
+  footer
+  {
+    height: auto;
+  }
+
+  footer .address
+  {
+    height: auto;
+  }
+
+  footer .a
+  {
+    height: auto;
+    font-size: 0.7rem;
+    margin-top: 2rem;
+  }
+  
+  footer span
+  {
+  font-size: 0.7rem;
+  }
+
+  footer .copy 
+  {
+    font-size: 0.7rem;
+  }
+}

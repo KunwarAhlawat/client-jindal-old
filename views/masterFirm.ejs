@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Jindal Trading | Dashboard</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="global_assets/js/main/jquery.min.js"></script>
+	<script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+
+	<script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="global_assets/js/plugins/notifications/pnotify.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+
+
+	<script src="assets/js/app.js"></script>
+	<script src="global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script src="global_assets/js/demo_pages/form_multiselect.js"></script>
+	<!-- /theme JS files -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-dark">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="global_assets/images/logo_light.png" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li>
+			</ul>
+
+			<span class="badge bg-success ml-md-3 mr-md-auto">Online</span>
+
+			<ul class="navbar-nav">
+
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+						<img src="global_assets/images/demo/users/face11.jpg" class="rounded-circle mr-2" height="34" alt="">
+						<span><%=username%></span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
+						<div class="dropdown-divider"></div>
+						<a href="/logout" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				Navigation
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+				<!-- User menu -->
+				<div class="sidebar-user">
+					<div class="card-body">
+						<div class="media">
+							<div class="mr-3">
+								<a href="#"><img src="global_assets/images/demo/users/face11.jpg" width="38" height="38" class="rounded-circle" alt=""></a>
+							</div>
+
+							<div class="media-body">
+								<div class="media-title font-weight-semibold"><%=username%></div>
+								<div class="font-size-xs opacity-50">
+									<i class="icon-pin font-size-sm"></i> &nbsp;Meerut
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /user menu -->
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/userDashboard" class="nav-link ">
+								<i class="icon-home4"></i>
+								<span>
+									Dashboard
+								</span>
+							</a>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/register" class="nav-link">User-Register</a></li>
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/registeredUsers" class="nav-link">Register-List</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Market-Plan</span></a>
+
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanPigIron" class="nav-link">Create Market-plan</a></li>
+							</ul>
+							
+							<!-- <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+							   <li class="nav-item"><a href="/marketPlanAllotment" class="nav-link">Allotment</a></li>
+						    </ul> -->
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/marketPlanQuantityLedger" class="nav-link">QuantityLedger</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Master</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterArea" class="nav-link active">MasterArea</a></li>
+								<li class="nav-item"><a href="/masterCategories" class="nav-link">MasterCategories</a></li>
+								<li class="nav-item"><a href="/masterGrade" class="nav-link">MasterGrade</a></li>
+								<li class="nav-item"><a href="/masterProducts" class="nav-link">MasterProducts</a></li>
+								<li class="nav-item"><a href="/masterProductGroup" class="nav-link">MasterProductGroup</a></li>
+								<li class="nav-item"><a href="/masterTeams" class="nav-link">MasterTeams</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+							<a href="#" class="nav-link  active"><i class="icon-copy"></i> <span>Customers</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterCustomer" class="nav-link">MasterCustomer</a></li>
+								<li class="nav-item"><a href="/masterFirm" class="nav-link active">MasterFirm</a></li>
+								<li class="nav-item nav-item-submenu ">
+									<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Datatables</span></a>
+									<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+										<li class="nav-item"><a href="/customerContact" class="nav-link">Contact</a></li>
+										<li class="nav-item"><a href="/customerCategory" class="nav-link">Categories</a></li>
+										<li class="nav-item"><a href="/customerFirm" class="nav-link">Firms</a></li>
+										<li class="nav-item"><a href="/customerProduct" class="nav-link">Products</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Transport</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/transportDetails" class="nav-link">Details</a></li>
+								<li class="nav-item"><a href="/transportContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/transportStations" class="nav-link">Stations</a></li>
+								<li class="nav-item"><a href="/transportTrucks" class="nav-link">Trucks</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Vendor</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterVendors" class="nav-link">MasterVendors</a></li>
+								<li class="nav-item"><a href="/vendorContacts" class="nav-link">Contacts</a></li>
+								<li class="nav-item"><a href="/vendorFirm" class="nav-link">Firm</a></li>
+								<li class="nav-item"><a href="/vendorProduct" class="nav-link">Product</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Employee</span></a>
+							
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="/masterEmployee" class="nav-link">MasterEmployee</a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="/contacts" class="nav-link"><i class="icon-copy"></i> <span>Contacts</span></a>
+						</li>
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+			
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+				<div class="page-header-content header-elements-md-inline">
+					<div class="page-title d-flex">
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Customer</span> - Master Firm</h4>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content">
+
+				<!-- Dashboard content -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card" style="overflow-x: auto;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Firm</h5>
+								<% if(level>=1) {%>
+									<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_firm">Add New Master Firm</button></td>
+								<%}%>
+								<div class="header-elements">
+									<div class="list-icons">
+										<a class="list-icons-item" data-action="collapse"></a>
+										<a class="list-icons-item" data-action="reload"></a>
+										<a class="list-icons-item" data-action="remove"></a>
+									</div>
+								</div>
+							</div>
+
+							<% if(data.length>0) {%>
+									
+								<table class="table datatable-basic table-bordered table-striped table-hover" style="table-layout: auto; width: 100%; overflow-x: auto;">
+									
+									<thead>
+										<tr>
+											<th>firmName</th>
+											<th>address</th>
+											<th>pincode</th>
+											<th>GSTNumber</th>
+											<th>accountNumber</th>
+											<th>bankName</th>
+											<th>IFSCcode</th>
+											<th>Product Produced</th>
+											<th>Quantity</th>
+											<% if(level>2) {%>
+												<th>Edit</th>
+												<th>Delete</th>
+											<%}else if(level>1){%>
+												<th>Edit</th>
+											<%}else{%>
+											<%}%>
+										</tr>
+									</thead >
+										
+									<% for(var i=0; i<data.length; i++) {%>
+										<tr class="<%= data[i].firmId%>firm">
+											<%if(level==1) {%>
+												<td class="firmName"><%= data[i].firmName%></td>
+												<td class="address"><%= data[i].address%></td>
+												<td class="pincode"><%= data[i].pincode%></td>
+												<td class="GSTNumber"><%= data[i].GSTNumber%></td>
+												<td class="accountNumber"><%= data[i].accountNumber%></td>
+												<td class="bankName"><%= data[i].bankName%></td>
+												<td class="IFSCcode"><%= data[i].IFSCcode%></td>
+												<td class="ProductProduced"><%= data[i].ProductProduced%></td>
+												<td class="Quantity"><%= data[i].Quantity%></td>
+
+											<%} else if(level>2) {%>
+                                                <td class="firmName"><%= data[i].firmName%></td>
+												<td class="address"><%= data[i].address%></td>
+												<td class="pincode"><%= data[i].pincode%></td>
+												<td class="GSTNumber"><%= data[i].GSTNumber%></td>
+												<td class="accountNumber"><%= data[i].accountNumber%></td>
+												<td class="bankName"><%= data[i].bankName%></td>
+												<td class="IFSCcode"><%= data[i].IFSCcode%></td>
+												<td class="ProductProduced"><%= data[i].ProductProduced%></td>
+												<td class="Quantity"><%= data[i].Quantity%></td>
+
+												
+
+												<td>
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" onclick="eedit('<%=data[i].firmId%>firm')" title="Edit <%= data[i].firmName%>">Edit</button>
+												</td>
+												<td>
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_del" onclick="ddel('<%=data[i].firmId%>firm')" title="Delete <%= data[i].firmName%>">Delete</button>
+												</td>
+												
+											<%}else if(level>1){%>
+                                                <td class="firmName"><%= data[i].firmName%></td>
+												<td class="address"><%= data[i].address%></td>
+												<td class="pincode"><%= data[i].pincode%></td>
+												<td class="GSTNumber"><%= data[i].GSTNumber%></td>
+												<td class="accountNumber"><%= data[i].accountNumber%></td>
+												<td class="bankName"><%= data[i].bankName%></td>
+												<td class="IFSCcode"><%= data[i].IFSCcode%></td>
+												<td class="ProductProduced"><%= data[i].ProductProduced%></td>
+												<td class="Quantity"><%= data[i].Quantity%></td>
+
+												<td>
+													<button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_edit" onclick="eedit('<%=data[i].firmId%>firm')" title="Edit <%= data[i].firmName%>">Edit</button>
+												</td>
+											<%}%> 
+										</tr>
+									<% } %>
+									</table>
+							
+							<%}else{%>
+								<h4>No new data</h4>
+							<%}%>
+							
+						 
+							<div id="modal_firm" class="modal fade"  tabindex="-1">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title">New Master Firm</h5>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+
+										<form  id="addFirmForm">
+											<div class="modal-body">
+												<div class="form-group">
+													<div class="row">
+														<div class="col-sm-6">
+															<label>Firm Name</label>
+															<input type="text" placeholder="Firm Name" class="form-control firmName" name="firmName" id="firmName">
+														</div>
+														<div class="col-sm-6">
+															<label>Address</label>
+															<input type="text" placeholder="Address" class="form-control address" name="address" id="address">
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="row">
+														<div class="col-sm-6">
+															<label>Pincode</label>
+															<input type="number" placeholder="Pin Code" class="form-control pincode" name="pincode" id="pincode"  >
+														</div>
+														<div class="col-sm-6">
+															<label>GST Number</label>
+															<div class="d-flex">
+
+															
+														<div class="d-flex flex-column  ">	<input type="text" placeholder="GST Number" class="form-control   GSTNumber" name="GSTNumber" id="GSTNumber"   >
+													
+
+															</div>
+															<div class="wrapper">
+																<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+											   </svg>
+											   </div>
+															<div class="btn btn-light button-88 mr-2" id="buttonCheckFirm" style="width: 75px; margin-left: 10px; height: 40px; border-radius: 0; padding: 010px;" >Check</div></div>
+															<div id="warningMessage"></div>
+															<div id="loader"></div>
+													
+															
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div id="firmDropdown">
+													 
+													  </div>
+												</div>
+												<div class="form-group">
+													<div class="row">
+														<div class="col-sm-4">
+															<label>Account Number</label>
+															<input type="number" placeholder="Account Number" class="form-control accountNumber" name="accountNumber" id="accountNumber"  >
+														</div>
+														<div class="col-sm-4">
+															<label>Bank Name</label>
+															<input type="text" placeholder="Bank Name" class="form-control bankName" name="bankName" id="bankName">
+														</div>
+														<div class="col-sm-4">
+															<label>IFSC Code</label>
+															<input type="text" placeholder="IFSC Code" class="form-control IFSCcode" name="IFSCcode" id="IFSCcode" >
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="row">
+														<div class="col-sm-6">
+															<label>Product Produced</label>
+															<input type="text" placeholder="Product Produced" class="form-control pincode" name="ProductProduced" id="ProductProduced">
+														</div>
+														<div class="col-sm-6">
+															<label>Quantity</label>
+															<input type="number" placeholder="Quantity" class="form-control Quantity" name="Quantity" id="Quantity">
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="modal-footer">
+												<button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+												<input type="submit" class="btn bg-primary" > 
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+
+				
+						
+							
+							
+							<!-- EDIT modal -->
+							<div id="modal_edit" class="modal fade" tabindex="-1">
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">Edit Customer Contact</h5>
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+								        <div class="modal-body" id="blast">
+									        
+								        </div>
+										
+
+								        <div class="modal-footer" id="off">
+									        
+								        </div>
+						            </div>
+					            </div>
+				            </div>
+							
+							
+							
+							<!-- DEL modal -->
+							<div id="modal_del" class="modal fade" tabindex="-1">
+					            <div class="modal-dialog">
+						            <div class="modal-content">
+							            <div class="modal-header">
+								            <h5 class="modal-title">Delete Customer Contact</h5>
+								            <button type="button" class="close" data-dismiss="modal">&times;</button>
+							            </div>
+
+								        <div class="modal-body" id="blasto">
+									        
+								        </div>
+
+								        <div class="modal-footer" id="offo">
+									        
+								        </div>
+						            </div>
+					            </div>
+				            </div>
+							
+			            </div>
+		            </div>
+					
+		        </div>
+				<!-- /dashboard content -->
+
+			</div>
+			<!-- /content area -->
+
+
+			<!-- Footer -->
+			<!-- /footer -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+</body>
+
+</html>
+<script>
+	// firm
+$(document).ready(function() {
+
+$('#GSTNumber').on('keyup', function(event) {
+
+let firmDetails = $("#GSTNumber").val();
+if (!firmDetails || firmDetails.length!= 15) {
+		// Append warning message to the UI
+		$('#warningMessage').html('<p class="text-warning">Invalid GST number. Please enter a GST number that is not empty and does not exceed 15 characters.</p>').show();
+		$('#firmDropdown').empty();
+		$('.wrapper').hide(); 
+	}else{
+		$('#warningMessage').empty()
+		$('#firmDropdown').empty();
+	} 
+});
+let timeout;
+
+
+$('#buttonCheckFirm').on('click', function(event) {
+	// Prevent the default action of the button (if any)
+	event.preventDefault();
+
+	let firmDetails = $("#GSTNumber").val();
+$('#warningMessage').empty()
+	// Check if firmDetails is empty or exceeds the maximum length
+	if (!firmDetails || firmDetails.length!= 15) {
+		// Append warning message to the UI
+		$('#warningMessage').html('<p class="text-warning">Invalid GST number. Please enter a GST number that is not empty and does not exceed 15 characters.</p>').show();
+		$('#firmDropdown').empty();
+		$('.wrapper').hide(); 
+	} else {
+		// Proceed with the rest of the code if the input is valid
+		// Clear the previous timeout if it exists
+		clearTimeout(timeout);
+		$('#warningMessage').empty()
+		$('#firmDropdown').empty();
+		$('#GSTNumber').attr("disabled", true); // Disables the GSTNumber input
+
+		//////console.log("firms", firmDetails);
+		// Set a new timeout
+		timeout = setTimeout(function() {
+			// Perform the search only if the input meets your criteria (e.g., length)
+			 $.ajax({
+				url: "/masterFirm",
+				type: 'post',
+				data: {
+					gstNumber: firmDetails,
+					op: "addFirm"
+				},
+				success: function(response) {
+					//////console.log("Success Data:", response);
+					$('#GSTNumber').attr("disabled", false); // Enables the GSTNumber input
+
+
+					clearTimeout(timeout);
+
+					// Handle the successful response here
+					if (response.result.length == 0) {
+						// Show the SVG icon indicating uniqueness
+						// $('#buttonCheckFirm').hide()
+						$('.wrapper').show(); // Ensure the wrapper is visible
+						$('#firmDropdown').empty();
+
+					} else {
+						// Handle the case where the GST number is not unique
+						// For example, clear any existing SVG icon
+						$('.wrapper').hide(); // Hide the wrapper if needed
+						$('#firmDropdown').empty();
+
+						let tableHtml = '<table class="table table-striped table-sm">' +
+							'<thead>' +
+								'<tr>' +
+									'<th>firmName</th>' +
+									'<th>GSTNumber</th>' +
+									'<th>address</th>' +
+									'<th>ProductProduced</th>' +
+								'</tr>' +
+							'</thead>' +
+							'<tbody>';
+
+						// Iterate over each item in the response.contactData array
+						$.each(response.result, function(index, item) {
+							// Add a row for each item
+							tableHtml += '<tr>' +
+								'<td>' + item.firmName + '</td>' +
+								'<td>' + item.GSTNumber + '</td>' +
+								'<td>' + item.address + '</td>' +
+								'<td>' + item.ProductProduced + '</td>' +
+							'</tr>';
+						});
+
+						// Close the tbody and the table tags
+						tableHtml += '</tbody></table>';
+
+						//////console.log(tableHtml);
+						// Append the complete table HTML to the div with id resultsDiv
+						$('#firmDropdown').html(tableHtml);
+
+					}
+
+				  
+
+				},
+				error: function(error) {
+					//////console.log("Error:", error);
+					// Handle the error case here
+				}
+			});
+		}, 500); // Wait for 500 milliseconds after the user stops typing
+	}
+});
+});
+
+</script>
+
+<script>
+	$(document).ready(function() {
+		$("#addFirmForm").validate({ // Replace "yourFormId" with the actual ID of your form
+		rules: {
+			firmName: {
+				required: true,
+				minlength: 2
+			},
+			address: {
+				required: true
+			},
+			pincode: {
+				required: true,
+			 
+			 },
+			GSTNumber: {
+				required: true,
+				minlength: 15,
+				maxlength: 15,
+			 },
+			accountNumber: {
+				required: true,
+				minlength: 11,
+				maxlength: 16,
+			 },
+			ProductProduced: {
+				required: true
+			},
+			Quantity: {
+				required: true,
+				min: 1
+			}
+		},
+		
+		messages: {
+			firmName: {
+				required: "Please enter the Firm Name.",
+				minlength: "Firm Name must be at least 2 characters long."
+			},
+			address: {
+				required: "Please enter the Address."
+			},
+			pincode: {
+				required: "Please enter the Pin Code.",
+	 
+				pattern: "Pin Code must be numeric and exactly 6 digits."
+			},
+			GSTNumber: {
+				required: "Please enter the GST Number.",
+				minlength: "GST Number must be exactly 15 characters long.",
+				maxlength: "GST Number must be exactly 15 characters long.",
+				pattern: "GST Number must match the format XX XXXXXXXXXX X Z 9X."
+			},
+			accountNumber: {
+				required: "Please enter the Account Number.",
+				minlength: "Account Number must be between 11 and 16 digits.",
+				maxlength: "Account Number must be between 11 and 16 digits.",
+				pattern: "Account Number must be numeric and between 11 and 16 digits."
+			},
+			ProductProduced: {
+				required: "Please enter the Product Produced."
+			},
+			Quantity: {
+				required: "Please enter the Quantity.",
+				min: "Quantity must be at least 1."
+			}
+		},
+		submitHandler : function (form) {
+			//////console.log("Submit handler triggered");
+	 
+
+		event.preventDefault(); // Prevent the default form submission behavior
+		$.post("/masterFirm",
+		{
+			data: $(form).serialize(),
+			op:"addFirm"
+		},
+		function (data, status) 
+		{
+ 			 
+ 
+			$("#modal_firm").modal("hide");
+			if (data.msg) {
+							let selectElement = $("#firmFil");
+							//////console.log(selectElement);
+							selectElement.next('.error').remove();
+							$(".error").remove();
+							// Clear previous content and append the error message div after the select element
+							selectElement.html('').after('<div class="error">' + data.msg + '</div>');
+						}
+
+		  window.location.reload() 
+			//////console.log(status);
+			// //////console.log(updatedFirmData)
+		});
+	}
+		});
+	});
+	</script>
+
+<script>
+    
+    function del(value)
+    {
+        console.log(value);
+        $.post("/masterFirm",
+            {
+                id: value,
+                op:"del"
+            },
+            function (data, status) {
+                console.log(data);
+                console.log(status);
+				if(data!="present")
+				{
+					setInterval('refreshPage()', 500);
+				}
+				else 
+				{
+					alert("master-firm already used")
+				}
+            }
+            );
+    }
+	function edit(value)
+    {
+        console.log(value);
+ 		var efirmName = document.getElementById("efirmName").value;
+        var eaddress = document.getElementById("eaddress").value;
+        var epincode = document.getElementById("epincode").value;
+        var eGSTNumber = document.getElementById("eGSTNumber").value;
+        var eaccountNumber = document.getElementById("eaccountNumber").value;
+        var ebankName = document.getElementById("ebankName").value;
+        var eIFSCcode = document.getElementById("eIFSCcode").value;
+        var eProductProduced = document.getElementById("eProductProduced").value;
+        var eQuantity = document.getElementById("eQuantity").value;
+
+        $.post("/masterFirm",
+		{
+			id: value,
+			firmName: efirmName,
+			address: eaddress,
+			pincode: epincode,
+			GSTNumber: eGSTNumber,
+			accountNumber: eaccountNumber,
+			bankName: ebankName,
+			IFSCcode: eIFSCcode,
+			ProductProduced: eProductProduced,
+			Quantity: eQuantity,
+			op:"edt"
+		},
+		function (data, status) {
+			console.log(data);
+			console.log(status);
+			setInterval('refreshPage()', 500);
+		}
+		);
+    }
+
+
+	function refreshPage() {
+    	location.reload(true);
+	}
+
+
+	function eedit(value)
+    {
+        console.log("value111111111111111111111111111111111111" ,value);
+        var sub = 'firm';
+        var result = value.replace(sub,'');
+        console.log("result111111111111111111111111111111111111" ,result);
+        
+        $('.'+value).each(function() 
+        {   
+			var firmName = $(this).find(".firmName").html();
+            var address = $(this).find(".address").html();
+            var pincode = $(this).find(".pincode").html();
+            var GSTNumber = $(this).find(".GSTNumber").html();
+            var accountNumber = $(this).find(".accountNumber").html();
+            var bankName = $(this).find(".bankName").html();
+            var IFSCcode = $(this).find(".IFSCcode").html();
+			var ProductProduced = $(this).find(".ProductProduced").html();
+			var Quantity = $(this).find(".Quantity").html();
+			console.log("++++++++++++++++++++++++++++++++++++++++")
+			console.log(result)
+			
+			
+            var tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >firmName</td> <td><input type="text" value="'+firmName+'" class="form-control efirmName" name="efirmName" id="efirmName"></td> </tr> <tr> <td>address</td> <td><input type="text" value="'+address+'" class="form-control eaddress" name="eaddress" id="eaddress"></td> </tr> <tr> <td>pincode</td> <td><input type="number" value="'+pincode+'" class="form-control epincode" name="epincode" id="epincode"></td> </tr> <tr> <td>GSTNumber</td> <td><input type="text" value="'+GSTNumber+'" class="form-control eGSTNumber" name="eGSTNumber" id="eGSTNumber"></td> </tr>  <tr> <td>accountNumber</td> <td><input type="number" value="'+accountNumber+'" class="form-control eaccountNumber" name="eaccountNumber" id="eaccountNumber"></td> </tr>  <tr> <td>bankName</td> <td><input type="text" value="'+bankName+'" class="form-control ebankName" name="ebankName" id="ebankName"></td> </tr>  <tr> <td>IFSCcode</td> <td><input type="text" value="'+IFSCcode+'" class="form-control eIFSCcode" name="eIFSCcode" id="eIFSCcode"></td> </tr>  <tr> <td>ProductProduced</td> <td><input type="text" value="'+ProductProduced+'" class="form-control eProductProduced" name="eProductProduced" id="eProductProduced"></td> </tr> <tr> <td>Quantity</td> <td><input type="text" value="'+Quantity+'" class="form-control eQuantity" name="eQuantity" id="eQuantity"></td> </tr></table> </div>'
+				
+			let bt = `
+<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button>
+<button type='submit' onclick='edit("${result}")' data-dismiss='modal' class='btn bg-teal-400'>Save</button>
+`;
+
+console.log("Ujjwal")
+			document.getElementById("blast").innerHTML=tek;
+			document.getElementById("off").innerHTML=bt;
+			console.log("++++++++++++++++++++++++++++++++++++++++")
+			
+		});
+    }
+	
+	function ddel(value)
+    {
+        console.log(value);
+        var sub = 'firm';
+        var result = value.replace(sub,'');
+        console.log(result);
+        
+        $('.'+value).each(function() 
+        {   
+			var firmName = $(this).find(".firmName").html();
+            var address = $(this).find(".address").html();
+            var pincode = $(this).find(".pincode").html();
+            var GSTNumber = $(this).find(".GSTNumber").html();
+            var accountNumber = $(this).find(".accountNumber").html();
+            var bankName = $(this).find(".bankName").html();
+            var IFSCcode = $(this).find(".IFSCcode").html();
+			var ProductProduced = $(this).find(".ProductProduced").html();
+			var Quantity = $(this).find(".Quantity").html();
+                
+			console.log(result)
+			
+
+            var tek = '<div class="card" style="text-align:center;"> <table class="table datatable-basic table-bordered table-striped table-hover"> <tr> <td >firmName</td> <td>'+firmName+'</td> </tr> <tr> <td>address</td> <td>'+address+' </td> </tr> <tr> <td>pincode</td> <td>'+pincode+' </td> </tr> <tr> <td>GSTNumber</td> <td>'+GSTNumber+' </td> </tr> <tr> <td>accountNumber</td> <td>'+accountNumber+' </td> </tr> <tr> <td>bankName</td> <td>'+bankName+' </td> </tr> <tr> <td>IFSCcode</td> <td>'+IFSCcode+' </td> </tr></table> </div>'
+
+			let bt = `
+<button type='button' class='btn btn-link' style='color:teal' data-dismiss='modal'>Cancel</button>
+<button type='submit' onclick='del("${result}")' data-dismiss='modal' class='btn bg-teal-400'>Delete</button>
+`;
+console.log("Ujjwal")
+			document.getElementById("blasto").innerHTML=tek;
+			document.getElementById("offo").innerHTML=bt;
+
+		});
+    }
+    </script>
